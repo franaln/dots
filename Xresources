@@ -1,0 +1,70 @@
+
+!-[Font Rendering]-----
+Xft.dpi:          99
+Xft.lcdfilter:	 lcdslight
+Xft.antialias:	 true
+Xft.rgba:        rgb
+Xft.hinting:	 true
+
+!-[URxvt Settings]----
+URxvt.termName: rxvt
+URxvt.font:xft:Tamsyn:autohint=true:pixelsize=18
+URxvt.allow_bold: false
+URxvt.depth: 0
+URxvt.transparent: false
+URxvt.tint: #000000
+URxvt.geometry:		80x36
+URxvt.cursorBlink: false
+URxvt.scrollBar: false
+URxvt.saveLines: 5000
+URxvt.perl-ext-common: default,matcher
+URxvt.urlLauncher: chromium
+URxvt.colorUL: #66cccc
+URxvt.matcher.button: 1
+URxvt.tabbed.tabbar-fg: 10
+URxvt.tabbed.tabbar-bg: #222222
+URxvt.tabbed.tab-fg: 4
+URxvt.tabbed.tab-bg: #222222
+
+!URxvt.letterSpace: -1
+!xft:Inconsolata-Regular:pixelSize=10
+!envypn-15
+
+*fading: 0
+
+!-[Colours]----
+*.foreground:   #cccccc
+*.background:   #1a1a1a
+*.cursorColor:  #4a49ca
+
+! Black / Grey
+*.color0:       #c2c2c2
+*.color8:       #4d4d4d
+
+! Red / Bright Red
+*.color1:       #e33939
+*.color9:       #e80000
+
+! Green + Bright Green
+*.color2:       #69e969
+*.color10:      #14db49
+
+! Yellow (Orange) + Bright Yellow (Yellow)
+*.color3:       #faa170
+*.color11:      #ffcc66
+
+! Blue + Bright Blue
+*.color4:       #6699cc
+*.color12:      #6699cc
+
+! Magenta (Purple) + Bright Magenta
+*.color5:       #b777e0
+*.color13:      #b777e0
+
+! Cyan (Aqua) + Bright Cyan
+*.color6:       #84afdb
+*.color14:      #84afdb
+
+! Light Grey (Selection) + White (Current Line)
+*.color7:       #ababab
+*.color15:      #cccccc
