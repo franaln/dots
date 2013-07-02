@@ -1,0 +1,57 @@
+# bash functions
+# frani 2012
+
+# Handy Extract Program
+extract () {
+    if [ -f $1 ] ; then
+        case $1 in
+            *.tar.bz2)   tar xvjf $1        ;;
+            *.tar.gz)    tar xvzf $1     ;;
+            *.bz2)       bunzip2 $1       ;;
+            *.rar)       unrar x $1     ;;
+            *.gz)        gunzip $1     ;;
+            *.tar)       tar xvf $1        ;;
+            *.tbz2)      tar xvjf $1      ;;
+            *.tgz)       tar xvzf $1       ;;
+            *.zip)       unzip $1     ;;
+            *.Z)         uncompress $1  ;;
+            *.7z)        7z x $1    ;;
+            *)           echo "'$1' cannot be extracted via >extract<" ;;
+        esac
+    else
+        echo "'$1' is not a valid file"
+    fi
+}
+
+# cd and ls in one
+cl() {
+if [ -d "$1" ]; then
+    cd "$1"
+    ls
+    else
+    echo "bash: cl: '$1': Directory not found"
+fi
+}
+
+# todo list
+todo() {
+   test -f $HOME/.todo || touch $HOME/.todo
+   if test $# = 0
+   then 
+           cat $HOME/.todo
+   elif test $1 = -l
+   then
+           cat -n $HOME/.todo
+   elif test $1 = -c
+   then
+           > $HOME/.todo
+   elif test $1 = -r
+   then
+           cat -n $HOME/.todo
+           echo -ne "----------------------------\nType a number to remove: "
+           read NUMBER
+           sed -ie ${NUMBER}d $HOME/.todo
+   else
+           echo $@ >> $HOME/.todo
+   fi
+}

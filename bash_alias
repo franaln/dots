@@ -1,0 +1,80 @@
+# bash aliases
+# frani 2012-2013
+
+# ls
+alias sl='ls'
+alias ll='ls -lh'
+alias la='ls -A'
+alias l='ls -CF'
+
+# emacs
+alias emw='emacs -nw'
+alias ewm='emacs -nw'
+alias em='emacs'
+
+# python
+alias python='python2.7'
+
+# lxplus
+alias sx='ssh -Y falonso@lxplus.cern.ch'
+alias s1='ssh -X -Y falonso@pcunlp001.cern.ch'
+alias s2='ssh -X -Y falonso@pcunlp002'
+
+# fisica.unlp.edu.ar
+alias smetis='ssh -X -Y falonso@metis.fisica.unlp.edu.ar'
+alias sleda='ssh -X -Y fran@leda.fisica.unlp.edu.ar'
+
+# root
+alias root='root -l'
+alias rootq='root -q'
+
+# tar
+alias targz='tar -cvzf'
+alias showtar='tar -tvf'
+alias untargz='tar -xvzf'
+
+# cd
+alias cd..='cd ..'
+alias ..='cd ..'
+alias ...='cd ../..'
+
+# music player
+alias mocp='mocp -m ~/Music -T ~/.moc/config.txt'
+
+# demas
+alias matrix='echo -e "\e[32m"; while :; do printf '%*c' $(($RANDOM % 30)) $(($RANDOM % 2)); done'
+alias ping='ping -c 3 www.google.com'
+alias diff='colordiff'              # requires colordiff package
+alias grep='grep --color=auto'
+alias df='df -h'
+alias du='du -sh'
+alias loadfonts='df-cache -v'
+
+#Apt-get and aptitude
+#alias apu='sudo apt-get update'
+#alias apg='sudo apt-get upgrade'
+#alias apdg='sudo apt-get dist-upgrade'
+#alias api='sudo aptitude install'
+#alias aps='aptitude search'
+#alias apr='sudo apt-get remove'
+
+# pacman
+alias pacu='sudo pacman -Syu' # Synchronize with repositories before upgrading packages that are out of date on the local system.
+alias paci='sudo pacman -S'   # Install specific package(s) from the repositories
+alias pacr='sudo pacman -R'   # Remove the specified package(s), retaining its configuration(s) and required dependencies
+alias pacs='pacman -Ss'       # Search for package(s) in the repositories
+
+# packer
+alias packer='packer --auronly'
+alias auu='packer -Syu'
+alias aui='packer -S'  
+alias aur='packer -R'  
+alias aus='packer -Ss'      
+
+# security
+# safety features
+alias cp='cp -i'
+alias mv='mv -i'
+alias rm='rm -I'                    # 'rm -i' prompts for every file
+alias ln='ln -i'
+
