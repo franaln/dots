@@ -7,5 +7,6 @@ volwheel &
 kdeinit &
 dunst -conf $HOME/.dunstrc &
 urxvtd -q -o -f &
+mpd $HOME/.config/mpd/mpd.conf &
 dropboxd &
 
