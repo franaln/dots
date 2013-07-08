@@ -8,12 +8,15 @@ Xft.hinting:	 true
 
 !-[URxvt Settings]----
 URxvt.termName: rxvt
-URxvt.font:xft:Tamsyn:autohint=true:pixelsize=18
-URxvt.allow_bold: false
+URxvt.modifier:             alt
+!URxvt.font:xft:Tamsyn:autohint=true:pixelsize=18
+!URxvt*.font: xft:Dina:size=13:antialias=false
+URxvt.font:xft:Inconsolata-Regular:pixelSize=10
+URxvt.boldFont:xft:Inconsolata-Regular:pixelSize=10
 URxvt.depth: 0
 URxvt.transparent: false
 URxvt.tint: #000000
-URxvt.geometry:		80x36
+URxvt.geometry:		80x50
 URxvt.cursorBlink: false
 URxvt.scrollBar: false
 URxvt.saveLines: 5000
@@ -25,11 +28,7 @@ URxvt.tabbed.tabbar-fg: 10
 URxvt.tabbed.tabbar-bg: #222222
 URxvt.tabbed.tab-fg: 4
 URxvt.tabbed.tab-bg: #222222
-
-!URxvt.letterSpace: -1
-!xft:Inconsolata-Regular:pixelSize=10
-!envypn-15
-
+URxvt.letterSpace:-2
 *fading: 0
 
 !-[Colours]----
