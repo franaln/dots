@@ -2,11 +2,12 @@ numlockx on &
 setxkbmap -layout us &
 nitrogen --restore & 
 setlayout 0 3 3 0 &
-tint2 &
 volwheel &
+tint2 &
 kdeinit &
 dunst -conf $HOME/.dunstrc &
 urxvtd -q -o -f &
-mpd $HOME/.config/mpd/mpd.conf &
+mpd ~/.config/mpd/mpd.conf &
 dropboxd &
+compton &
 

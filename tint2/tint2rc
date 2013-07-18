@@ -63,7 +63,7 @@ task_urgent_icon_asb = 100 0 0
 task_iconified_icon_asb = 70 0 0
 
 # Fonts
-task_font = Segoe 10
+task_font = DroidSans 10
 task_font_color = #b6b6b6 100
 task_active_font_color = #6e6eff 100
 task_urgent_font_color = #6e6eff 100
@@ -79,8 +79,8 @@ systray_icon_size = 16
 systray_icon_asb = 70 0 0
 
 # Clock
-time1_format = %A %d %B   %H:%M
-time1_font = Segoe 12
+time1_format = %H:%M
+time1_font = DroidSans 11
 time2_format = %A %d %B
 time2_font = sans 0
 clock_font_color = #b6b6b6 100
@@ -107,8 +107,8 @@ battery = 1
 battery_low_status = 10
 battery_low_cmd = notify-send "Battery low" "Connect your charger now!!!"
 battery_hide = 98
-bat1_font = Segoe 11
-bat2_font = Segoe 0
+bat1_font = DroidSans 11
+bat2_font = DroidSans 0
 battery_font_color = #b6b6b6 100
 battery_padding = 1 0
 battery_background_id = 0

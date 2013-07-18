@@ -7,8 +7,7 @@ Frani 2013 -->
     <screen_edge_strength>20</screen_edge_strength>
   </resistance>
   <focus>
-    <!-- always try to focus new windows when they appear. other rules do
-       apply -->
+    <!-- always try to focus new windows when they appear. other rules do apply -->
     <focusNew>yes</focusNew>
     <!-- move focus to a window when you move the mouse into it -->
     <followMouse>no</followMouse>
@@ -42,7 +41,7 @@ Frani 2013 -->
     <primaryMonitor>1</primaryMonitor>
   </placement>
   <theme>
-    <name>TropicBomb</name>
+    <name>Numix</name>
     <!--
       available characters are NDSLIMC, each can occur at most once.
       N: window icon
@@ -290,6 +289,12 @@ Frani 2013 -->
         <menu>client-menu</menu>
       </action>
     </keybind>
+    <keybind key="W-t">
+      <action name="ToggleAlwaysOnTop"/>
+    </keybind>
+    <keybind key="W-l">
+      <action name="ToggleAlwaysOnBottom"/>
+    </keybind>
     <!-- window switching -->
     <keybind key="A-Tab">
       <action name="NextWindow">
@@ -307,6 +312,12 @@ Frani 2013 -->
           <action name="Raise"/>
           <action name="Unshade"/>
         </finalactions>
+      </action>
+    </keybind>
+    <keybind key="W-Tab">
+      <action name="NextWindow">
+	<allDesktops>yes</allDesktops>
+        <dialog>list</dialog>        
       </action>
     </keybind>
     <!-- window switching with the arrow keys -->
@@ -367,22 +378,22 @@ Frani 2013 -->
      </action>
    </keybind>
    <!-- audio keys -->
-    <keybind key="XF86AudioRaiseVolume">
+    <keybind key="C-F12">    <!--XF86AudioRaiseVolume"-->
       <action name="Execute">
         <command>volume increase</command>
       </action>
     </keybind>
-    <keybind key="XF86AudioLowerVolume">
+    <keybind key="C-F11">   <!--XF86AudioLowerVolume"-->
       <action name="Execute">
         <command>volume decrease</command>
       </action>
     </keybind>
-    <keybind key="XF86AudioMute">
+    <keybind key="C-F10">    <!--XF86AudioMute"-->
       <action name="Execute">
         <command>volume toggle</command>
       </action>
     </keybind>
-   <!-- keyboard backlight keys -->
+    <!-- keyboard backlight keys -->
     <keybind key="XF86KbdBrightnessUp">
       <action name="Execute">
         <command>asus-kbd-backlight up</command>
@@ -890,5 +901,16 @@ Frani 2013 -->
 	
 	# end of the example
     -->
+
+    <application class="Chromium">
+      <desktop>1</desktop>
+      <maximized>yes</maximized>
+      <decor>no</decor>
+    </application>
+
+    <!-- <application class="URxvt"> -->
+    <!--   <decor>no</decor> -->
+    <!-- </application> -->
+    
   </applications>
 </openbox_config>

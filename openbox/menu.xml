@@ -1,22 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openbox_menu>
-	<menu id="None-153818" label="New Menu">
-		<item label="Alfred">
-			<action name="Execute">
-				<execute>alfred</execute>
-			</action>
-		</item>
-	</menu>
 	<menu id="root-menu" label="OpenBox 3">
 		<menu id="2" label="Editors">
-			<item label="AA Fire">
-				<action name="Execute">
-					<execute>xterm -e aafire -driver slang</execute>
-				</action>
-			</item>
 			<item label="Emacs">
 				<action name="Execute">
-					<execute>xterm -e emacs</execute>
+					<execute>urxvt -e emacs</execute>
 				</action>
 			</item>
 			<item label="Kate">
@@ -24,29 +12,9 @@
 					<execute>kate</execute>
 				</action>
 			</item>
-			<item label="KWrite">
-				<action name="Execute">
-					<execute>kwrite</execute>
-				</action>
-			</item>
-			<item label="zNotes">
-				<action name="Execute">
-					<execute>znotes</execute>
-				</action>
-			</item>
 		</menu>
 		<menu id="6" label="Graphics">
-			<item label="AcquireImages">
-				<action name="Execute">
-					<execute>scangui</execute>
-				</action>
-			</item>
-			<item label="ExpoBlending">
-				<action name="Execute">
-					<execute>expoblending</execute>
-				</action>
-			</item>
-			<item label="GNU Image Manipulation Program">
+			<item label="GIMP">
 				<action name="Execute">
 					<execute>gimp-2.8</execute>
 				</action>
@@ -61,71 +29,21 @@
 					<execute>inkscape</execute>
 				</action>
 			</item>
-			<item label="Kamoso">
-				<action name="Execute">
-					<execute>kamoso</execute>
-				</action>
-			</item>
-			<item label="KColorChooser">
-				<action name="Execute">
-					<execute>kcolorchooser</execute>
-				</action>
-			</item>
-			<item label="KolourPaint">
-				<action name="Execute">
-					<execute>kolourpaint</execute>
-				</action>
-			</item>
-			<item label="Krita">
-				<action name="Execute">
-					<execute>krita</execute>
-				</action>
-			</item>
 			<item label="KSnapshot">
 				<action name="Execute">
 					<execute>ksnapshot</execute>
-				</action>
-			</item>
-			<item label="Scribus">
-				<action name="Execute">
-					<execute>scribus</execute>
-				</action>
-			</item>
-			<item label="The GIMP">
-				<action name="Execute">
-					<execute>gimp</execute>
 				</action>
 			</item>
 		</menu>
 		<menu id="7" label="Multimedia">
 			<item label="ALSA mixer">
 				<action name="Execute">
-					<execute>urxvt-e alsamixer</execute>
+					<execute>urxvt -e alsamixer</execute>
 				</action>
 			</item>
 			<item label="Amarok">
 				<action name="Execute">
 					<execute>amarok</execute>
-				</action>
-			</item>
-			<item label="Dragon Player">
-				<action name="Execute">
-					<execute>dragon</execute>
-				</action>
-			</item>
-			<item label="Gtv">
-				<action name="Execute">
-					<execute>gtv</execute>
-				</action>
-			</item>
-			<item label="KMix">
-				<action name="Execute">
-					<execute>kmix</execute>
-				</action>
-			</item>
-			<item label="kradio4">
-				<action name="Execute">
-					<execute>kradio4</execute>
 				</action>
 			</item>
 		</menu>
@@ -424,31 +342,6 @@
 			<item label="Pacman Log Viewer">
 				<action name="Execute">
 					<execute>plv</execute>
-				</action>
-			</item>
-			<item label="pstree">
-				<action name="Execute">
-					<execute>xterm -e pstree</execute>
-				</action>
-			</item>
-			<item label="pstree">
-				<action name="Execute">
-					<execute>xterm -e /usr/bin/pstree.x11</execute>
-				</action>
-			</item>
-			<item label="pstree">
-				<action name="Execute">
-					<execute>xterm -e pstree.x11</execute>
-				</action>
-			</item>
-			<item label="regedit">
-				<action name="Execute">
-					<execute>q4wine-cli -p &quot;Default&quot; -d &quot;system&quot; -i &quot;regedit&quot;</execute>
-				</action>
-			</item>
-			<item label="Top">
-				<action name="Execute">
-					<execute>xterm -e top</execute>
 				</action>
 			</item>
 		</menu>
