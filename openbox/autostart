@@ -6,8 +6,8 @@ volwheel &
 tint2 &
 kdeinit &
 dunst -conf $HOME/.dunstrc &
+skippy-xd --start-daemon &
 urxvtd -q -o -f &
 mpd ~/.config/mpd/mpd.conf &
 dropboxd &
-
 

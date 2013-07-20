@@ -1,15 +1,16 @@
-(add-to-list 'load-path "~/.emacs.d")
+;; emacs init
+;; frani
 
+;; Turn off mouse interface early in startup to avoid momentary display
+(if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
+(if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
+(if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
+
+(setq inhibit-startup-message t)
 (setq visible-bell t)
 
-;; Emacs usually has a splash screen on startup.
-(setq inhibit-startup-message t)
+(add-to-list 'load-path "~/.emacs.d")
 
-;; Position of the vertical scrollbar. Useful for left-handers.
-(set-scroll-bar-mode 'right)
-
-; Change font size
-;;(set-face-attribute 'default nil :height 90)
 
 ;; Entra en modo de coloreado por sintaxis
 (global-font-lock-mode t)
@@ -19,6 +20,10 @@
 (show-paren-mode)
 (setq show-paren-mismatch t)
 
+;; custom config
+(require 'custom-modeline)
+(require 'custom-fns)
+(require 'custom-keys)
 
 ;; Guardo los respaldos automáticos en ~/.saves/
 (setq make-backup-files nil)
@@ -28,8 +33,7 @@
 	delete-old-versions t 
 	kept-new-versions 6 
 	kept-old-versions 2
-	version-control t)  
-
+	version-control t) 
 
 ;; No seguir agregando líneas en blanco al final
 (setq next-line-add-newlines nil)
@@ -52,19 +56,12 @@
  '(uniquify-buffer-name-style (quote post-forward-angle-brackets) nil (uniquify)))
 
 
-(if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
-(if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
-
-;; -----------------------------------------------------------------------
 ;; Autoloads (aka, the way to make emacs fast)
-;; -----------------------------------------------------------------------
 (autoload 'hide-ifdef-define "hideif" nil t)
 (autoload 'hide-ifdef-undef  "hideif" nil t)
 (autoload 'c-mode "cc-mode" "C Editing Mode" t)
 (autoload 'c++-mode "cc-mode" "C++ Editing Mode" t)
 (autoload 'objc-mode "cc-mode" "ObjC Editing Mode" t)
-
-(autoload 'go-mode "go-mode" "Major mode for editing Go source text." t nil)
 
 ;; Autoloads to my custom header inserters
 (autoload 'insert-c++-seperator-line "e-seperators" nil t)
@@ -80,14 +77,12 @@
 (autoload 'insert-script-big-header "e-seperators" nil t)
 (autoload 'insert-text-seperator-line "e-seperators" nil t)
 
+(autoload 'markdown-mode "markdown-mode"
+   "Major mode for editing Markdown files" t)
+(add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 
-;;Shortcuts
-(global-set-key "\C-l" 'goto-line)
-(global-set-key "\C-h" 'delete-backward-char)
-(global-set-key "\C-x\C-u" 'shell);
-
-;; (line-number-mode 1)
-;; (column-number-mode 1)
 (fset 'yes-or-no-p 'y-or-n-p)
 
 
@@ -102,51 +97,9 @@
   (select-window (previous-window)))
 
 
-(defun increment-number-at-point ()
-  (interactive)
-  (skip-chars-backward "0123456789")
-  (or (looking-at "[0123456789]+")
-      (error "No number at point"))
-  (replace-match (number-to-string (1+ (string-to-number (match-string 0))))))
+(when (fboundp 'windmove-default-keybindings)
+  (windmove-default-keybindings))
 
-(global-set-key (kbd "C-c +") 'increment-number-at-point)
+;; autorefresh files
+(global-auto-revert-mode t)
 
-
-;; ;; autopair
-;; ;; (require 'autopair)
-;; ;; (autopair-global-mode)
-
-;; ;; corregir errores de pyhton
-;; ;;(require 'python-pylint)
-
-;; (when (fboundp 'windmove-default-keybindings)
-;;   (windmove-default-keybindings))
-
-
-;; (autoload 'markdown-mode "markdown-mode"
-;;    "Major mode for editing Markdown files" t)
-;; (add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
-;; (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
-;; (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
-
-;; (require 'edit-server)
-;; (edit-server-start)
-
-;; (autoload 'edit-server-maybe-dehtmlize-buffer "edit-server-htmlize" "edit-server-htmlize" t)
-;; (autoload 'edit-server-maybe-htmlize-buffer   "edit-server-htmlize" "edit-server-htmlize" t)
-;; (add-hook 'edit-server-start-hook 'edit-server-maybe-dehtmlize-buffer)
-;; (add-hook 'edit-server-done-hook  'edit-server-maybe-htmlize-buffer)
-
-;; ;; (require 'epy-completion)
-
-;; ;; (require 'powerline)
-;; ;; (setq powerline-arrow-shape 'arrow14)
-;; ;; (custom-set-faces
-;; ;;  '(mode-line ((t (:foreground "#000000" :background "#ffffff" :box nil))))
-;; ;;  '(mode-line-inactive ((t (:foreground "#000000" :background "#ffffff" :box nil)))))
-
-;; ;; autorefresh files
-;; (global-auto-revert-mode t)
-
-;; custom modeline
-(require 'custom-modeline)
