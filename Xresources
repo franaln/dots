@@ -37,8 +37,8 @@ URxvt.letterSpace:-2
 *.cursorColor:  #4a49ca
 
 ! Black / Grey
-*.color0:       #c2c2c2
-*.color8:       #404040
+*.color0:       #2f2f2f
+*.color8:       #4d4d4d
 
 ! Red / Bright Red
 *.color1:       #e84f4f

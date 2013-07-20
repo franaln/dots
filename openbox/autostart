@@ -9,5 +9,5 @@ dunst -conf $HOME/.dunstrc &
 urxvtd -q -o -f &
 mpd ~/.config/mpd/mpd.conf &
 dropboxd &
-compton &
+
 
