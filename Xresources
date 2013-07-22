@@ -53,8 +53,8 @@ URxvt.letterSpace:-2
 *.color11:      #f39d21
 
 ! Blue + Bright Blue
-*.color4:       #7dadcf
-*.color12:      #4e9f81
+*.color4:       #7d99cf
+*.color12:      #456dba
 
 ! Magenta (Purple) + Bright Magenta
 *.color5:       #9864fb

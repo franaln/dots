@@ -420,7 +420,7 @@ Frani 2013 -->
       </action>
     </keybind>
     <!-- olgaaa! -->
-    <keybind key="C-Space">
+    <keybind key="C-Return">
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>

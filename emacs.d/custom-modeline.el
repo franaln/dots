@@ -2,11 +2,11 @@
 (setq-default
  mode-line-format
  '(; Position, including warning for 80 columns
-   (:propertize "%4l:" face mode-line-position-face)
-   ;; (:eval (propertize "%3c" 'face
-   ;;                    (if (>= (current-column) 80)
-   ;;                        'mode-line-80col-face
-   ;;                      'mode-line-position-face)))
+   (:propertize "%5l:" face mode-line-position-face)
+   (:eval (propertize "%3c" 'face
+                      (if (>= (current-column) 80)
+                          'mode-line-80col-face
+                        'mode-line-position-face)))
    ; emacsclient [default -- keep?]
    mode-line-client
    "  "
@@ -28,15 +28,18 @@
    ; mode indicators: vc, recursive edit, major mode, minor modes, process, global
    (vc-mode vc-mode)
    "  %["
+   (:propertize "[" face mode-line-mode-face)
    (:propertize mode-name
                 face mode-line-mode-face)
+   (:propertize "]" face mode-line-mode-face)
    "%] "
-   (:eval (propertize (format-mode-line minor-mode-alist)
-                      'face 'mode-line-minor-mode-face))
-   (:propertize mode-line-process
-                face mode-line-process-face)
-   (global-mode-string global-mode-string)
-   "    "
+
+   ;; (:eval (propertize (format-mode-line minor-mode-alist)
+   ;;                    face 'mode-line-minor-mode-face))
+   ;; (:propertize mode-line-process
+   ;;              face mode-line-process-face)
+   ;; (global-mode-string global-mode-string)
+   ;; "    "
    ;; system info
    ;;   (:propertize mode-line-hostname
    ;;             face mode-line-hostname-face)
@@ -60,6 +63,7 @@
 
 ;; Extra mode line faces
 (make-face 'mode-line-read-only-face)
+(make-face 'mode-line-80col-face)
 (make-face 'mode-line-modified-face)
 (make-face 'mode-line-folder-face)
 (make-face 'mode-line-filename-face)
@@ -79,10 +83,16 @@
     :inverse-video nil
     :box '(:line-width 6 :color "gray5" :style nil))
 
+(set-face-attribute 'mode-line-80col-face nil
+    :inherit 'mode-line-face
+    :foreground "red"
+    :box '(:line-width 2 :color "blue"))
+
 (set-face-attribute 'mode-line-read-only-face nil
     :inherit 'mode-line-face
-    :foreground "#4271ae"
-    :box '(:line-width 2 :color "#4271ae"))
+    :background "#ffffff"
+    :foreground "blue"
+    :box '(:line-width 2 :color "blue"))
 
 (set-face-attribute 'mode-line-modified-face nil
     :inherit 'mode-line-face
@@ -91,9 +101,7 @@
     :box '(:line-width 2 :color "#c82829"))
 
 (set-face-attribute 'mode-line-folder-face nil
-    :inherit 'mode-line-face
-    :foreground "aaaaaa"
-    :background "gray5")
+    :inherit 'mode-line-face)
 
 (set-face-attribute 'mode-line-filename-face nil
     :inherit 'mode-line-face
@@ -106,18 +114,19 @@
 
 (set-face-attribute 'mode-line-mode-face nil
     :inherit 'mode-line-face
-    :foreground "#6495ed")
+    :foreground "green")
 
 (set-face-attribute 'mode-line-minor-mode-face nil
     :inherit 'mode-line-mode-face
-    :foreground "#6495ed"
     :height 110)
 
 (set-face-attribute 'mode-line-process-face nil
     :inherit 'mode-line-face
-    :foreground "#718c00")
+    :foreground "red"
+    :background "white")
 
 (set-face-attribute 'mode-line-hostname-face nil
-    :foreground "#4271ae" :background "gray5")
+    :foreground "#4271ae" 
+    :background "gray5")
 
 (provide 'custom-modeline)

@@ -25,23 +25,24 @@
 (require 'custom-fns)
 (require 'custom-keys)
 
-;; Guardo los respaldos automáticos en ~/.saves/
-(setq make-backup-files nil)
-(setq version-control 'never)
-(setq   backup-by-copying t   
-	backup-directory-alist   '(("." . "~/.saves"))  
-	delete-old-versions t 
-	kept-new-versions 6 
-	kept-old-versions 2
-	version-control t) 
+;; Backups
+;;(setq make-backup-files nil) ; stop creating those backup~ files
+;;(setq auto-save-default nil) ; stop creating those #autosave# files
 
-;; No seguir agregando líneas en blanco al final
+;; store all backup and autosave files in the tmp dir
+(setq backup-directory-alist
+      `((".*" . , "~/temp/")))
+(setq auto-save-file-name-transforms
+      `((".*" , "~/temp/" t)))
+
+
+;; Don't add blank lines at the end
 (setq next-line-add-newlines nil)
 
-;; Hacer scroll línea por línea
+;; Scroll line by line
 (setq scroll-step 1)
 
-;; Muestra como título de la ventana/icono el nombre del archivo abierto (%f - filename, más largo. %b - buffer, más corto)
+;; Window title
 (setq frame-title-format "Emacs : %b")
 (setq icon-title-format "Emacs : %b")
 
@@ -103,3 +104,6 @@
 ;; autorefresh files
 (global-auto-revert-mode t)
 
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 4)
+(setq indent-line-function 'insert-tab)

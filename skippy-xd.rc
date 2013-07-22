@@ -1,4 +1,3 @@
-# Copy this to ~/.skippy-xd.rc and edit it to your liking
 #
 # Notes:
 #
@@ -50,9 +49,9 @@ opacity = 255
 
 [tooltip]
 show = true
-border = #e0e0e0
-background = #404040
+border = #484848
+background = #1a1a1a
 opacity = 128
-text = #e0e0e0
+text = #cccccc
 textShadow = black
 font = fixed-11:weight=bold
