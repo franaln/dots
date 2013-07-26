@@ -10,4 +10,3 @@ skippy-xd --start-daemon &
 urxvtd -q -o -f &
 mpd ~/.config/mpd/mpd.conf &
 dropboxd &
-

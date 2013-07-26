@@ -35,7 +35,7 @@ updateFreq = 10.0
 lazyTrans = false
 
 [xinerama]
-showAll = false
+showAll = true
 
 [normal]
 tint = black
