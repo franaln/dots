@@ -2,11 +2,12 @@ numlockx on &
 setxkbmap -layout us &
 nitrogen --restore & 
 setlayout 0 3 3 0 &
-volwheel &
 tint2 &
-kdeinit &
-dunst -conf $HOME/.dunstrc &
-skippy-xd --start-daemon &
+volwheel &
+tidybattery &
 urxvtd -q -o -f &
+skippy-xd --start-daemon &
+dunst -conf $HOME/.dunstrc &
 mpd ~/.config/mpd/mpd.conf &
 dropboxd &
+kdeinit &

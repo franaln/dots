@@ -103,7 +103,7 @@ mouse_scroll_up = none
 mouse_scroll_down = none
 
 # Battery
-battery = 1
+battery = 0
 battery_low_status = 10
 battery_low_cmd = notify-send "Battery low" "Connect your charger now!!!"
 battery_hide = 98
