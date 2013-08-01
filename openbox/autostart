@@ -3,8 +3,9 @@ setxkbmap -layout us &
 nitrogen --restore & 
 setlayout 0 3 3 0 &
 tint2 &
-volwheel &
-tidybattery &
+(sleep 3 && nm-applet --sm-disable) &
+gvolicon -s 5 &
+batticon &
 urxvtd -q -o -f &
 skippy-xd --start-daemon &
 dunst -conf $HOME/.dunstrc &

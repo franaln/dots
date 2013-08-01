@@ -1,7 +1,9 @@
 # Tint2 config file
 # Frani 2013
 
+#-----------------------
 # Background definitions
+#-----------------------
 # ID 1
 rounded = 0
 border_width = 0
@@ -20,7 +22,9 @@ border_width = 0
 background_color = #272727 100
 border_color = #272727 100
 
+#----------
 # Panel
+#----------
 panel_monitor = all
 panel_position = top center horizontal
 panel_size = 100% 28
@@ -31,20 +35,17 @@ wm_menu = 0
 panel_layer = normal
 panel_background_id = 1
 
-# Panel Autohide
-autohide = 0
-autohide_show_timeout = 0.3
-autohide_hide_timeout = 2
-autohide_height = 2
-strut_policy = follow_size
-
+#----------
 # Taskbar
+#----------
 taskbar_mode = single_desktop
 taskbar_padding = 2 3 2
 taskbar_background_id = 0
 taskbar_active_background_id = 0
 
+#----------
 # Tasks
+#----------
 urgent_nb_of_blink = 4
 task_icon = 0
 task_text = 1
@@ -56,13 +57,17 @@ task_active_background_id = 2
 task_urgent_background_id = 2
 task_iconified_background_id = 3
 
+#------------
 # Task Icons
+#------------
 task_icon_asb = 70 0 0
 task_active_icon_asb = 100 0 0
 task_urgent_icon_asb = 100 0 0
 task_iconified_icon_asb = 70 0 0
 
+#----------
 # Fonts
+#----------
 task_font = DroidSans 10
 task_font_color = #b6b6b6 100
 task_active_font_color = #6e6eff 100
@@ -70,39 +75,50 @@ task_urgent_font_color = #6e6eff 100
 task_iconified_font_color = #aaaaaa 100
 font_shadow = 0
 
+#-------------
 # System Tray
+#-------------
 systray = 1
-systray_padding = 0 4 5
+systray_padding = 4 4 15
 systray_sort = ascending
 systray_background_id = 0
-systray_icon_size = 16
+systray_icon_size = 0
 systray_icon_asb = 70 0 0
 
+#----------
 # Clock
+#----------
 time1_format = %H:%M
-time1_font = DroidSans 11
+time1_font = DroidSans 12
 time2_format = %A %d %B
 time2_font = sans 0
 clock_font_color = #b6b6b6 100
-clock_padding = 1 0
+clock_padding = 3 0
 clock_background_id = 0
-#clock_rclick_command = orage
+clock_tooltip = %A, %d %b %Y
 
+#----------
 # Tooltips
+#----------
+tooltip = 1
 tooltip_padding = 2 2
 tooltip_show_timeout = 0.7
 tooltip_hide_timeout = 0.3
 tooltip_background_id = 1
-tooltip_font = sans 10
-tooltip_font_color = #000000 80
+tooltip_font = DroidSans 11
+tooltip_font_color = #b6b6b6 100
 
+#----------
 # Mouse
+#----------
 mouse_middle = close
 mouse_right = none
 mouse_scroll_up = none
 mouse_scroll_down = none
 
-# Battery
+#----------
+# Battery  
+#----------
 battery = 0
 battery_low_status = 10
 battery_low_cmd = notify-send "Battery low" "Connect your charger now!!!"
@@ -113,4 +129,3 @@ battery_font_color = #b6b6b6 100
 battery_padding = 1 0
 battery_background_id = 0
 
-# End of config
