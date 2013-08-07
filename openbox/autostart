@@ -5,8 +5,8 @@ nitrogen --restore &
 setlayout 0 3 3 0 &
 tint2 &
 (sleep 3 && nm-applet --sm-disable) &
-gvolicon &
-batterymonitor &
+voltray &
+batterytray &
 urxvtd -q -o -f &
 skippy-xd --start-daemon &
 dunst -conf $HOME/.dunstrc &
