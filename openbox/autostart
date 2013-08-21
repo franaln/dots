@@ -4,12 +4,13 @@ conf_touchpad.sh &
 nitrogen --restore & 
 setlayout 0 3 3 0 &
 tint2 &
-(sleep 3 && nm-applet --sm-disable) &
-voltray &
 batterytray &
+voltray &
+nm-applet --sm-disable &
 urxvtd -q -o -f &
 skippy-xd --start-daemon &
 dunst -conf $HOME/.dunstrc &
 mpd ~/.config/mpd/mpd.conf &
-dropboxd &
-kdeinit &
+(sleep 5 && dropboxd) &
+(sleep 5 && kdeinit) &
+(sleep 5 && archtray) &

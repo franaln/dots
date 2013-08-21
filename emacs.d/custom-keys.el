@@ -11,11 +11,8 @@
 
 (global-set-key (kbd "C-c d") 'delete-this-file)
 
-;; M-space should remove multiple whitespace lines into a single blank
-;; character
 (global-set-key (kbd "M-SPC") 'multi-line-just-one-space)
 
-;; increment number by one
 (global-set-key (kbd "C-c +") 'increment-number-at-point)
 
 (provide 'custom-keys)

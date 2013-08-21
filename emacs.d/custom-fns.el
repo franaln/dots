@@ -29,10 +29,10 @@
         (set-buffer-modified-p nil)))))
 
 
+;; Multi-line version of just-one-space: Delete all
+;; spaces, tabs and newlines around point,
+;; leaving one space (or N spaces)."
 (defun multi-line-just-one-space (&optional n)
-  "Multi-line version of just-one-space: Delete all
-  spaces, tabs and newlines around point,
-  leaving one space (or N spaces)."
   (interactive "*p")
   (let ((orig-pos (point)))
     (skip-chars-backward " \t\n")
