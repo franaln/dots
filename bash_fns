@@ -1,5 +1,5 @@
 # bash functions
-# frani 2012
+# frani
 
 # Handy Extract Program
 extract () {
@@ -25,11 +25,32 @@ extract () {
 
 # cd and ls in one
 cl() {
-if [ -d "$1" ]; then
-    cd "$1"
-    ls
-    else
-    echo "bash: cl: '$1': Directory not found"
-fi
+    if [ -d "$1" ]; then
+        cd "$1"
+        ls          
+    else        
+        echo "bash: cl: '$1': Directory not found"
+    fi
 }
+
+# load root
+lroot () {
+    
+    if [[ $1 == "32" ]]; then 
+        echo ":: ROOT 5.32.04"
+        export ROOTSYS=$HOME/root/root-5.32.04
+    elif [[ $1 == "34" ]]; then
+        echo ":: ROOT 5.34.05"
+        export ROOTSYS=$HOME/root/root-5.34.05
+    elif [[ $1 == "last" ]] ; then
+        echo ":: ROOT 5.34.09"
+        export ROOTSYS=$HOME/root/root-5.34.09
+    fi
+
+    export PATH=$PATH:$ROOTSYS/bin
+    export LD_LIBRARY_PATH=$ROOTSYS/lib:$LD_LIBRARY_PATH:$PYTHONDIR/lib
+    export PYTHONPATH=$ROOTSYS/lib:$PYTHONPATH
+
+}
+
 

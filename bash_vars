@@ -1,5 +1,5 @@
 # bash global variables
-# frani 2013
+# frani
 
 # default editor
 export EDITOR='emacs -nw'
@@ -10,19 +10,9 @@ export BROWSER='chromium'
 # my bins
 export MYBIN=$HOME/bin
 
-# slides
-##export CREATE_SLIDES=$HOME/dev/createSlides
-
-# root
-#export ROOTSYS=/usr/local
-#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$ROOTSYS/lib/root:$PYTHONDIR/lib/root
-#export PYTHONPATH=$ROOTSYS/lib/root:$PYTHONPATH
-
 # SVN@CERN
-export SVNPHYS='svn+ssh://falonso@svn.cern.ch/reps/atlasphys'
-export SVNUNLP='svn+ssh://falonso@svn.cern.ch/reps/UNLP/'
-
-# work
+export SVNPHYS='svn+ssh://svn.cern.ch/reps/atlasphys'
+export SVNUNLP='svn+ssh://svn.cern.ch/reps/UNLP/'
 
 # add to path
 export PATH=$MYBIN:$PATH
