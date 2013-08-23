@@ -1,5 +1,5 @@
 # .bashrc
-# frani 2013
+# frani
 
 # custom PS1
 [ -z "$PS1" ] && return
@@ -34,19 +34,16 @@ if [ -f /usr/share/bash-completion/bash_completion ] && ! shopt -oq posix; then
 fi
 
 # alias definitions
-if [ -f ~/.bash_alias ]; then
-    . ~/.bash_alias
-fi
+if [ -f ~/.bash_alias ]; then . ~/.bash_alias ; fi
 
 # functions definitions
-if [ -f ~/.bash_fns ]; then
-    . ~/.bash_fns
-fi
+if [ -f ~/.bash_fns ]; then . ~/.bash_fns ; fi
 
 # vars definitions
-if [ -f ~/.bash_vars ]; then
-    . ~/.bash_vars
-fi
+if [ -f ~/.bash_vars ]; then . ~/.bash_vars ; fi
+
+# private
+if [ -f ~/.bash_private ]; then . ~/.bash_private ; fi
 
 # easy navigation :)
 . ~/bin/z.sh

@@ -1,5 +1,5 @@
 # bash aliases
-# frani 2012-2013
+# frani
 
 # ls
 alias sl='ls'
@@ -14,15 +14,6 @@ alias em='emacs'
 
 # python
 alias python='python2.7'
-
-# lxplus
-alias sx='ssh -Y falonso@lxplus.cern.ch'
-alias s1='ssh -X -Y falonso@pcunlp001.cern.ch'
-alias s2='ssh -X -Y falonso@pcunlp002'
-
-# fisica.unlp.edu.ar
-alias smetis='ssh -X -Y falonso@metis.fisica.unlp.edu.ar'
-alias sleda='ssh -X -Y fran@leda.fisica.unlp.edu.ar'
 
 # root
 alias root='root -l'
@@ -52,31 +43,33 @@ alias df='df -h'
 alias du='du -sh'
 alias loadfonts='df-cache -v'
 
-#Apt-get and aptitude
-#alias apu='sudo apt-get update'
-#alias apg='sudo apt-get upgrade'
-#alias apdg='sudo apt-get dist-upgrade'
-#alias api='sudo aptitude install'
-#alias aps='aptitude search'
-#alias apr='sudo apt-get remove'
 
-# pacman
-alias pacu='sudo pacman -Syu' # Synchronize with repositories before upgrading packages that are out of date on the local system.
-alias paci='sudo pacman -S'   # Install specific package(s) from the repositories
-alias pacr='sudo pacman -R'   # Remove the specified package(s), retaining its configuration(s) and required dependencies
-alias pacs='pacman -Ss'       # Search for package(s) in the repositories
+if [ `uname -v` == "*Ubuntu*" ] ; then
+    # apt-get and aptitude
+    alias apu='sudo apt-get update'
+    alias apg='sudo apt-get upgrade'
+    alias apdg='sudo apt-get dist-upgrade'
+    alias api='sudo aptitude install'
+    alias aps='aptitude search'
+    alias apr='sudo apt-get remove'
+else
+    # pacman
+    alias pacu='sudo pacman -Syu'
+    alias paci='sudo pacman -S'
+    alias pacr='sudo pacman -R'
+    alias pacs='pacman -Ss'
+    
+    # packer
+    alias packer='packer --auronly'
+    alias auu='packer -Syu'
+    alias aui='packer -S'  
+    alias aur='packer -R'  
+    alias aus='packer -Ss'      
+fi
 
-# packer
-alias packer='packer --auronly'
-alias auu='packer -Syu'
-alias aui='packer -S'  
-alias aur='packer -R'  
-alias aus='packer -Ss'      
-
-# security
-# safety features
+# security/safety features
 alias cp='cp -i'
 alias mv='mv -i'
-alias rm='rm -I'                    # 'rm -i' prompts for every file
+alias rm='rm -I'
 alias ln='ln -i'
 
