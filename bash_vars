@@ -12,7 +12,7 @@ export MYBIN=$HOME/bin
 
 # SVN@CERN
 export SVNPHYS='svn+ssh://svn.cern.ch/reps/atlasphys'
-export SVNUNLP='svn+ssh://svn.cern.ch/reps/UNLP/'
+export SVNUNLP='svn+ssh://svn.cern.ch/reps/UNLP'
 
 # add to path
 export PATH=$MYBIN:$PATH

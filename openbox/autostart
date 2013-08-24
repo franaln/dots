@@ -12,5 +12,5 @@ skippy-xd --start-daemon &
 dunst -conf $HOME/.dunstrc &
 mpd ~/.config/mpd/mpd.conf &
 (sleep 5 && dropboxd) &
-(sleep 5 && kdeinit) &
-(sleep 5 && archtray) &
+#(sleep 5 && kdeinit) &
+#(sleep 5 && archtray) &

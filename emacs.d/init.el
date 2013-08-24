@@ -31,9 +31,9 @@
 
 ;; store all backup and autosave files in the tmp dir
 (setq backup-directory-alist
-      `((".*" . , "~/temp/")))
+      `((".*" . , "~/temp/emacs-backups/")))
 (setq auto-save-file-name-transforms
-      `((".*" , "~/temp/" t)))
+      `((".*" , "~/temp/emacs-backups/" t)))
 
 
 ;; Don't add blank lines at the end
@@ -43,8 +43,8 @@
 (setq scroll-step 1)
 
 ;; Window title
-(setq frame-title-format "Emacs : %b")
-(setq icon-title-format "Emacs : %b")
+(setq frame-title-format "emacs : %b")
+(setq icon-title-format "emacs : %b")
 
 (custom-set-variables
  '(auto-compression-mode t nil (jka-compr))

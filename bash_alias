@@ -44,7 +44,7 @@ alias du='du -sh'
 alias loadfonts='df-cache -v'
 
 
-if [ `uname -v` == "*Ubuntu*" ] ; then
+if [[ `uname -v` == "*Ubuntu*" ]] ; then
     # apt-get and aptitude
     alias apu='sudo apt-get update'
     alias apg='sudo apt-get upgrade'
