@@ -1,6 +1,5 @@
 # fonts
 xset +fp /usr/share/fonts/envypn
-xset +fp ~/.fonts/tamsyn
 xset fp rehash
 
 # screen powersave
@@ -12,4 +11,3 @@ xrdb ~/.Xresources
 
 # start openbox
 exec openbox-session
-#exec "$HOME/wmrun.sh"
