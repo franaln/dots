@@ -7,37 +7,17 @@ Frani 2013 -->
     <screen_edge_strength>20</screen_edge_strength>
   </resistance>
   <focus>
-    <!-- always try to focus new windows when they appear. other rules do apply -->
     <focusNew>yes</focusNew>
-    <!-- move focus to a window when you move the mouse into it -->
     <followMouse>no</followMouse>
-    <!-- focus the last used window when changing desktops, instead of the one
-       under the mouse pointer. when followMouse is enabled -->
     <focusLast>yes</focusLast>
-    <!-- move focus under the mouse, even when the mouse is not moving -->
     <underMouse>no</underMouse>
-    <!-- when followMouse is enabled, the mouse must be inside the window for
-       this many milliseconds (1000 = 1 sec) before moving focus to it -->
     <focusDelay>200</focusDelay>
-    <!-- when followMouse is enabled, and a window is given focus by moving the
-       mouse into it, also raise the window -->
     <raiseOnFocus>no</raiseOnFocus>
   </focus>
   <placement>
-    <!-- 'Smart' or 'UnderMouse' -->
     <policy>Smart</policy>
-    <!-- whether to place windows in the center of the free area found or
-       the top left corner -->
     <center>yes</center>
-    <!-- with Smart placement on a multi-monitor system, try to place new windows
-       on: 'Any' - any monitor, 'Mouse' - where the mouse is, 'Active' - where
-       the active window is, 'Primary' - only on the primary monitor -->
     <monitor>Primary</monitor>
-    <!-- The monitor where Openbox should place popup dialogs such as the
-       focus cycling popup, or the desktop switch popup.  It can be an index
-       from 1, specifying a particular monitor.  Or it can be one of the
-       following: 'Mouse' - where the mouse is, or
-                  'Active' - where the active window is -->
     <primaryMonitor>1</primaryMonitor>
   </placement>
   <theme>
@@ -57,100 +37,57 @@ Frani 2013 -->
     <animateIconify>no</animateIconify>
     <font place="ActiveWindow">
       <name>Segoe</name>
-      <!-- font size in points -->
       <size>10</size>
-      <!-- 'bold' or 'normal' -->
       <weight>Normal</weight>
-      <!-- 'italic' or 'normal' -->
       <slant>Normal</slant>
     </font>
     <font place="InactiveWindow">
       <name>Segoe</name>
-      <!-- font size in points -->
       <size>10</size>
-      <!-- 'bold' or 'normal' -->
       <weight>Normal</weight>
-      <!-- 'italic' or 'normal' -->
       <slant>Normal</slant>
     </font>
     <font place="MenuHeader">
       <name>Segoe</name>
-      <!-- font size in points -->
       <size>10</size>
-      <!-- 'bold' or 'normal' -->
       <weight>Normal</weight>
-      <!-- 'italic' or 'normal' -->
       <slant>Normal</slant>
     </font>
     <font place="MenuItem">
       <name>Segoe</name>
-      <!-- font size in points -->
       <size>10</size>
-      <!-- 'bold' or 'normal' -->
       <weight>Normal</weight>
-      <!-- 'italic' or 'normal' -->
       <slant>Normal</slant>
     </font>
     <font place="ActiveOnScreenDisplay">
       <name>Segoe</name>
-      <!-- font size in points -->
       <size>10</size>
-      <!-- 'bold' or 'normal' -->
       <weight>Normal</weight>
-      <!-- 'italic' or 'normal' -->
       <slant>Normal</slant>
     </font>
     <font place="InactiveOnScreenDisplay">
       <name>Segoe</name>
-      <!-- font size in points -->
       <size>10</size>
-      <!-- 'bold' or 'normal' -->
       <weight>Bold</weight>
-      <!-- 'italic' or 'normal' -->
       <slant>Normal</slant>
     </font>
   </theme>
   <desktops>
-    <!-- this stuff is only used at startup, pagers allow you to change them
-       during a session
-
-       these are default values to use when other ones are not already set
-       by other applications, or saved in your session
-
-       use obconf if you want to change these without having to log out
-       and back in -->
     <number>9</number>
     <firstdesk>1</firstdesk>
     <names>
-      <!-- set names up here if you want to, like this:
-    <name>desktop 1</name>
-    <name>desktop 2</name>
-    -->
     </names>
-    <!-- The number of milliseconds to show the popup for when switching
-       desktops.  Set this to 0 to disable the popup. -->
     <popupTime>875</popupTime>
   </desktops>
   <resize>
     <drawContents>yes</drawContents>
-    <!-- 'Always', 'Never', or 'Nonpixel' (xterms and such) -->
     <popupShow>Nonpixel</popupShow>
-    <!-- 'Center', 'Top', or 'Fixed' -->
     <popupPosition>Center</popupPosition>
     <popupFixedPosition>
-      <!-- these are used if popupPosition is set to 'Fixed' -->
       <x>0</x>
-      <!-- positive number for distance from left edge, negative number for
-         distance from right edge, or 'Center' -->
       <y>0</y>
-      <!-- positive number for distance from top edge, negative number for
-         distance from bottom edge, or 'Center' -->
     </popupFixedPosition>
   </resize>
-  <!-- You can reserve a portion of your screen where windows will not cover when
-     they are maximized, or when they are initially placed.
-     Many programs reserve space automatically, but you can use this in other
-     cases. -->
   <margins>
     <top>28</top>
     <bottom>0</bottom>
@@ -158,26 +95,23 @@ Frani 2013 -->
     <right>0</right>
   </margins>
   <dock>
-    <!-- (Top|Bottom)(Left|Right|)|Top|Bottom|Left|Right|Floating -->
     <position>Top</position>
     <floatingX>0</floatingX>
     <floatingY>0</floatingY>
     <noStrut>no</noStrut>
-    <!-- 'Above', 'Normal', or 'Below' -->
     <stacking>Normal</stacking>
-    <!-- 'Vertical' or 'Horizontal' -->
     <direction>Horizontal</direction>
     <autoHide>no</autoHide>
     <hideDelay>300</hideDelay>
-    <!-- in milliseconds (1000 = 1 second) -->
     <showDelay>300</showDelay>
-    <!-- in milliseconds (1000 = 1 second) -->
     <moveButton>Middle</moveButton>
-    <!-- 'Left', 'Middle', 'Right' -->
   </dock>
+
+  <!-- Keybindings -->
   <keyboard>
     <chainQuitKey>C-g</chainQuitKey>
-    <!-- Keybindings -->
+
+
     <!-- desktop switching -->
     <keybind key="C-A-Left">
       <action name="GoToDesktop">
@@ -275,6 +209,7 @@ Frani 2013 -->
     <keybind key="W-d">
       <action name="ToggleShowDesktop"/>
     </keybind>
+    
     <!-- windows -->
     <keybind key="A-F4">
       <action name="Close"/>
@@ -295,6 +230,7 @@ Frani 2013 -->
     <keybind key="W-l">
       <action name="ToggleAlwaysOnBottom"/>
     </keybind>
+    
     <!-- window switching -->
     <keybind key="A-Tab">
       <action name="NextWindow">
@@ -320,6 +256,7 @@ Frani 2013 -->
         <dialog>list</dialog>        
       </action>
     </keybind>
+    
     <!-- window switching with the arrow keys -->
     <keybind key="W-A-Right">
       <action name="DirectionalCycleWindows">
@@ -341,6 +278,7 @@ Frani 2013 -->
         <direction>down</direction>
       </action>
     </keybind>
+    
     <!-- tile windows -->
     <keybind key="W-Left">
       <action name="UnmaximizeFull"/>
@@ -368,6 +306,7 @@ Frani 2013 -->
     <keybind key="W-Up">
       <action name="Maximize"/>
     </keybind>
+
    <!-- resize and move windows with the arrow keys -->
    <keybind key="W-R">
      <action name="Resize">
@@ -377,48 +316,23 @@ Frani 2013 -->
      <action name="Move">
      </action>
    </keybind>
-   <!-- audio keys -->
-    <keybind key="F12">    <!--XF86AudioRaiseVolume"-->
-      <action name="Execute">
-        <command>volume increase</command>
-      </action>
-    </keybind>
-    <keybind key="F11">   <!--XF86AudioLowerVolume"-->
-      <action name="Execute">
-        <command>volume decrease</command>
-      </action>
-    </keybind>
-    <keybind key="F10">    <!--XF86AudioMute"-->
-      <action name="Execute">
-        <command>volume toggle</command>
-      </action>
-    </keybind>
-    <!-- keyboard backlight keys -->
-    <keybind key="XF86KbdBrightnessUp">
-      <action name="Execute">
-        <command>asus-kbd-backlight up</command>
-      </action>
-    </keybind>
-    <keybind key="XF86KbdBrightnessDown">
-      <action name="Execute">
-        <command>asus-kbd-backlight down</command>
-      </action>
-    </keybind>
-    <!-- running applications -->
-    <keybind key="C-A-t">
-      <action name="Execute">
-        <startupnotify>
-          <enabled>true</enabled>
-          <name>terminal</name>
-        </startupnotify>
-        <command>urxvt</command>
-      </action>
+
+   <!-- running applications -->
+   <keybind key="C-A-t">
+     <action name="Execute">
+       <startupnotify>
+         <enabled>true</enabled>
+         <name>terminal</name>
+       </startupnotify>
+       <command>urxvtdc</command>
+     </action>
     </keybind>
     <keybind key="Print">
       <action name="Execute">
         <command>ksnapshot</command>
       </action>
     </keybind>
+
     <!-- olgaaa! -->
     <keybind key="A-F2">
       <action name="Execute">
@@ -428,6 +342,56 @@ Frani 2013 -->
         <command>olgaaa</command>
       </action>
     </keybind>
+
+    <!-- scratchpad -->
+    <keybind key="W-grave">
+      <action name="Execute">
+        <execute>urxvtq</execute>
+      </action>
+    </keybind>
+
+   <!-- audio keys -->
+    <keybind key="F12">    <!--XF86AudioRaiseVolume"-->
+      <action name="Execute">
+        <command>volume up</command>
+      </action>
+    </keybind>
+    <keybind key="F11">   <!--XF86AudioLowerVolume"-->
+      <action name="Execute">
+        <command>volume down</command>
+      </action>
+    </keybind>
+    <keybind key="F10">    <!--XF86AudioMute"-->
+      <action name="Execute">
+        <command>volume toggle</command>
+      </action>
+    </keybind>
+
+    <!-- keyboard backlight keys -->
+    <keybind key="XF86KbdBrightnessUp">
+      <action name="Execute">
+        <command>kbd-backlight up</command>
+      </action>
+    </keybind>
+    <keybind key="XF86KbdBrightnessDown">
+      <action name="Execute">
+        <command>kbd-backlight down</command>
+      </action>
+    </keybind>
+
+    <!-- screen backlight keys -->
+    <keybind key="XF86MonBrightnessUp">
+      <action name="Execute">
+        <command>screen-backlight up</command>
+      </action>
+    </keybind>
+    <keybind key="XF86MonBrightnessDown">
+      <action name="Execute">
+        <command>screen-backlight down</command>
+      </action>
+    </keybind>
+
+
     <!-- <keybind key="A-F12"> -->
     <!--   <keybind key="a"> -->
     <!-- 	<action name="Execute"> -->
@@ -796,121 +760,28 @@ Frani 2013 -->
     </context>
   </mouse>
   <menu>
-    <!-- You can specify more than one menu file in here and they are all loaded,
-	 just don't make menu ids clash or, well, it'll be kind of pointless -->
-    <!-- default menu file (or custom one in $HOME/.config/openbox/) -->
     <file>menu.xml</file>
-    <!-- if a press-release lasts longer than this setting (in milliseconds), the
-	 menu is hidden again -->
     <hideDelay>200</hideDelay>
-    <!-- center submenus vertically about the parent entry -->
     <middle>no</middle>
-    <!-- time to delay before showing a submenu after hovering over the parent entry.
-	 if this is a negative value, then the delay is infinite and the
-	 submenu will not be shown until it is clicked on -->
     <submenuShowDelay>100</submenuShowDelay>
-    <!-- time to delay before hiding a submenu when selecting another
-	 entry in parent menu -->
-    <!--if this is a negative value, then the delay is infinite and the
-	submenu will not be hidden until a different submenu is opened -->
     <submenuHideDelay>400</submenuHideDelay>
-    <!-- controls if icons appear in the client-list-(combined-)menu -->
     <applicationIcons>yes</applicationIcons>
-    <!-- show the manage desktops section in the client-list-(combined-)menu -->
     <manageDesktops>no</manageDesktops>
   </menu>
   <applications>
-    <!--
-	# this is an example with comments through out. use these to make your
-	# own rules, but without the comments of course.
-	# you may use one or more of the name/class/role/title/type rules to specify
-	# windows to match
-	
-	<application name="the window's _OB_APP_NAME property (see obxprop)"
-	class="the window's _OB_APP_CLASS property (see obxprop)"
-	role="the window's _OB_APP_ROLE property (see obxprop)"
-	title="the window's _OB_APP_TITLE property (see obxprop)"
-        type="the window's _OB_APP_TYPE property (see obxprob)..
-        (if unspecified, then it is 'dialog' for child windows)">
-	# you may set only one of name/class/role/title/type, or you may use more
-	# than one together to restrict your matches.
-	
-	# the name, class, role, and title use simple wildcard matching such as those
-	# used by a shell. you can use * to match any characters and ? to match
-	# any single character.
-	
-	# the type is one of: normal, dialog, splash, utility, menu, toolbar, dock,
-	#    or desktop
-	
-	# when multiple rules match a window, they will all be applied, in the
-	# order that they appear in this list
-	
-	
-	# each rule element can be left out or set to 'default' to specify to not 
-	# change that attribute of the window
-	
-	<decor>yes</decor>
-	# enable or disable window decorations
-	
-	<shade>no</shade>
-	# make the window shaded when it appears, or not
-	
-	<position force="no">
-	# the position is only used if both an x and y coordinate are provided
-	# (and not set to 'default')
-	# when force is "yes", then the window will be placed here even if it
-	# says you want it placed elsewhere.  this is to override buggy
-	# applications who refuse to behave
-	<x>center</x>
-	# a number like 50, or 'center' to center on screen. use a negative number
-	# to start from the right (or bottom for <y>), ie -50 is 50 pixels from the
-	# right edge (or bottom).
-	<y>200</y>
-	<monitor>1</monitor>
-	# specifies the monitor in a xinerama setup.
-	# 1 is the first head, or 'mouse' for wherever the mouse is
-	</position>
-	
-	<focus>yes</focus>
-	# if the window should try be given focus when it appears. if this is set
-	# to yes it doesn't guarantee the window will be given focus. some
-	# restrictions may apply, but Openbox will try to
-	
-	<desktop>1</desktop>
-	# 1 is the first desktop, 'all' for all desktops
-	
-	<layer>normal</layer>
-	# 'above', 'normal', or 'below'
-	
-	<iconic>no</iconic>
-	# make the window iconified when it appears, or not
-	
-	<skip_pager>no</skip_pager>
-	# asks to not be shown in pagers
-	
-	<skip_taskbar>no</skip_taskbar>
-	# asks to not be shown in taskbars. window cycling actions will also
-	# skip past such windows
-	
-	<fullscreen>yes</fullscreen>
-	# make the window in fullscreen mode when it appears
-	
-	<maximized>true</maximized>
-	# 'Horizontal', 'Vertical' or boolean (yes/no)
-	</application>
-	
-	# end of the example
-    -->
 
-    <!-- <application class="Chromium"> -->
-    <!--   <desktop>1</desktop> -->
-    <!--   <maximized>yes</maximized> -->
-    <!--   <decor>no</decor> -->
-    <!-- </application> -->
-
-    <!-- <application class="URxvt"> -->
-    <!--   <decor>no</decor> -->
-    <!-- </application> -->
+    <application name="urxvtq">
+      <decor>no</decor>
+      <position force="yes">
+        <x>center</x>
+        <y>0</y>
+      </position>
+      <desktop>all</desktop>
+      <layer>above</layer>
+      <skip_pager>yes</skip_pager>
+      <skip_taskbar>yes</skip_taskbar>
+      <maximized>Horizontal</maximized>
+    </application>
     
   </applications>
 </openbox_config>

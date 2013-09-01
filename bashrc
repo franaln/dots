@@ -10,9 +10,10 @@ export HISTIGNORE="&:ls:[bf]g:exit:[cxh]:a\ "
 HISTCONTROL=$HISTCONTROL${HISTCONTROL+:}ignoredups
 HISTCONTROL=ignoreboth
 
-
 shopt -s histappend
 shopt -s checkwinsize
+
+complete -cf sudo
 
 # autocd
 shopt -s autocd

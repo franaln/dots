@@ -3,14 +3,15 @@ setxkbmap -layout us &
 conf_touchpad.sh &
 nitrogen --restore & 
 setlayout 0 3 3 0 &
+allowusers &
 tint2 &
-batterytray &
-voltray &
+battery-tray &
+volume-tray &
 nm-applet --sm-disable &
 urxvtd -q -o -f &
 skippy-xd --start-daemon &
 dunst -conf $HOME/.dunstrc &
 mpd ~/.config/mpd/mpd.conf &
 (sleep 5 && dropboxd) &
-#(sleep 5 && kdeinit) &
-#(sleep 5 && archtray) &
+
+
