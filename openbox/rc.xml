@@ -770,6 +770,16 @@ Frani 2013 -->
   </menu>
   <applications>
 
+    <application class="Firefox">
+      <decor>no</decor>
+      <desktop>1</desktop>
+      <maximized>true</maximized>
+    </application>
+    <application name="chromium">
+      <maximized>true</maximized>
+      <desktop>1</desktop>
+    </application>
+
     <application name="urxvtq">
       <decor>no</decor>
       <position force="yes">

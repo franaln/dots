@@ -35,7 +35,6 @@ cl() {
 
 # load root
 lroot () {
-    
     if [ $1 == "32" ] ; then 
         echo ":: ROOT 5.32.04"
         export ROOTSYS=$HOME/root/root-5.32.04
@@ -50,7 +49,6 @@ lroot () {
     export PATH=$PATH:$ROOTSYS/bin
     export LD_LIBRARY_PATH=$ROOTSYS/lib:$LD_LIBRARY_PATH:$PYTHONDIR/lib
     export PYTHONPATH=$ROOTSYS/lib:$PYTHONPATH
-
 }
 
 
