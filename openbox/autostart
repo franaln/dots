@@ -3,7 +3,6 @@ setxkbmap -layout us &
 conf_touchpad.sh &
 nitrogen --restore & 
 setlayout 0 3 3 0 &
-allowusers &
 tint2 &
 battery-tray &
 volume-tray &
