@@ -11,7 +11,6 @@
 
 (add-to-list 'load-path "~/.emacs.d")
 
-
 ;; Entra en modo de coloreado por sintaxis
 (global-font-lock-mode t)
 
@@ -20,21 +19,11 @@
 (show-paren-mode)
 (setq show-paren-mismatch t)
 
-;; custom config
-(require 'custom-modeline)
-(require 'custom-fns)
-(require 'custom-keys)
-
-;; Backups
-;;(setq make-backup-files nil) ; stop creating those backup~ files
-;;(setq auto-save-default nil) ; stop creating those #autosave# files
-
 ;; store all backup and autosave files in the tmp dir
 (setq backup-directory-alist
       `((".*" . , "~/temp/emacs-backups/")))
 (setq auto-save-file-name-transforms
       `((".*" , "~/temp/emacs-backups/" t)))
-
 
 ;; Don't add blank lines at the end
 (setq next-line-add-newlines nil)
@@ -55,7 +44,6 @@
  '(show-paren-mode t nil (paren))
  '(transient-mark-mode t)
  '(uniquify-buffer-name-style (quote post-forward-angle-brackets) nil (uniquify)))
-
 
 ;; Autoloads (aka, the way to make emacs fast)
 (autoload 'hide-ifdef-define "hideif" nil t)
@@ -87,19 +75,18 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 
 
-(defun select-next-window ()
-  "Switch to the next window" 
-  (interactive)
-  (select-window (next-window)))
+;; (defun select-next-window ()
+;;   "Switch to the next window" 
+;;   (interactive)
+;;   (select-window (next-window)))
 
-(defun select-previous-window ()
-  "Switch to the previous window" 
-  (interactive)
-  (select-window (previous-window)))
+;; (defun select-previous-window ()
+;;   "Switch to the previous window" 
+;;   (interactive)
+;;   (select-window (previous-window)))
 
-
-(when (fboundp 'windmove-default-keybindings)
-  (windmove-default-keybindings))
+;; (when (fboundp 'windmove-default-keybindings)
+;;   (windmove-default-keybindings))
 
 ;; autorefresh files
 (global-auto-revert-mode t)
@@ -107,3 +94,8 @@
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
 (setq indent-line-function 'insert-tab)
+
+;; custom config
+(require 'custom-modeline)
+(require 'custom-fns)
+(require 'custom-keys)
