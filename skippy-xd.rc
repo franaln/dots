@@ -44,8 +44,8 @@ opacity = 200
 
 [highlight]
 tint = #101020
-tintOpacity = 64
-opacity = 255
+tintOpacity = 50
+opacity = 250
 
 [tooltip]
 show = true

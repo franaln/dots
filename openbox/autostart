@@ -9,9 +9,9 @@ battery-tray &
 volume-tray &
 nm-applet --sm-disable &
 urxvtd -q -o -f &
+compton &
 skippy-xd --start-daemon &
 dunst -conf $HOME/.dunstrc &
-mpd ~/.config/mpd/mpd.conf &
+mpd /home/fran/.config/mpd/mpd.conf &
 (sleep 5 && dropboxd) &
-
 
