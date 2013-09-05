@@ -74,19 +74,18 @@
 
 (fset 'yes-or-no-p 'y-or-n-p)
 
+(defun select-next-window ()
+  "Switch to the next window" 
+  (interactive)
+  (select-window (next-window)))
 
-;; (defun select-next-window ()
-;;   "Switch to the next window" 
-;;   (interactive)
-;;   (select-window (next-window)))
+(defun select-previous-window ()
+  "Switch to the previous window" 
+  (interactive)
+  (select-window (previous-window)))
 
-;; (defun select-previous-window ()
-;;   "Switch to the previous window" 
-;;   (interactive)
-;;   (select-window (previous-window)))
-
-;; (when (fboundp 'windmove-default-keybindings)
-;;   (windmove-default-keybindings))
+(when (fboundp 'windmove-default-keybindings)
+  (windmove-default-keybindings))
 
 ;; autorefresh files
 (global-auto-revert-mode t)
@@ -94,6 +93,14 @@
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
 (setq indent-line-function 'insert-tab)
+
+;; yasnippet
+(add-to-list 'load-path
+              "~/.emacs.d/plugins/yasnippet")
+(require 'yasnippet)
+(setq yas-snippet-dirs '("~/.emacs.d/snippets"))  
+(yas-global-mode 1)
+
 
 ;; custom config
 (require 'custom-modeline)
