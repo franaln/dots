@@ -44,7 +44,6 @@ alias du='du -sh'
 alias loadfonts='df-cache -v'
 alias bd='. bd -s'
 
-
 if [[ `uname -v` == "*Ubuntu*" ]] ; then
     # apt-get and aptitude
     alias apu='sudo apt-get update'
@@ -74,3 +73,9 @@ alias mv='mv -i'
 alias rm='rm -I'
 alias ln='ln -i'
 
+# git
+alias gst='git status'
+alias gci='git commit'
+alias gpull='git pull'
+alias gpush='git push'
+alias gadd='git add'
