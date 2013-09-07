@@ -11,6 +11,5 @@ urxvtd -q -o -f &
 compton &
 skippy-xd --start-daemon &
 dunst -conf $HOME/.dunstrc &
-mpd /home/fran/.config/mpd/mpd.conf &
 (sleep 5 && dropboxd) &
 
