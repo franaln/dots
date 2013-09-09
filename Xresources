@@ -1,14 +1,14 @@
 
-!-[Font Rendering]-----
+!- Font Rendering -
 Xft.dpi:          99
 Xft.lcdfilter:	 lcdslight
 Xft.antialias:	 true
 Xft.rgba:        rgb
 Xft.hinting:	 true
 
-!-[URxvt Settings]----
+!- urxvt Settings -
 URxvt.termName: rxvt
-URxvt.modifier:             alt
+URxvt.modifier: alt
 !URxvt.font:xft:Tamsyn:autohint=true:pixelsize=18
 !URxvt*.font: xft:Dina:size=13:antialias=false
 URxvt.font:xft:Inconsolata-Regular:pixelSize=10
@@ -20,18 +20,22 @@ URxvt.geometry:		160x50
 URxvt.cursorBlink: false
 URxvt.scrollBar: false
 URxvt.saveLines: 5000
-URxvt.perl-ext-common: default,matcher
-URxvt.urlLauncher: chromium
-URxvt.colorUL: #66cccc
-URxvt.matcher.button: 1
-URxvt.tabbed.tabbar-fg: 10
-URxvt.tabbed.tabbar-bg: #222222
-URxvt.tabbed.tab-fg: 4
-URxvt.tabbed.tab-bg: #222222
 URxvt.letterSpace:-2
+
+!- urls and tabs
+URxvt.perl-ext-common: default,matcher
+URxvt.url-launcher: chromium
+URxvt.matcher.button:   1
+URxvt.colorUL: #4667b4
+
+! URxvt.tabbed.tabbar-fg: 10
+! URxvt.tabbed.tabbar-bg: #222222
+! URxvt.tabbed.tab-fg: 4
+! URxvt.tabbed.tab-bg: #222222
+
 *fading: 0
 
-!-[Colours]----
+!- colours -
 *.foreground:   #cccccc
 *.background:   #1a1a1a
 *.cursorColor:  #4a49ca
