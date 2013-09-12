@@ -8,7 +8,7 @@ Xft.hinting:	 true
 
 !- urxvt Settings -
 URxvt.termName: rxvt
-URxvt.modifier: alt
+!URxvt.modifier: alt
 !URxvt.font:xft:Tamsyn:autohint=true:pixelsize=18
 !URxvt*.font: xft:Dina:size=13:antialias=false
 URxvt.font:xft:Inconsolata-Regular:pixelSize=10
@@ -22,86 +22,60 @@ URxvt.scrollBar: false
 URxvt.saveLines: 5000
 URxvt.letterSpace:-2
 
-!- urls and tabs
+!- urls 
 URxvt.perl-ext-common: default,matcher
 URxvt.url-launcher: chromium
 URxvt.matcher.button:   1
 URxvt.colorUL: #4667b4
 
-! URxvt.tabbed.tabbar-fg: 10
-! URxvt.tabbed.tabbar-bg: #222222
-! URxvt.tabbed.tab-fg: 4
-! URxvt.tabbed.tab-bg: #222222
-
 *fading: 0
 
-!- colours -
-*.foreground:   #cccccc
-*.background:   #1a1a1a
-*.cursorColor:  #4a49ca
+! Colours (TomorrowNight)
+#define t_background        #1d1f21
+#define t_current_line      #282a2e
+#define t_selection      	#373b41
+#define t_foreground      	#c5c8c6
+#define t_comment	     	#969896
+#define t_red		     	#cc6666
+#define t_orange	     	#de935f
+#define t_yellow        	#f0c674
+#define t_green	        	#b5bd68
+#define t_aqua	        	#8abeb7
+#define t_blue	        	#81a2be
+#define t_purple        	#b294bb
+
+*.foreground:   t_foreground
+*.background:   t_background
+*.cursorColor:  #aeafad
 
 ! Black / Grey
 *.color0:       #2f2f2f
 *.color8:       #4d4d4d
 
 ! Red / Bright Red
-*.color1:       #e84f4f
-*.color9:       #d23d3d
+*.color1:       t_red
+*.color9:       #FF3334
 
-! Green + Bright Green 
-*.color2:       #89c966  
-*.color10:      #66c975
+! Green + Bright Green
+*.color2:       t_green
+*.color10:      #9ec400
 
 ! Yellow (Orange) + Bright Yellow (Yellow)
-*.color3:       #e1aa5d
-*.color11:      #f39d21
+*.color3:       t_orange
+*.color11:      t_yellow
 
 ! Blue + Bright Blue
-*.color4:       #7d99cf
-*.color12:      #456dba
+*.color4:       t_blue
+*.color12:      t_blue
 
 ! Magenta (Purple) + Bright Magenta
-*.color5:       #9864fb
-*.color13:      #8542ff
+*.color5:       t_purple
+*.color13:      #b777e0
 
 ! Cyan (Aqua) + Bright Cyan
-*.color6:       #6d878d
-*.color14:      #7aadb8
+*.color6:       t_aqua
+*.color14:      #54ced6
 
 ! Light Grey (Selection) + White (Current Line)
-*.color7:       #dddddd
-*.color15:      #dddddd
-
-
-! *foreground:  #bcbcaf
-! *background:  #1c1c1c
-! *borderColor: #1c1c1c
-! *cursorColor: #c7a551
-! *colorUL:     #6a8c8c
-
-! !black
-! *color0:      #232323
-! *color8:      #464646
-! !red
-! *color1:      #a04363
-! *color9:      #ae837a
-! !green
-! *color2:      #9b9329
-! *color10:     #b4aa30
-! !yellow
-! *color3:      #bf7a29
-! *color11:     #c7a551
-! !blue
-! *color4:      #6a8c8c
-! *color12:     #74999e
-! !magenta
-! *color5:      #856774
-! *color13:     #9c818e
-! !cyan
-! *color6:      #757978
-! *color14:     #9fa590
-! !white
-! *color7:      #bcbcaf
-! *color15:     #c1c4bc
-
-
+*.color7:       t_foreground
+*.color15:      t_foreground
