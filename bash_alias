@@ -1,3 +1,4 @@
+# -*- mode: sh -*-
 # bash aliases
 # frani
 
@@ -5,12 +6,12 @@
 alias sl='ls'
 alias ll='ls -lh'
 alias la='ls -A'
-alias l='ls -CF'
 
 # emacs
 alias emw='emacs -nw'
 alias ewm='emacs -nw'
 alias em='emacs -nw'
+alias e='emacs -nw'
 
 # python
 alias python='python2.7'
@@ -41,8 +42,7 @@ alias diff='colordiff'              # requires colordiff package
 alias grep='grep --color=auto'
 alias df='df -h'
 alias du='du -sh'
-alias loadfonts='df-cache -v'
-alias bd='. bd -s'
+alias loadfonts='fc-cache -v'
 
 if [[ `uname -v` == "*Ubuntu*" ]] ; then
     # apt-get and aptitude
@@ -79,3 +79,4 @@ alias gci='git commit'
 alias gpull='git pull'
 alias gpush='git push'
 alias gadd='git add'
+
