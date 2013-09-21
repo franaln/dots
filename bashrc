@@ -1,9 +1,10 @@
+# -*- mode: shell -*-
 # .bashrc
 # frani
 
 # custom PS1
 [ -z "$PS1" ] && return
-PS1='\[\e[0;32m\][\u@\h]\[\e[m\] \w $ '
+PS1='\[\e[1;34m\][\u@\h]\[\e[m\] \w $ '
 
 export HISTIGNORE="&:ls:[bf]g:exit:[cxh]:a\ "
 
