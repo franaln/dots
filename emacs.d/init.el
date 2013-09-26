@@ -101,6 +101,8 @@
 (setq yas-snippet-dirs '("~/.emacs.d/snippets"))  
 (yas-global-mode 1)
 
+(custom-set-variables
+ '(tab-width 4))
 
 ;; custom config
 (require 'custom-modeline)

@@ -43,6 +43,7 @@ alias grep='grep --color=auto'
 alias df='df -h'
 alias du='du -sh'
 alias loadfonts='fc-cache -v'
+alias nocomment='grep -Ev "^(#|$)"'
 
 if [[ `uname -v` == "*Ubuntu*" ]] ; then
     # apt-get and aptitude

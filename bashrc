@@ -1,4 +1,4 @@
-# -*- mode: shell -*-
+# -*- mode: sh -*-
 # .bashrc
 # frani
 
