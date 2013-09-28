@@ -15,9 +15,4 @@
 
 (global-set-key (kbd "C-c +") 'increment-number-at-point)
 
-(global-set-key (kbd "M-<left>") 'windmove-left)          ; move to left windnow
-(global-set-key (kbd "M-<right>") 'windmove-right)        ; move to right window
-(global-set-key (kbd "M-<up>") 'windmove-up)              ; move to upper window
-(global-set-key (kbd "M-<down>") 'windmove-down)          ; move to downer window
-
 (provide 'custom-keys)

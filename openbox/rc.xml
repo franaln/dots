@@ -32,7 +32,7 @@ Frani 2013 -->
       S: shade (roll up/down)
       D: omnipresent (on all desktops).
     -->
-    <titleLayout>LIMC</titleLayout>
+    <titleLayout>IMC</titleLayout>
     <keepBorder>no</keepBorder>
     <animateIconify>no</animateIconify>
     <font place="ActiveWindow">

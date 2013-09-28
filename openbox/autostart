@@ -8,8 +8,6 @@ battery-tray &
 volume-tray &
 nm-applet --sm-disable &
 urxvtd -q -o -f &
-compton &
-skippy-xd --start-daemon &
 dunst -conf $HOME/.dunstrc &
 (sleep 5 && dropboxd) &
 
