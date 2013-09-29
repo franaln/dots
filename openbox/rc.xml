@@ -370,24 +370,24 @@ Frani 2013 -->
     <!-- keyboard backlight keys -->
     <keybind key="XF86KbdBrightnessUp">
       <action name="Execute">
-        <command>kbd-backlight up</command>
+        <command>kbdbacklight up</command>
       </action>
     </keybind>
     <keybind key="XF86KbdBrightnessDown">
       <action name="Execute">
-        <command>kbd-backlight down</command>
+        <command>kbdbacklight down</command>
       </action>
     </keybind>
 
     <!-- screen backlight keys -->
     <keybind key="XF86MonBrightnessUp">
       <action name="Execute">
-        <command>screen-backlight up</command>
+        <command>screenbacklight up</command>
       </action>
     </keybind>
     <keybind key="XF86MonBrightnessDown">
       <action name="Execute">
-        <command>screen-backlight down</command>
+        <command>screenbacklight down</command>
       </action>
     </keybind>
 
