@@ -6,7 +6,7 @@
 [ -z "$PS1" ] && return
 PS1='\[\e[1;34m\][\u@\h]\[\e[m\] \w $ '
 
-export HISTIGNORE="&:ls:[bf]g:exit:[cxh]:a\ "
+export HISTIGNORE="&:ls:ll:[bf]g:exit:[cxh]:a\ "
 
 HISTCONTROL=$HISTCONTROL${HISTCONTROL+:}ignoredups
 HISTCONTROL=ignoreboth
@@ -54,7 +54,4 @@ fi
 if [ -f ~/.bash_private ] ; then 
     . ~/.bash_private  
 fi
-
-# easy navigation :)
-[ -f ~/bin/z.sh ] && . ~/bin/z.sh
 

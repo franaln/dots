@@ -17,7 +17,8 @@ export SVNUNLP='svn+ssh://svn.cern.ch/reps/UNLP'
 # add to path
 export PATH=$MYBIN:$PATH
 
-
+# python path
+export PYTHONPATH=~/dev/simpleroot:$PYTHONPATH
 
 
 

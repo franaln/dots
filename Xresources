@@ -22,16 +22,22 @@ URxvt.scrollBar: false
 URxvt.saveLines: 5000
 URxvt.letterSpace:-2
 
-!- urls 
-!URxvt.perl-ext-common: default,matcher
-!URxvt.url-launcher: chromium
+!- perl extensions
+URxvt.perl-ext-common: matcher, font-size
+!URxvt.url-launcher: chromium   
 !URxvt.matcher.button:   1
 !URxvt.colorUL: #4667b4
+
+URxvt.keysym.C-S-Up:     perl:font-size:increase
+URxvt.keysym.C-S-Down:   perl:font-size:decrease
+
+URxvt.iso14755: false
+URxvt.iso14755_52: false
 
 *fading: 0
 
 ! Colours (TomorrowNight)
-#define t_background        #1d1f21
+#define t_background        #111213
 #define t_current_line      #282a2e
 #define t_selection      	#373b41
 #define t_foreground      	#c5c8c6
