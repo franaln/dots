@@ -1,5 +1,5 @@
 ;; -- emacs init --
-;; frani
+;; -- frani
 
 ;; turn off mouse interface early in startup to avoid momentary display
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
@@ -17,11 +17,11 @@
 
 ;; highlight current line
 (global-hl-line-mode 1)
-(set-face-background 'hl-line "#a4e486")
+(set-face-background 'hl-line "#1d1f20")
+(set-face-foreground 'hl-line "#ffffff")
 
 ;; don't defer screen updates when performing operations
 (setq redisplay-dont-pause t)
-(require 'appearance)
 
 ;; show matching paretheses
 (require 'paren)
@@ -73,26 +73,27 @@
 ;; autorefresh files
 (global-auto-revert-mode t)
 
+;; setup org
+(eval-after-load 'org '(require 'setup-org))
+
 ;; setup extensions
 (add-to-list 'load-path "~/.emacs.d/plugins")
+(require 'setup-yasnippet)
 
 ;; sane defaults
 (require 'sane-defaults)
-
-
-(require 'setup-yasnippet)
 
 ;; custom config
 (require 'custom-modeline)
 (require 'custom-fns)
 (require 'custom-keys)
 
-;; Run at full power please
+;; run at full power please
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
 (put 'narrow-to-region 'disabled nil)
 
-;; Autoloads (aka, the way to make emacs fast)
+;; autoloads (aka, the way to make emacs fast)
 (autoload 'hide-ifdef-define "hideif" nil t)
 (autoload 'hide-ifdef-undef  "hideif" nil t)
 (autoload 'c-mode "cc-mode" "C Editing Mode" t)
@@ -117,8 +118,8 @@
 (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 
+;; fix for shift+up (bug in xterm)
 (if (equal "xterm" (tty-type))
     (define-key input-decode-map "\e[1;2A" [S-up]))
-
 (defadvice terminal-init-xterm (after select-shift-up activate)
   (define-key input-decode-map "\e[1;2A" [S-up]))

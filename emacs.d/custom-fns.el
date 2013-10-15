@@ -1,7 +1,7 @@
-;; custom funs for emacs
+;; -- emacs fns
 ;; frani
 
-;; Delete the current file
+;; delete the current file
 (defun delete-this-file ()
   "Delete the current file, and kill the buffer."
   (interactive)
@@ -11,7 +11,7 @@
     (delete-file (buffer-file-name))
     (kill-this-buffer)))
 
-;; Rename the current file
+;; rename the current file
 (defun rename-this-file-and-buffer (new-name)
   "Renames both current buffer and file it's visiting to NEW-NAME."
   (interactive "sNew name: ")

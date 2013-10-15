@@ -1,4 +1,6 @@
-;; Mode line setup
+;; -- emacs modeline
+;; frani
+
 (setq-default
  mode-line-format
  '(; Position, including warning for 80 columns

@@ -1,4 +1,4 @@
-;; Keys for emacs! (and useful functions)
+;; -- emacs keys 
 ;; frani
 
 ;; I don't need to kill emacs that easily
