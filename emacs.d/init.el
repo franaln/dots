@@ -1,25 +1,32 @@
-;; emacs init
+;; -- emacs init --
 ;; frani
 
-;; turn off menubar/toolbar/scrollbar/splash screen
+;; turn off mouse interface early in startup to avoid momentary display
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
-(setq inhibit-startup-message t)
-(fset 'yes-or-no-p 'y-or-n-p)
 
+;; no splash screen please
+(setq inhibit-startup-message t)
+
+;; setup load path
 (add-to-list 'load-path "~/.emacs.d")
 
 ;; enter syntaxis color mode
 (global-font-lock-mode t)
 
-;; set up appearance
-;;(require 'appearance)
+;; highlight current line
+(global-hl-line-mode 1)
+(set-face-background 'hl-line "#a4e486")
 
-;; show 
-;; (require 'paren)
-;; (show-paren-mode)
-;; (setq show-paren-mismatch t)
+;; don't defer screen updates when performing operations
+(setq redisplay-dont-pause t)
+(require 'appearance)
+
+;; show matching paretheses
+(require 'paren)
+(show-paren-mode)
+(setq show-paren-mismatch t)
 
 ;; tab == 4 spaces
 (custom-set-variables
@@ -49,18 +56,6 @@
 (setq-default save-place t)
 (setq save-place-file (expand-file-name ".places" user-emacs-directory))
 
-(custom-set-variables
- '(auto-compression-mode t nil (jka-compr))
- '(case-fold-search t)
- '(current-language-environment "UTF-8")
- '(default-input-method "rfc1345")
- '(global-font-lock-mode t nil (font-lock))
- '(show-paren-mode t nil (paren))
- '(transient-mark-mode t)
- '(uniquify-buffer-name-style (quote post-forward-angle-brackets) nil (uniquify)))
-
-
-
 ;; switch windows with shift + arrows
 (defun select-next-window ()
   "Switch to the next window" 
@@ -75,26 +70,17 @@
 (when (fboundp 'windmove-default-keybindings)
   (windmove-default-keybindings))
 
-
 ;; autorefresh files
 (global-auto-revert-mode t)
 
-
-;;-- plugins
+;; setup extensions
 (add-to-list 'load-path "~/.emacs.d/plugins")
 
-;; Setup extensions
+;; sane defaults
+(require 'sane-defaults)
+
+
 (require 'setup-yasnippet)
-
-(require 'fold-this)
-;;(global-set-key (kbd "C-c C-f") 'fold-this-all)
-(global-set-key (kbd "C-c C-F") 'fold-this)
-;; (global-set-key (kbd "C-c M-f") 'fold-this-unfold-all)
-
-;; highlight current line
-;; (global-hl-line-mode 1)
-;; (set-face-background 'hl-line "#1a1c1d")
-
 
 ;; custom config
 (require 'custom-modeline)
@@ -112,8 +98,6 @@
 (autoload 'c-mode "cc-mode" "C Editing Mode" t)
 (autoload 'c++-mode "cc-mode" "C++ Editing Mode" t)
 (autoload 'objc-mode "cc-mode" "ObjC Editing Mode" t)
-
-;; Autoloads to my custom header inserters
 (autoload 'insert-c++-seperator-line "e-seperators" nil t)
 (autoload 'insert-c-seperator-line "e-seperators" nil t)
 (autoload 'insert-elisp-seperator-line "e-seperators" nil t)
@@ -132,3 +116,9 @@
 (add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
+
+(if (equal "xterm" (tty-type))
+    (define-key input-decode-map "\e[1;2A" [S-up]))
+
+(defadvice terminal-init-xterm (after select-shift-up activate)
+  (define-key input-decode-map "\e[1;2A" [S-up]))
