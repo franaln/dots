@@ -21,7 +21,7 @@ Frani 2013 -->
     <primaryMonitor>1</primaryMonitor>
   </placement>
   <theme>
-    <name>Numix</name>
+    <name>egtk</name>
     <!--
       available characters are NDSLIMC, each can occur at most once.
       N: window icon
@@ -32,7 +32,7 @@ Frani 2013 -->
       S: shade (roll up/down)
       D: omnipresent (on all desktops).
     -->
-    <titleLayout>IMC</titleLayout>
+    <titleLayout>CLM</titleLayout>
     <keepBorder>no</keepBorder>
     <animateIconify>no</animateIconify>
     <font place="ActiveWindow">

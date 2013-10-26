@@ -9,5 +9,6 @@ volume-tray &
 nm-applet --sm-disable &
 urxvtd -q -o -f &
 dunst -conf $HOME/.dunstrc &
+touchegg &
 (sleep 5 && dropboxd) &
 
