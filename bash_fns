@@ -34,13 +34,16 @@ cl() {
     fi
 }
 
-
-
-
 count() {
     ll $@ | wc -l
 }
 
 search_tar() {
     for i in `ls $1` ; do echo $i && tar -tvf $i | grep $2 ; done
+}
+
+load_root() {
+    cd ~/root/root-5.34.09/bin
+    source thisroot.sh
+    cd - > /dev/null
 }

@@ -46,7 +46,7 @@ alias du='du -sh'
 alias loadfonts='fc-cache -v'
 alias nocomment='grep -Ev "^(#|$)"'
 
-if [[ `uname -v` == "*Ubuntu*" ]] ; then
+if [[ `uname -v` == *"Ubuntu"* ]] ; then
     # apt-get and aptitude
     alias apu='sudo apt-get update'
     alias apg='sudo apt-get upgrade'
