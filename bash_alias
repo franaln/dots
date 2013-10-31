@@ -60,6 +60,7 @@ else
     alias paci='sudo pacman -S'
     alias pacr='sudo pacman -R'
     alias pacs='pacsearch'
+    alias pacro="/usr/bin/pacman -Qtdq > /dev/null && sudo /usr/bin/pacman -Rns \$(/usr/bin/pacman -Qtdq | sed -e ':a;N;\$!ba;s/\n/ /g')"
     
     # packer
     alias packer='packer --auronly'
