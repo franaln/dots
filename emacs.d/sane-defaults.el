@@ -89,6 +89,9 @@
 ;; Sentences do not need double spaces to end. Period.
 (set-default 'sentence-end-double-space nil)
 
+;; follow output in compilation buffer
+(setq compilation-scroll-output t)
+
 ;; A saner ediff
 (setq ediff-diff-options "-w")
 (setq ediff-split-window-function 'split-window-horizontally)
