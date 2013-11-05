@@ -21,7 +21,7 @@ Frani 2013 -->
     <primaryMonitor>1</primaryMonitor>
   </placement>
   <theme>
-    <name>egtk</name>
+    <name>NumixMod</name>
     <!--
       available characters are NDSLIMC, each can occur at most once.
       N: window icon
