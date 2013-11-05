@@ -1,7 +1,7 @@
 dots
 ====
 
-The configfiles I use for my arch with openbox :)
+The configuration files I use for my arch with openbox :)
 
 Include configuration files for:
 
@@ -14,4 +14,5 @@ Include configuration files for:
  * mpd and ncmpcpp
  * skippy-xd
  * xinitrc and Xresources
+ 
 
