@@ -43,7 +43,7 @@ search_tar() {
 }
 
 load_root() {
-    cd ~/root/root-5.34.09/bin
+    cd ~/root/root-5.34.11/bin
     source thisroot.sh
     cd - > /dev/null
 }

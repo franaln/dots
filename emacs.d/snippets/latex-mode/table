@@ -4,7 +4,7 @@
 
 \begin{table}[ht!]
 \centering$>
-\begin{tabular}{$1:c|c}$>
+\begin{tabular}{${1:c|c}}$>
 $0$>    
 \end{tabular}$>
 \end{table}$>
