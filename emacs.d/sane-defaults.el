@@ -112,4 +112,7 @@
     (dotimes (i 10)
       (when (= p (point)) ad-do-it))))
 
+;; whitespace cleanup
+(add-hook 'before-save-hook 'whitespace-cleanup)
+
 (provide 'sane-defaults)

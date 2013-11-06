@@ -1,4 +1,4 @@
-;; -- emacs keys 
+;; -- emacs keys
 ;; frani
 
 ;; I don't need to kill emacs that easily
@@ -44,5 +44,13 @@
 (global-set-key (kbd "C-c d") 'delete-this-file)
 
 (global-set-key (kbd "C-x c") 'compile)
+
+;; remap C-a to smarter-move-beginning-of-line
+(global-set-key [remap move-beginning-of-line]
+                'smarter-move-beginning-of-line)
+
+;;
+(global-set-key (kbd "C-S up")  'move-line-up)
+(global-set-key (kbd "C-S down")  'move-line-down)
 
 (provide 'custom-keys)
