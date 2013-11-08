@@ -115,4 +115,7 @@
 ;; whitespace cleanup
 (add-hook 'before-save-hook 'whitespace-cleanup)
 
+
+(electric-indent-mode +1)
+
 (provide 'sane-defaults)

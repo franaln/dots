@@ -92,4 +92,12 @@ point reaches the beginning or end of the buffer, stop there."
   (forward-line -1)
   (indent-according-to-mode))
 
+;; kill other buffers
+(defun kill-other-buffers ()
+  "Kill all buffers but the current one.
+Don't mess with special buffers."
+  (interactive)
+  (dolist (buffer (buffer-list))
+    (unless (or (eql buffer (current-buffer)) (not (buffer-file-name buffer)))
+      (kill-buffer buffer))))
 (provide 'custom-fns)
