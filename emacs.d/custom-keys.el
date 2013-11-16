@@ -56,5 +56,7 @@
 (global-set-key (kbd "C-c k") 'kill-other-buffers)
 
 (global-set-key (kbd "C-c C-v") 'atl-switch-src)
+(global-set-key (kbd "C-c t") 'mo-toggle-identifier-naming-style)
+
 
 (provide 'custom-keys)

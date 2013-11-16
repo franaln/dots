@@ -101,12 +101,10 @@ Don't mess with special buffers."
     (unless (or (eql buffer (current-buffer)) (not (buffer-file-name buffer)))
       (kill-buffer buffer))))
 
-                                        ; Map C-c C-v to the following function
-(define-key global-map [(control c) (control v)] 'atl-switch-src)
-                                        ; Switches between .h and .cxx files for the two cases:
-                                        ; 1) The .h and .cxx files are in the same dirctory
-                                        ; 2) path/MyPackage/MyPackage/MyClass.h
-                                        ;    path/MyPackage/src/MyClass.cxx
+;; Switches between .h and .cxx files for the two cases:
+;; 1) The .h and .cxx files are in the same dirctory
+;; 2) path/MyPackage/MyPackage/MyClass.h
+;;    path/MyPackage/src/MyClass.cxx
 (defun atl-switch-src ()
   (interactive)
   (setq filename buffer-file-name)
@@ -144,5 +142,33 @@ Don't mess with special buffers."
     )
   (find-file hpath)
   )
+
+;; toggle between CamelCase and snake
+(defun mo-toggle-identifier-naming-style ()
+    "Toggles the symbol at point between C-style naming,
+e.g. `hello_world_string', and camel case,
+e.g. `HelloWorldString'."
+    (interactive)
+    (let* ((symbol-pos (bounds-of-thing-at-point 'symbol))
+           case-fold-search symbol-at-point cstyle regexp func)
+      (unless symbol-pos
+        (error "No symbol at point"))
+      (save-excursion
+        (narrow-to-region (car symbol-pos) (cdr symbol-pos))
+        (setq cstyle (string-match-p "_" (buffer-string))
+              regexp (if cstyle "\\(?:\\_<\\|_\\)\\(\\w\\)" "\\([A-Z]\\)")
+              func (if cstyle
+                       'capitalize
+                     (lambda (s)
+                       (concat (if (= (match-beginning 1)
+                                      (car symbol-pos))
+                                   ""
+                                 "_")
+                               (downcase s)))))
+        (goto-char (point-min))
+        (while (re-search-forward regexp nil t)
+          (replace-match (funcall func (match-string 1))
+                         t nil))
+              (widen))))
 
 (provide 'custom-fns)
