@@ -100,4 +100,49 @@ Don't mess with special buffers."
   (dolist (buffer (buffer-list))
     (unless (or (eql buffer (current-buffer)) (not (buffer-file-name buffer)))
       (kill-buffer buffer))))
+
+                                        ; Map C-c C-v to the following function
+(define-key global-map [(control c) (control v)] 'atl-switch-src)
+                                        ; Switches between .h and .cxx files for the two cases:
+                                        ; 1) The .h and .cxx files are in the same dirctory
+                                        ; 2) path/MyPackage/MyPackage/MyClass.h
+                                        ;    path/MyPackage/src/MyClass.cxx
+(defun atl-switch-src ()
+  (interactive)
+  (setq filename buffer-file-name)
+  (setq path (split-string filename "/"))
+  (if (not (string-equal (car path) ""))
+      (setq path (cons "" path)))
+  (setq len (length path))
+  (setq pkg (nth (- len 3) path))
+
+  (if (string-match "\\.h" filename)
+      (progn
+        (setq hpath (replace-match ".cxx" nil nil filename))
+        (if (not (file-readable-p hpath))    ; look for .cxx file in current dir first
+            (progn        ; now check in the "pkg/pkg" dir
+              (setcar (nthcdr (- len 2) path) "src")
+              (setq tmppath (mapconcat 'identity path "/"))
+              (string-match "\\.h" tmppath)
+              (setq hpath (replace-match ".cxx" nil nil tmppath))
+              )
+          )
+        )
+    )
+  (if (string-match "\\.cxx" filename)
+      (progn
+        (setq hpath (replace-match ".h" nil nil filename))
+        (if (not (file-readable-p hpath))
+            (progn
+              (setcar (nthcdr (- len 2) path) pkg)
+              (setq tmppath (mapconcat 'identity path "/"))
+              (string-match "\\.cxx" tmppath)
+              (setq hpath (replace-match ".h" nil nil tmppath))
+              )
+          )
+        )
+    )
+  (find-file hpath)
+  )
+
 (provide 'custom-fns)

@@ -58,12 +58,12 @@
 
 ;; switch windows with shift + arrows
 (defun select-next-window ()
-  "Switch to the next window" 
+  "Switch to the next window"
   (interactive)
   (select-window (next-window)))
 
 (defun select-previous-window ()
-  "Switch to the previous window" 
+  "Switch to the previous window"
   (interactive)
   (select-window (previous-window)))
 
@@ -82,6 +82,7 @@
 
 (require 'indent-guide)
 (indent-guide-global-mode)
+
 
 ;; sane defaults
 (require 'sane-defaults)

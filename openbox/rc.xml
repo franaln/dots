@@ -32,7 +32,7 @@ Frani 2013 -->
       S: shade (roll up/down)
       D: omnipresent (on all desktops).
     -->
-    <titleLayout>CLM</titleLayout>
+    <titleLayout>LIMC</titleLayout>
     <keepBorder>no</keepBorder>
     <animateIconify>no</animateIconify>
     <font place="ActiveWindow">
@@ -209,7 +209,7 @@ Frani 2013 -->
     <keybind key="W-d">
       <action name="ToggleShowDesktop"/>
     </keybind>
-    
+
     <!-- windows -->
     <keybind key="A-F4">
       <action name="Close"/>
@@ -230,7 +230,7 @@ Frani 2013 -->
     <keybind key="W-l">
       <action name="ToggleAlwaysOnBottom"/>
     </keybind>
-    
+
     <!-- window switching -->
     <keybind key="A-Tab">
       <action name="NextWindow">
@@ -252,11 +252,11 @@ Frani 2013 -->
     </keybind>
     <keybind key="W-Tab">
       <action name="NextWindow">
-	<allDesktops>yes</allDesktops>
-        <dialog>list</dialog>        
+    <allDesktops>yes</allDesktops>
+        <dialog>list</dialog>
       </action>
     </keybind>
-    
+
     <!-- window switching with the arrow keys -->
     <keybind key="W-A-Right">
       <action name="DirectionalCycleWindows">
@@ -278,7 +278,7 @@ Frani 2013 -->
         <direction>down</direction>
       </action>
     </keybind>
-    
+
     <!-- tile windows -->
     <keybind key="W-Left">
       <action name="UnmaximizeFull"/>
@@ -394,60 +394,60 @@ Frani 2013 -->
 
     <!-- <keybind key="A-F12"> -->
     <!--   <keybind key="a"> -->
-    <!-- 	<action name="Execute"> -->
+    <!--    <action name="Execute"> -->
     <!--       <startupnotify> -->
     <!--         <enabled>true</enabled> -->
     <!--       </startupnotify> -->
     <!--       <command>olgaaa apps</command> -->
-    <!-- 	</action> -->
+    <!--    </action> -->
     <!--   </keybind> -->
     <!--   <keybind key="w"> -->
-    <!-- 	<action name="Execute"> -->
+    <!--    <action name="Execute"> -->
     <!--       <startupnotify> -->
     <!--         <enabled>true</enabled> -->
     <!--       </startupnotify> -->
     <!--       <command>olgaaa windows</command> -->
-    <!-- 	</action> -->
+    <!--    </action> -->
     <!--   </keybind> -->
     <!--   <keybind key="e"> -->
-    <!-- 	<action name="Execute"> -->
+    <!--    <action name="Execute"> -->
     <!--       <startupnotify> -->
     <!--         <enabled>true</enabled> -->
     <!--       </startupnotify> -->
     <!--       <command>olgaaa explore</command> -->
-    <!-- 	</action> -->
+    <!--    </action> -->
     <!--   </keybind> -->
     <!--   <keybind key="p"> -->
-    <!-- 	<action name="Execute"> -->
+    <!--    <action name="Execute"> -->
     <!--       <startupnotify> -->
     <!--         <enabled>true</enabled> -->
     <!--       </startupnotify> -->
     <!--       <command>olgaaa power</command> -->
-    <!-- 	</action> -->
+    <!--    </action> -->
     <!--   </keybind> -->
     <!--   <keybind key="f"> -->
-    <!-- 	<action name="Execute"> -->
+    <!--    <action name="Execute"> -->
     <!--       <startupnotify> -->
     <!--         <enabled>true</enabled> -->
     <!--       </startupnotify> -->
     <!--       <command>olgaaa find</command> -->
-    <!-- 	</action> -->
+    <!--    </action> -->
     <!--   </keybind> -->
     <!--   <keybind key="c"> -->
-    <!-- 	<action name="Execute"> -->
+    <!--    <action name="Execute"> -->
     <!--       <startupnotify> -->
     <!--         <enabled>true</enabled> -->
     <!--       </startupnotify> -->
     <!--       <command>olgaaa calc</command> -->
-    <!-- 	</action> -->
+    <!--    </action> -->
     <!--   </keybind> -->
     <!--   <keybind key="o"> -->
-    <!-- 	<action name="Execute"> -->
+    <!--    <action name="Execute"> -->
     <!--       <startupnotify> -->
     <!--         <enabled>true</enabled> -->
     <!--       </startupnotify> -->
     <!--       <command>olgaaa config</command> -->
-    <!-- 	</action> -->
+    <!--    </action> -->
     <!--   </keybind> -->
     <!-- </keybind> -->
   </keyboard>
@@ -792,6 +792,6 @@ Frani 2013 -->
       <skip_taskbar>yes</skip_taskbar>
       <maximized>Horizontal</maximized>
     </application>
-    
+
   </applications>
 </openbox_config>
