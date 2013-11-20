@@ -1,10 +1,11 @@
-
 !- Font Rendering -
 Xft.dpi:          99
-Xft.lcdfilter:	 lcdslight
-Xft.antialias:	 true
+Xft.lcdfilter:   lcddefault
+Xft.antialias:   true
 Xft.rgba:        rgb
-Xft.hinting:	 true
+Xft.hinting:     true
+Xft.autohint: 0
+Xft.hintstyle:  hintfull
 
 !- urxvt Settings -
 URxvt.termName: rxvt
@@ -24,7 +25,7 @@ URxvt.letterSpace:-2
 
 !- perl extensions
 URxvt.perl-ext-common: matcher, font-size
-!URxvt.url-launcher: chromium   
+!URxvt.url-launcher: chromium
 !URxvt.matcher.button:   1
 !URxvt.colorUL: #4667b4
 
