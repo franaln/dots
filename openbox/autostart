@@ -1,7 +1,7 @@
 numlockx on &
 setxkbmap -layout us &
 conf_touchpad.sh &
-nitrogen --restore & 
+nitrogen --restore &
 setlayout 0 3 3 0 &
 tint2 &
 battery-tray &
@@ -10,5 +10,5 @@ nm-applet --sm-disable &
 urxvtd -q -o -f &
 dunst -conf $HOME/.dunstrc &
 mpd $HOME/.config/mpd/mpd.conf &
+compton &
 (sleep 5 && dropboxd) &
-
