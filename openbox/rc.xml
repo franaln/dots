@@ -324,7 +324,7 @@ Frani 2013 -->
          <enabled>true</enabled>
          <name>terminal</name>
        </startupnotify>
-       <command>urxvtdc</command>
+       <command>gnome-terminal</command>
      </action>
     </keybind>
     <keybind key="Print">
@@ -340,13 +340,6 @@ Frani 2013 -->
           <enabled>true</enabled>
         </startupnotify>
         <command>olgaaa</command>
-      </action>
-    </keybind>
-
-    <!-- scratchpad -->
-    <keybind key="W-grave">
-      <action name="Execute">
-        <execute>urxvtq</execute>
       </action>
     </keybind>
 
@@ -391,65 +384,6 @@ Frani 2013 -->
       </action>
     </keybind>
 
-
-    <!-- <keybind key="A-F12"> -->
-    <!--   <keybind key="a"> -->
-    <!--    <action name="Execute"> -->
-    <!--       <startupnotify> -->
-    <!--         <enabled>true</enabled> -->
-    <!--       </startupnotify> -->
-    <!--       <command>olgaaa apps</command> -->
-    <!--    </action> -->
-    <!--   </keybind> -->
-    <!--   <keybind key="w"> -->
-    <!--    <action name="Execute"> -->
-    <!--       <startupnotify> -->
-    <!--         <enabled>true</enabled> -->
-    <!--       </startupnotify> -->
-    <!--       <command>olgaaa windows</command> -->
-    <!--    </action> -->
-    <!--   </keybind> -->
-    <!--   <keybind key="e"> -->
-    <!--    <action name="Execute"> -->
-    <!--       <startupnotify> -->
-    <!--         <enabled>true</enabled> -->
-    <!--       </startupnotify> -->
-    <!--       <command>olgaaa explore</command> -->
-    <!--    </action> -->
-    <!--   </keybind> -->
-    <!--   <keybind key="p"> -->
-    <!--    <action name="Execute"> -->
-    <!--       <startupnotify> -->
-    <!--         <enabled>true</enabled> -->
-    <!--       </startupnotify> -->
-    <!--       <command>olgaaa power</command> -->
-    <!--    </action> -->
-    <!--   </keybind> -->
-    <!--   <keybind key="f"> -->
-    <!--    <action name="Execute"> -->
-    <!--       <startupnotify> -->
-    <!--         <enabled>true</enabled> -->
-    <!--       </startupnotify> -->
-    <!--       <command>olgaaa find</command> -->
-    <!--    </action> -->
-    <!--   </keybind> -->
-    <!--   <keybind key="c"> -->
-    <!--    <action name="Execute"> -->
-    <!--       <startupnotify> -->
-    <!--         <enabled>true</enabled> -->
-    <!--       </startupnotify> -->
-    <!--       <command>olgaaa calc</command> -->
-    <!--    </action> -->
-    <!--   </keybind> -->
-    <!--   <keybind key="o"> -->
-    <!--    <action name="Execute"> -->
-    <!--       <startupnotify> -->
-    <!--         <enabled>true</enabled> -->
-    <!--       </startupnotify> -->
-    <!--       <command>olgaaa config</command> -->
-    <!--    </action> -->
-    <!--   </keybind> -->
-    <!-- </keybind> -->
   </keyboard>
 
   <mouse>
