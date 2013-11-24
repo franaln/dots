@@ -11,4 +11,5 @@ urxvtd -q -o -f &
 dunst -conf $HOME/.dunstrc &
 mpd $HOME/.config/mpd/mpd.conf &
 compton &
-(sleep 5 && dropboxd) &
+(sleep 2 && dropboxd) &
+(sleep 2 && spacefm -d) &

@@ -21,7 +21,7 @@ Frani 2013 -->
     <primaryMonitor>1</primaryMonitor>
   </placement>
   <theme>
-    <name>egtk</name>
+    <name>elementary-openbox</name>
     <!--
       available characters are NDSLIMC, each can occur at most once.
       N: window icon
@@ -326,7 +326,8 @@ Frani 2013 -->
        </startupnotify>
        <command>gnome-terminal</command>
      </action>
-    </keybind>
+   </keybind>
+
     <keybind key="Print">
       <action name="Execute">
         <command>ksnapshot</command>
