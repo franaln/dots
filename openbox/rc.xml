@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- OpenBox config ($HOME/.config/openbox/rc.xml)
-Frani 2013 -->
+<!-- OpenBox config ($HOME/.config/openbox/rc.xml) Frani 2013 -->
 <openbox_config xmlns="http://openbox.org/3.4/rc" xmlns:xi="http://www.w3.org/2001/XInclude">
   <resistance>
     <strength>10</strength>
@@ -21,7 +20,7 @@ Frani 2013 -->
     <primaryMonitor>1</primaryMonitor>
   </placement>
   <theme>
-    <name>elementary-openbox</name>
+    <name>elemental</name>
     <!--
       available characters are NDSLIMC, each can occur at most once.
       N: window icon
@@ -36,37 +35,37 @@ Frani 2013 -->
     <keepBorder>no</keepBorder>
     <animateIconify>no</animateIconify>
     <font place="ActiveWindow">
-      <name>Segoe</name>
+      <name>Cantarell</name>
       <size>10</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="InactiveWindow">
-      <name>Segoe</name>
+      <name>Cantarell</name>
       <size>10</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="MenuHeader">
-      <name>Segoe</name>
+      <name>Cantarell</name>
       <size>10</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="MenuItem">
-      <name>Segoe</name>
+      <name>Cantarell</name>
       <size>10</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="ActiveOnScreenDisplay">
-      <name>Segoe</name>
+      <name>Cantarell</name>
       <size>10</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="InactiveOnScreenDisplay">
-      <name>Segoe</name>
+      <name>Cantarell</name>
       <size>10</size>
       <weight>Bold</weight>
       <slant>Normal</slant>
@@ -94,6 +93,7 @@ Frani 2013 -->
     <left>0</left>
     <right>0</right>
   </margins>
+
   <dock>
     <position>Top</position>
     <floatingX>0</floatingX>
@@ -110,7 +110,6 @@ Frani 2013 -->
   <!-- Keybindings -->
   <keyboard>
     <chainQuitKey>C-g</chainQuitKey>
-
 
     <!-- desktop switching -->
     <keybind key="C-A-Left">
@@ -694,6 +693,7 @@ Frani 2013 -->
       </mousebind>
     </context>
   </mouse>
+
   <menu>
     <file>menu.xml</file>
     <hideDelay>200</hideDelay>
@@ -703,30 +703,30 @@ Frani 2013 -->
     <applicationIcons>yes</applicationIcons>
     <manageDesktops>no</manageDesktops>
   </menu>
-  <applications>
 
-    <application class="Firefox">
-      <decor>no</decor>
-      <desktop>1</desktop>
-      <maximized>true</maximized>
-    </application>
+  <applications>
+    <!-- <application class="Firefox"> -->
+    <!--   <decor>no</decor> -->
+    <!--   <desktop>1</desktop> -->
+    <!--   <maximized>true</maximized> -->
+    <!-- </application> -->
     <application name="chromium">
       <maximized>true</maximized>
       <desktop>1</desktop>
     </application>
 
-    <application name="urxvtq">
-      <decor>no</decor>
-      <position force="yes">
-        <x>center</x>
-        <y>0</y>
-      </position>
-      <desktop>all</desktop>
-      <layer>above</layer>
-      <skip_pager>yes</skip_pager>
-      <skip_taskbar>yes</skip_taskbar>
-      <maximized>Horizontal</maximized>
-    </application>
+    <!-- <application name="urxvtq"> -->
+    <!--   <decor>no</decor> -->
+    <!--   <position force="yes"> -->
+    <!--     <x>center</x> -->
+    <!--     <y>0</y> -->
+    <!--   </position> -->
+    <!--   <desktop>all</desktop> -->
+    <!--   <layer>above</layer> -->
+    <!--   <skip_pager>yes</skip_pager> -->
+    <!--   <skip_taskbar>yes</skip_taskbar> -->
+    <!--   <maximized>Horizontal</maximized> -->
+    <!-- </application> -->
 
   </applications>
 </openbox_config>
