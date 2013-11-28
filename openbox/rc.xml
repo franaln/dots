@@ -31,18 +31,18 @@
       S: shade (roll up/down)
       D: omnipresent (on all desktops).
     -->
-    <titleLayout>LIMC</titleLayout>
+    <titleLayout>IMC</titleLayout>
     <keepBorder>no</keepBorder>
     <animateIconify>no</animateIconify>
     <font place="ActiveWindow">
       <name>Cantarell</name>
-      <size>10</size>
+      <size>12</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="InactiveWindow">
       <name>Cantarell</name>
-      <size>10</size>
+      <size>12</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
@@ -60,13 +60,13 @@
     </font>
     <font place="ActiveOnScreenDisplay">
       <name>Cantarell</name>
-      <size>10</size>
+      <size>12</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="InactiveOnScreenDisplay">
       <name>Cantarell</name>
-      <size>10</size>
+      <size>12</size>
       <weight>Bold</weight>
       <slant>Normal</slant>
     </font>
