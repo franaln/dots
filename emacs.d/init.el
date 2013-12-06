@@ -80,8 +80,8 @@
 (add-to-list 'load-path "~/.emacs.d/plugins")
 (require 'setup-yasnippet)
 
-(require 'indent-guide)
-(indent-guide-global-mode)
+;;(require 'indent-guide)
+;;(indent-guide-global-mode)
 
 
 ;; sane defaults
