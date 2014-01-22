@@ -21,10 +21,9 @@ altscreen on
 hardstatus alwayslastline "%{= w}%-w%{= Bk} %n %t %{-}%+w %-=  %{G}%H %{g}"
 
 termcapinfo xterm* ti@:te@
+termcapinfo xterm-color ti@:te@
 
 bind ',' prev
 bind '.' next
 
 #screen -t
-
-

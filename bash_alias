@@ -38,7 +38,7 @@ alias ncmpcpp='ncmpcpp -c ~/.config/ncmpcpp/config'
 # demas
 alias reload='source ~/.bashrc'
 alias matrix='echo -e "\e[32m"; while :; do printf '%*c' $(($RANDOM % 30)) $(($RANDOM % 2)); done'
-alias ping='ping -c 3 www.google.com'
+alias pingg='ping -c 3 www.google.com'
 alias diff='colordiff'              # requires colordiff package
 alias grep='grep --color=auto'
 alias df='df -h'
@@ -84,4 +84,7 @@ alias s='svn'
 alias sc='svn status | grep -v ?'
 
 # go to
-alias gosusy='cd ~/Susy/SinglePhotonAnalysis && source ./setup/sh'
+alias gosusy='cd ~/Susy/SinglePhotonAnalysis && source ./setup.sh'
+
+# delete files older than 30 days
+alias del_older='find * -mtime +30 -exec sudo rm {} \;'

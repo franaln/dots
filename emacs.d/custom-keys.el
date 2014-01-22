@@ -49,13 +49,9 @@
 (global-set-key [remap move-beginning-of-line]
                 'smarter-move-beginning-of-line)
 
-;;
-;;(global-set-key (kbd "C-S up")  'move-line-up)
-;;(global-set-key (kbd "C-S down")  'move-line-down)
-
 (global-set-key (kbd "C-c k") 'kill-other-buffers)
 
-(global-set-key (kbd "C-c C-v") 'atl-switch-src)
+(global-set-key (kbd "C-c v") 'switch-src-header)
 (global-set-key (kbd "C-c t") 'mo-toggle-identifier-naming-style)
 
 

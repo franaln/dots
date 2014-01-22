@@ -105,7 +105,7 @@ Don't mess with special buffers."
 ;; 1) The .h and .cxx files are in the same dirctory
 ;; 2) path/MyPackage/MyPackage/MyClass.h
 ;;    path/MyPackage/src/MyClass.cxx
-(defun atl-switch-src ()
+(defun switch-src-header ()
   (interactive)
   (setq filename buffer-file-name)
   (setq path (split-string filename "/"))
