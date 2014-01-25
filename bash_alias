@@ -40,7 +40,7 @@ alias reload='source ~/.bashrc'
 alias matrix='echo -e "\e[32m"; while :; do printf '%*c' $(($RANDOM % 30)) $(($RANDOM % 2)); done'
 alias pingg='ping -c 3 www.google.com'
 alias diff='colordiff'              # requires colordiff package
-alias grep='grep --color=auto'
+alias grep='grep -i --color=auto'
 alias df='df -h'
 alias du='du -sh'
 alias loadfonts='fc-cache -v'
@@ -76,11 +76,7 @@ alias mv='mv -i'
 alias rm='rm -I'
 alias ln='ln -i'
 
-# git
-alias g='git'
-
 # svn
-alias s='svn'
 alias sc='svn status | grep -v ?'
 
 # go to

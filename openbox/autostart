@@ -7,9 +7,7 @@ tint2 &
 battery-tray &
 volume-tray &
 nm-applet --sm-disable &
-urxvtd -q -o -f &
 dunst -conf $HOME/.dunstrc &
-mpd $HOME/.config/mpd/mpd.conf &
 compton &
 (sleep 2 && dropboxd) &
 (sleep 2 && spacefm -d) &

@@ -7,13 +7,13 @@
 # ID 1
 rounded = 0
 border_width = 0
-background_color = #1a1a1a 100
-border_color = #1a1a1a 100
+background_color = #1a1a1a 85
+border_color = #ffffff 40
 
 # ID 2
 rounded = 0
 border_width = 0
-background_color = #272727 100
+background_color = #1a1a1a 100
 border_color = #272727 100
 
 # ID 3
@@ -52,10 +52,10 @@ task_text = 1
 task_centered = 1
 task_maximum_size = 300 35
 task_padding = 6 2
-task_background_id = 3
-task_active_background_id = 1
-task_urgent_background_id = 1
-task_iconified_background_id = 1
+task_background_id = 0
+task_active_background_id = 0
+task_urgent_background_id = 0
+task_iconified_background_id = 0
 
 #------------
 # Task Icons
@@ -68,11 +68,11 @@ task_iconified_icon_asb = 70 0 0
 #----------
 # Fonts
 #----------
-task_font = Cantarell 10
-task_font_color = #b6b6b6 100
-task_active_font_color = #6e6eff 100
-task_urgent_font_color = #6e6eff 100
-task_iconified_font_color = #aaaaaa 100
+task_font = Cantarell 9
+task_font_color = #ffffff 50
+task_active_font_color = #ffffff 80
+task_urgent_font_color = #ffffff 100
+task_iconified_font_color = #ffffff 25
 font_shadow = 0
 
 #-------------
