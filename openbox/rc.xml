@@ -333,13 +333,21 @@
       </action>
     </keybind>
 
-    <!-- olgaaa! -->
     <keybind key="A-F2">
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
         </startupnotify>
         <command>olgaaa</command>
+      </action>
+    </keybind>
+
+    <keybind key="C-S-Esc">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+        </startupnotify>
+        <command>gnome-system-monitor</command>
       </action>
     </keybind>
 
