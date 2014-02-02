@@ -10,4 +10,3 @@ nm-applet --sm-disable &
 dunst -conf $HOME/.dunstrc &
 compton &
 (sleep 2 && dropboxd) &
-(sleep 2 && spacefm -d) &

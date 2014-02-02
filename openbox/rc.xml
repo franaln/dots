@@ -430,34 +430,44 @@
         <action name="FocusToBottom"/>
         <action name="Unfocus"/>
       </mousebind>
-      <mousebind button="A-Up" action="Click">
-        <action name="GoToDesktop">
-          <to>previous</to>
-        </action>
-      </mousebind>
-      <mousebind button="A-Down" action="Click">
-        <action name="GoToDesktop">
-          <to>next</to>
-        </action>
-      </mousebind>
       <mousebind button="C-A-Up" action="Click">
         <action name="GoToDesktop">
-          <to>previous</to>
+          <to>up</to>
         </action>
       </mousebind>
       <mousebind button="C-A-Down" action="Click">
         <action name="GoToDesktop">
-          <to>next</to>
+          <to>down</to>
+        </action>
+      </mousebind>
+      <mousebind button="C-A-Left" action="Click">
+        <action name="GoToDesktop">
+          <to>left</to>
+        </action>
+      </mousebind>
+      <mousebind button="C-A-Right" action="Click">
+        <action name="GoToDesktop">
+          <to>right</to>
         </action>
       </mousebind>
       <mousebind button="A-S-Up" action="Click">
         <action name="SendToDesktop">
-          <to>previous</to>
+          <to>up</to>
         </action>
       </mousebind>
       <mousebind button="A-S-Down" action="Click">
         <action name="SendToDesktop">
-          <to>next</to>
+          <to>down</to>
+        </action>
+      </mousebind>
+      <mousebind button="A-S-Left" action="Click">
+        <action name="SendToDesktop">
+          <to>left</to>
+        </action>
+      </mousebind>
+      <mousebind button="A-S-Right" action="Click">
+        <action name="SendToDesktop">
+          <to>right</to>
         </action>
       </mousebind>
     </context>
@@ -692,25 +702,7 @@
         <action name="Raise"/>
       </mousebind>
     </context>
-    <context name="Root">
-      <!-- Menus -->
-      <mousebind button="Right" action="Press">
-        <action name="ShowMenu">
-          <menu>root-menu</menu>
-        </action>
-      </mousebind>
-    </context>
   </mouse>
-
-  <menu>
-    <file>menu.xml</file>
-    <hideDelay>200</hideDelay>
-    <middle>no</middle>
-    <submenuShowDelay>100</submenuShowDelay>
-    <submenuHideDelay>400</submenuHideDelay>
-    <applicationIcons>yes</applicationIcons>
-    <manageDesktops>no</manageDesktops>
-  </menu>
 
   <applications>
     <!-- <application class="Firefox"> -->
