@@ -4,8 +4,8 @@ conf_touchpad.sh &
 nitrogen --restore &
 setlayout 0 3 3 0 &
 tint2 &
-battery-tray &
-volume-tray &
+batterytray &
+volumetray &
 nm-applet --sm-disable &
 dunst -conf $HOME/.dunstrc &
 compton &

@@ -77,7 +77,7 @@ alias rm='rm -I'
 alias ln='ln -i'
 
 # svn
-alias sc='svn status | grep -v ?'
+alias sc='svn status | grep -v ?' # (s)how (c)hanges
 
 # go to
 alias gosusy='cd ~/Susy/SinglePhotonAnalysis && source ./setup.sh'

@@ -1,3 +1,4 @@
+# -*- mode: sh -*-
 # bash global variables
 # frani
 
@@ -18,9 +19,4 @@ export SVNUNLP='svn+ssh://svn.cern.ch/reps/UNLP'
 export PATH=$MYBIN:$PATH
 
 # python path
-export PYTHONPATH=~/dev/simpleroot:$PYTHONPATH
-
-
-
-
-
+#export PYTHONPATH=~/dev/simpleroot:$PYTHONPATH
