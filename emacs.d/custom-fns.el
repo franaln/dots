@@ -145,9 +145,7 @@ Don't mess with special buffers."
 
 ;; toggle between CamelCase and snake
 (defun mo-toggle-identifier-naming-style ()
-    "Toggles the symbol at point between C-style naming,
-e.g. `hello_world_string', and camel case,
-e.g. `HelloWorldString'."
+    "Toggles the symbol at point between C-style and camel case"
     (interactive)
     (let* ((symbol-pos (bounds-of-thing-at-point 'symbol))
            case-fold-search symbol-at-point cstyle regexp func)

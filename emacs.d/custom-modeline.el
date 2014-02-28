@@ -76,7 +76,7 @@
 (make-face 'mode-line-hostname-face)
 
 (set-face-attribute 'mode-line nil
-    :foreground "#aaaaaa" :background "gray5" 
+    :foreground "#aaaaaa" :background "gray5"
     :inverse-video nil
     :box '(:line-width 6 :color "gray5" :style nil))
 
@@ -128,7 +128,7 @@
     :background "white")
 
 (set-face-attribute 'mode-line-hostname-face nil
-    :foreground "#4271ae" 
+    :foreground "#4271ae"
     :background "gray5")
 
 (provide 'custom-modeline)

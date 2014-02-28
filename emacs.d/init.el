@@ -73,16 +73,9 @@
 ;; autorefresh files
 (global-auto-revert-mode t)
 
-;; setup org
-(eval-after-load 'org '(require 'setup-org))
-
 ;; setup extensions
 (add-to-list 'load-path "~/.emacs.d/plugins")
 (require 'setup-yasnippet)
-
-;;(require 'indent-guide)
-;;(indent-guide-global-mode)
-
 
 ;; sane defaults
 (require 'sane-defaults)
@@ -102,7 +95,6 @@
 (autoload 'hide-ifdef-undef  "hideif" nil t)
 (autoload 'c-mode "cc-mode" "C Editing Mode" t)
 (autoload 'c++-mode "cc-mode" "C++ Editing Mode" t)
-(autoload 'objc-mode "cc-mode" "ObjC Editing Mode" t)
 (autoload 'insert-c++-seperator-line "e-seperators" nil t)
 (autoload 'insert-c-seperator-line "e-seperators" nil t)
 (autoload 'insert-elisp-seperator-line "e-seperators" nil t)
@@ -122,10 +114,10 @@
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 
 ;; fix for shift+up (bug in xterm)
-(if (equal "xterm" (tty-type))
-    (define-key input-decode-map "\e[1;2A" [S-up]))
-(defadvice terminal-init-xterm (after select-shift-up activate)
-  (define-key input-decode-map "\e[1;2A" [S-up]))
+;; (if (equal "xterm" (tty-type))
+;;     (define-key input-decode-map "\e[1;2A" [S-up]))
+;; (defadvice terminal-init-xterm (after select-shift-up activate)
+;;   (define-key input-decode-map "\e[1;2A" [S-up]))
 
 ;; ansi colours
 (add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
