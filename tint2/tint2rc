@@ -19,7 +19,7 @@ border_color = #272727 100
 # ID 3
 rounded = 0
 border_width = 0
-background_color = #272727 100
+background_color = #ffffff 100
 border_color = #272727 100
 
 #----------
@@ -104,9 +104,9 @@ tooltip = 1
 tooltip_padding = 2 2
 tooltip_show_timeout = 0.7
 tooltip_hide_timeout = 0.3
-tooltip_background_id = 1
+tooltip_background_id = 3
 tooltip_font = Cantarell 11
-tooltip_font_color = #b6b6b6 100
+tooltip_font_color = #1a1a1a 100
 
 #----------
 # Mouse

@@ -1,8 +1,9 @@
 numlockx on &
-setxkbmap -layout us &
-conf_touchpad.sh &
-nitrogen --restore &
+setxkbmap -layout us -option ctrl:nocaps &
 setlayout 0 3 3 0 &
+conf_touchpad.sh &
+start-pulseaudio-x11 &
+nitrogen --restore &
 tint2 &
 batterytray &
 volumetray &

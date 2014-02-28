@@ -14,7 +14,7 @@ alias em='emacs -nw'
 alias e='emacs -nw'
 
 # python
-alias python='python2.7'
+#alias python='python2.7'
 
 # root
 alias root='root -l'
@@ -59,7 +59,6 @@ else
     alias paci='sudo pacman -S'
     alias pacr='sudo pacman -R'
     alias pacs='pacsearch'
-    alias pacro="/usr/bin/pacman -Qtdq > /dev/null && sudo /usr/bin/pacman -Rns \$(/usr/bin/pacman -Qtdq | sed -e ':a;N;\$!ba;s/\n/ /g')"
     alias pacq='pacman -Q'
 
     # packer

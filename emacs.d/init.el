@@ -126,3 +126,11 @@
     (define-key input-decode-map "\e[1;2A" [S-up]))
 (defadvice terminal-init-xterm (after select-shift-up activate)
   (define-key input-decode-map "\e[1;2A" [S-up]))
+
+;; ansi colours
+(add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
+(autoload 'ansi-color-for-comint-mode-on "ansi-color" nil t)
+
+;; tramp
+(require 'tramp)
+(setq tramp-default-method "ssh")

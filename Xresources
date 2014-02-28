@@ -71,6 +71,6 @@ URxvt.iso14755_52: false
 *.color6:       #8abeb7
 *.color14:      #54ced6
 
-! ! Light Grey (Selection) + White (Current Line)
+! Light Grey (Selection) + White (Current Line)
 *.color7:       #c5c8c6
 *.color15:      #c5c8c6

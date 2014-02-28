@@ -17,7 +17,7 @@ shopt -s checkwinsize
 complete -cf sudo
 
 # autocd
-shopt -s autocd
+#shopt -s autocd
 
 # cortar directorios a 5
 PROMPT_DIRTRIM=5
@@ -36,22 +36,21 @@ if [ -f /usr/share/bash-completion/bash_completion ] && ! shopt -oq posix; then
 fi
 
 # alias definitions
-if [ -f ~/.bash_alias ]; then 
-    . ~/.bash_alias 
+if [ -f ~/.bash_alias ]; then
+    . ~/.bash_alias
 fi
 
 # functions definitions
-if [ -f ~/.bash_fns ] ; then 
+if [ -f ~/.bash_fns ] ; then
     . ~/.bash_fns
 fi
 
 # vars definitions
 if [ -f ~/.bash_vars ] ; then
-    . ~/.bash_vars 
+    . ~/.bash_vars
 fi
 
 # private
-if [ -f ~/.bash_private ] ; then 
-    . ~/.bash_private  
+if [ -f ~/.bash_private ] ; then
+    . ~/.bash_private
 fi
-
