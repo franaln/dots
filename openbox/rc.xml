@@ -392,6 +392,12 @@
       </action>
     </keybind>
 
+    <keybind key="Pause">
+      <action name="Execute">
+        <command>skippy-xd --activate-window-picker</command>
+      </action>
+    </keybind>
+
   </keyboard>
 
   <mouse>

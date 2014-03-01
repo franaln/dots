@@ -1,9 +1,8 @@
 ;; -- emacs fns
 ;; frani
 
-;; delete the current file
+;; delete the current file and kill the buffer
 (defun delete-this-file ()
-  "Delete the current file, and kill the buffer."
   (interactive)
   (or (buffer-file-name) (error "No file is currently being edited"))
   (when (yes-or-no-p (format "Really delete '%s'?"
@@ -11,9 +10,8 @@
     (delete-file (buffer-file-name))
     (kill-this-buffer)))
 
-;; rename the current file
+;; rename the current file/buffer
 (defun rename-this-file-and-buffer (new-name)
-  "Renames both current buffer and file it's visiting to NEW-NAME."
   (interactive "sNew name: ")
   (let ((name (buffer-name))
         (filename (buffer-file-name)))
@@ -26,7 +24,6 @@
         (rename-buffer new-name)
         (set-visited-file-name new-name)
         (set-buffer-modified-p nil)))))
-
 
 ;; Multi-line version of just-one-space: Delete all
 ;; spaces, tabs and newlines around point,
@@ -118,7 +115,7 @@ Don't mess with special buffers."
       (progn
         (setq hpath (replace-match ".cxx" nil nil filename))
         (if (not (file-readable-p hpath))    ; look for .cxx file in current dir first
-            (progn        ; now check in the "pkg/pkg" dir
+            (progn                           ; now check in the "pkg/pkg" dir
               (setcar (nthcdr (- len 2) path) "src")
               (setq tmppath (mapconcat 'identity path "/"))
               (string-match "\\.h" tmppath)
@@ -145,28 +142,63 @@ Don't mess with special buffers."
 
 ;; toggle between CamelCase and snake
 (defun mo-toggle-identifier-naming-style ()
-    "Toggles the symbol at point between C-style and camel case"
-    (interactive)
-    (let* ((symbol-pos (bounds-of-thing-at-point 'symbol))
-           case-fold-search symbol-at-point cstyle regexp func)
-      (unless symbol-pos
-        (error "No symbol at point"))
-      (save-excursion
-        (narrow-to-region (car symbol-pos) (cdr symbol-pos))
-        (setq cstyle (string-match-p "_" (buffer-string))
-              regexp (if cstyle "\\(?:\\_<\\|_\\)\\(\\w\\)" "\\([A-Z]\\)")
-              func (if cstyle
-                       'capitalize
-                     (lambda (s)
-                       (concat (if (= (match-beginning 1)
-                                      (car symbol-pos))
-                                   ""
-                                 "_")
-                               (downcase s)))))
-        (goto-char (point-min))
-        (while (re-search-forward regexp nil t)
-          (replace-match (funcall func (match-string 1))
-                         t nil))
-              (widen))))
+  (interactive)
+  (let* ((symbol-pos (bounds-of-thing-at-point 'symbol))
+         case-fold-search symbol-at-point cstyle regexp func)
+    (unless symbol-pos
+      (error "No symbol at point"))
+    (save-excursion
+      (narrow-to-region (car symbol-pos) (cdr symbol-pos))
+      (setq cstyle (string-match-p "_" (buffer-string))
+            regexp (if cstyle "\\(?:\\_<\\|_\\)\\(\\w\\)" "\\([A-Z]\\)")
+            func (if cstyle
+                     'capitalize
+                   (lambda (s)
+                     (concat (if (= (match-beginning 1)
+                                    (car symbol-pos))
+                                 ""
+                               "_")
+                             (downcase s)))))
+      (goto-char (point-min))
+      (while (re-search-forward regexp nil t)
+        (replace-match (funcall func (match-string 1))
+                       t nil))
+      (widen))))
+
+;; move window borders
+(defun xor (b1 b2)
+  "Exclusive or of its two arguments."
+  (or (and b1 b2)
+      (and (not b1) (not b2))))
+
+(defun move-border-left-or-right (arg dir)
+         "General function covering move-border-left and move-border-right. If DIR is
+     t, then move left, otherwise move right."
+         (interactive)
+         (if (null arg) (setq arg 5))
+         (let ((left-edge (nth 0 (window-edges))))
+           (if (xor (= left-edge 0) dir)
+               (shrink-window arg t)
+             (enlarge-window arg t))))
+
+(defun move-border-left (arg)
+  "If this is a window with its right edge being the edge of the screen, enlarge
+     the window horizontally. If this is a window with its left edge being the edge
+     of the screen, shrink the window horizontally. Otherwise, default to enlarging
+     horizontally.
+
+     Enlarge/Shrink by ARG columns, or 5 if arg is nil."
+  (interactive "P")
+  (move-border-left-or-right arg t))
+
+(defun move-border-right (arg)
+  "If this is a window with its right edge being the edge of the screen, shrink
+     the window horizontally. If this is a window with its left edge being the edge
+     of the screen, enlarge the window horizontally. Otherwise, default to shrinking
+     horizontally.
+
+     Enlarge/Shrink by ARG columns, or 5 if arg is nil."
+  (interactive "P")
+  (move-border-left-or-right arg nil))
 
 (provide 'custom-fns)
