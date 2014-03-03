@@ -27,8 +27,8 @@
 (global-set-key (kbd "C-c v")    'switch-src-header)
 (global-set-key (kbd "C-c t")    'mo-toggle-identifier-naming-style)
 (global-set-key (kbd "C-\"")     'toggle-quotes)
-(global-set-key (kbd "\C-l")     'goto-line)
-(global-set-key (kbd "\C-h")     'delete-backward-char)
+(global-set-key (kbd "C-l")     'goto-line)
+(global-set-key (kbd "C-h")     'delete-backward-char)
 (global-set-key (kbd "\C-x\C-u") 'shell)
 (global-set-key (kbd "M-SPC")    'multi-line-just-one-space)
 (global-set-key (kbd "C-c +")    'increment-number-at-point)
@@ -36,6 +36,10 @@
 (global-set-key (kbd "C-c d")    'delete-this-file)
 (global-set-key (kbd "C-x c")    'compile)
 (global-set-key (kbd "M-s e")    'sudo-edit)
+(global-set-key (kbd "C-c s")    'win-swap)
+
+;; escape as C-g
+(global-set-key (kbd "<escape>") 'keyboard-quit)
 
 
 (provide 'custom-keys)

@@ -17,8 +17,6 @@
 
 ;; highlight current line
 (global-hl-line-mode 1)
-(set-face-background 'hl-line "#1d1f20")
-(set-face-foreground 'hl-line "#ffffff")
 
 ;; don't defer screen updates when performing operations
 (setq redisplay-dont-pause t)
@@ -126,3 +124,9 @@
 ;; tramp
 (require 'tramp)
 (setq tramp-default-method "ssh")
+
+;; custom faces
+(set-face-background 'hl-line "#1d1f20") ;; current line
+(set-face-foreground 'hl-line "#ffffff")
+(set-face-background 'region "green")    ;; selected region
+(set-face-foreground 'region "black")

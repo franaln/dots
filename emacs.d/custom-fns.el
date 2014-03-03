@@ -201,4 +201,14 @@ Don't mess with special buffers."
   (interactive "P")
   (move-border-left-or-right arg nil))
 
+;; swap windows
+(require 'buffer-move)
+(defun win-swap ()
+  (interactive)
+  (if (null (windmove-find-other-window 'right))
+      (buf-move-left)
+    (buf-move-right)
+    )
+  )
+
 (provide 'custom-fns)
