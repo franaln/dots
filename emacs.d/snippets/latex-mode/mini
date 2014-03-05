@@ -2,6 +2,6 @@
 # key: mini
 # --
 
-\begin{minipage}{${1}\textwidth}$>
+\begin{minipage}{${1:}\textwidth}$>
 $0$>
 \end{minipage}$>
