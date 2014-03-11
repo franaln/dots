@@ -35,9 +35,9 @@
 
 ;; store all backup and autosave files in the tmp dir
 (setq backup-directory-alist
-      `((".*" . , "~/temp/emacs-backups/")))
+      `((".*" . , "~/tmp/emacs-backups/")))
 (setq auto-save-file-name-transforms
-      `((".*" , "~/temp/emacs-backups/" t)))
+      `((".*" , "~/tmp/emacs-backups/" t)))
 
 ;; don't add blank lines at the end
 (setq next-line-add-newlines nil)
@@ -66,7 +66,11 @@
   (select-window (previous-window)))
 
 (when (fboundp 'windmove-default-keybindings)
-  (windmove-default-keybindings))
+  (windmove-default-keybindings)
+  (setq windmove-wrap-around t))
+
+
+
 
 ;; autorefresh files
 (global-auto-revert-mode t)

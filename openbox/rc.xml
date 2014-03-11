@@ -251,7 +251,13 @@
     </keybind>
     <keybind key="W-Tab">
       <action name="NextWindow">
-    <allDesktops>yes</allDesktops>
+        <allDesktops>yes</allDesktops>
+        <dialog>list</dialog>
+      </action>
+    </keybind>
+    <keybind key="W-S-Tab">
+      <action name="PreviousWindow">
+        <allDesktops>yes</allDesktops>
         <dialog>list</dialog>
       </action>
     </keybind>
@@ -338,11 +344,20 @@
         <startupnotify>
           <enabled>true</enabled>
         </startupnotify>
-        <command>olgaaa</command>
+        <command>sherlock</command>
       </action>
     </keybind>
 
-    <keybind key="C-S-Esc">
+    <keybind key="Menu">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+        </startupnotify>
+        <command>sherlock</command>
+      </action>
+    </keybind>
+
+    <keybind key="C-S-Escape">
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>

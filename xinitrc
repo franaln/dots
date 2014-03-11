@@ -1,7 +1,3 @@
-# fonts
-xset +fp /usr/share/fonts/envypn
-xset fp rehash
-
 # screen powersave
 xset +dpms
 xset dpms 0 0 300
@@ -11,3 +7,5 @@ xrdb ~/.Xresources
 
 # start openbox
 exec openbox-session
+#exec cinnamon-session
+#exec gnome-session --session=gnome-classic

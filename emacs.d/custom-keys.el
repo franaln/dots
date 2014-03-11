@@ -9,10 +9,11 @@
 (global-set-key (kbd "M-t p") 'transpose-params)
 
 ;; Move windows
-(global-set-key (kbd "<s-right>") 'windmove-right)
-(global-set-key (kbd "<s-left>")  'windmove-left)
-(global-set-key (kbd "<s-up>")    'windmove-up)
-(global-set-key (kbd "<s-down>")  'windmove-down)
+;; (global-set-key (kbd "S-right") 'windmove-right)
+;; (global-set-key (kbd "S-left")  'windmove-left)
+(global-set-key (kbd "<select>")    'windmove-up)
+;; (global-set-key (kbd "S-down")  'windmove-down)
+
 
 ;; move window borders
 (global-set-key (kbd "M-{") 'move-border-left)
@@ -39,7 +40,7 @@
 (global-set-key (kbd "C-c s")    'win-swap)
 
 ;; escape as C-g
-(global-set-key (kbd "<escape>") 'keyboard-quit)
+;; (global-set-key (kbd "<escape>") 'keyboard-quit)
 
 
 (provide 'custom-keys)
