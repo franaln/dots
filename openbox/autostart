@@ -10,5 +10,5 @@ batterytray &
 volumetray &
 nm-applet --sm-disable &
 dunst -conf $HOME/.dunstrc &
-compton &
+compton -b &
 (sleep 2 && dropboxd) &

@@ -211,4 +211,4 @@ Don't mess with special buffers."
     )
   )
 
-(provide 'custom-fns)
+(provide 'fns)

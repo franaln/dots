@@ -353,7 +353,7 @@
         <startupnotify>
           <enabled>true</enabled>
         </startupnotify>
-        <command>sherlock</command>
+        <command>/home/fran/dev/sherlock/sherlock.py</command>
       </action>
     </keybind>
 

@@ -70,8 +70,6 @@
   (setq windmove-wrap-around t))
 
 
-
-
 ;; autorefresh files
 (global-auto-revert-mode t)
 
@@ -83,9 +81,9 @@
 (require 'sane-defaults)
 
 ;; custom config
-(require 'custom-modeline)
-(require 'custom-fns)
-(require 'custom-keys)
+(require 'modeline)
+(require 'fns)
+(require 'keys)
 
 ;; run at full power please
 (put 'downcase-region 'disabled nil)

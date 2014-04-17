@@ -14,22 +14,20 @@
 (global-set-key (kbd "<select>")    'windmove-up)
 ;; (global-set-key (kbd "S-down")  'windmove-down)
 
-
 ;; move window borders
 (global-set-key (kbd "M-{") 'move-border-left)
 (global-set-key (kbd "M-}") 'move-border-right)
 
 ;; remap C-a to smarter-move-beginning-of-line
-(global-set-key [remap move-beginning-of-line]
-                'smarter-move-beginning-of-line)
+(global-set-key [remap move-beginning-of-line] 'smarter-move-beginning-of-line)
 
 ;; others
 (global-set-key (kbd "C-c k")    'kill-other-buffers)
 (global-set-key (kbd "C-c v")    'switch-src-header)
 (global-set-key (kbd "C-c t")    'mo-toggle-identifier-naming-style)
 (global-set-key (kbd "C-\"")     'toggle-quotes)
-(global-set-key (kbd "C-l")     'goto-line)
-(global-set-key (kbd "C-h")     'delete-backward-char)
+(global-set-key (kbd "C-l")      'goto-line)
+(global-set-key (kbd "C-h")      'delete-backward-char)
 (global-set-key (kbd "\C-x\C-u") 'shell)
 (global-set-key (kbd "M-SPC")    'multi-line-just-one-space)
 (global-set-key (kbd "C-c +")    'increment-number-at-point)
@@ -39,8 +37,7 @@
 (global-set-key (kbd "M-s e")    'sudo-edit)
 (global-set-key (kbd "C-c s")    'win-swap)
 
-;; escape as C-g
-;; (global-set-key (kbd "<escape>") 'keyboard-quit)
+; Fixing another key binding bug in iedit mode
+(define-key global-map (kbd "C-c o") 'iedit-mode)
 
-
-(provide 'custom-keys)
+(provide 'keys)

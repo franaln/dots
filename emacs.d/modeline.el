@@ -15,7 +15,7 @@
    ; read-only or modified status
    (:eval
     (cond (buffer-read-only
-           (propertize " RO " 'face 'mode-line-read-only-face))
+           (propertize " Read Only " 'face 'mode-line-read-only-face))
           ((buffer-modified-p)
            (propertize " ** " 'face 'mode-line-modified-face))
           (t "      ")))
@@ -30,23 +30,12 @@
    ; mode indicators: vc, recursive edit, major mode, minor modes, process, global
    (vc-mode vc-mode)
    "  %["
-   (:propertize "[" face mode-line-mode-face)
+   (:propertize "(" face mode-line-mode-face)
    (:propertize mode-name
                 face mode-line-mode-face)
-   (:propertize "]" face mode-line-mode-face)
+   (:propertize ")" face mode-line-mode-face)
    "%] "
 
-   ;; (:eval (propertize (format-mode-line minor-mode-alist)
-   ;;                    face 'mode-line-minor-mode-face))
-   ;; (:propertize mode-line-process
-   ;;              face mode-line-process-face)
-   ;; (global-mode-string global-mode-string)
-   ;; "    "
-   ;; system info
-   ;;   (:propertize mode-line-hostname
-   ;;             face mode-line-hostname-face)
-   ;;"           "
-   ;;(:eval system-name)
    ))
 
 ;; Helper function
@@ -131,4 +120,4 @@
     :foreground "#4271ae"
     :background "gray5")
 
-(provide 'custom-modeline)
+(provide 'modeline)
