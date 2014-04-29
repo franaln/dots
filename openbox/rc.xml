@@ -367,17 +367,17 @@
     </keybind>
 
    <!-- audio keys -->
-    <keybind key="F12">    <!--XF86AudioRaiseVolume"-->
+    <keybind key="W-F12">    <!--XF86AudioRaiseVolume"-->
       <action name="Execute">
         <command>volume up</command>
       </action>
     </keybind>
-    <keybind key="F11">   <!--XF86AudioLowerVolume"-->
+    <keybind key="W-F11">   <!--XF86AudioLowerVolume"-->
       <action name="Execute">
         <command>volume down</command>
       </action>
     </keybind>
-    <keybind key="F10">    <!--XF86AudioMute"-->
+    <keybind key="W-F10">    <!--XF86AudioMute"-->
       <action name="Execute">
         <command>volume toggle</command>
       </action>

@@ -1,4 +1,4 @@
-include "/home/fran/.themes/elemental/gtk-2.0/gtkrc"
+include "/home/fran/.themes/emmental/gtk-2.0/gtkrc"
 
 gtk-font-name = "Cantarell 10"
 gtk-icon-theme-name = "Faenza-Darkest"
