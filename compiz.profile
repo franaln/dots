@@ -340,10 +340,10 @@ s0_timestep = 0.500000
 s0_command0 = gnome-terminal
 s0_command1 = /home/fran/dev/sherlock/sherlock.py
 s0_command2 = sherlock
-s0_command3 = 
-s0_command4 = 
-s0_command5 = 
-s0_command6 = 
+s0_command3 = volume toggle
+s0_command4 = volume down
+s0_command5 = volume up
+s0_command6 = xfce4-screenshooter
 s0_command7 = 
 s0_command8 = 
 s0_command9 = 
@@ -361,10 +361,10 @@ s0_command20 =
 s0_run_command0_key = <Control><Alt>t
 s0_run_command1_key = Menu
 s0_run_command2_key = <Alt>F2
-s0_run_command3_key = Disabled
-s0_run_command4_key = Disabled
-s0_run_command5_key = Disabled
-s0_run_command6_key = Disabled
+s0_run_command3_key = XF86AudioMute
+s0_run_command4_key = XF86AudioLowerVolume
+s0_run_command5_key = XF86AudioRaiseVolume
+s0_run_command6_key = Print
 s0_run_command7_key = Disabled
 s0_run_command8_key = Disabled
 s0_run_command9_key = Disabled
@@ -900,7 +900,7 @@ s0_start_wm = false
 s0_wm_cmd = 
 
 [session]
-s0_save_legacy = false
+s0_save_legacy = true
 s0_ignore_match = 
 
 [td]
@@ -926,7 +926,7 @@ s0_window_opacity = 0.300000
 s0_window_part_size = 20
 
 [core]
-s0_active_plugins = core;composite;opengl;decor;move;place;annotate;resize;extrawm;compiztoolbox;wall;imgjpeg;grid;scale;commands;text;mousepoll;wallpaper;expo;ezoom;switcher;
+s0_active_plugins = core;composite;opengl;decor;move;place;annotate;resize;extrawm;session;compiztoolbox;wall;imgjpeg;grid;scale;commands;text;mousepoll;wallpaper;expo;ezoom;switcher;
 s0_audible_bell = false
 s0_ignore_hints_when_maximized = true
 s0_hide_skip_taskbar_windows = true
