@@ -8,26 +8,28 @@ Xft.lcdfilter: lcddefault
 Xft.rgba: rgb
 
 !- urxvt Settings -
-URxvt.termName: rxvt
-!URxvt.modifier: alt
-!URxvt.font:xft:Tamsyn:autohint=true:pixelsize=18
-!URxvt*.font: xft:Dina:size=13:antialias=false
-URxvt.font:xft:Inconsolata-Regular:pixelSize=10
-URxvt.boldFont:xft:Inconsolata-Regular:pixelSize=10
 URxvt.depth: 0
 URxvt.transparent: false
 URxvt.tint: #000000
-URxvt.geometry:		160x50
+URxvt.geometry: 160x50
 URxvt.cursorBlink: false
 URxvt.scrollBar: false
 URxvt.saveLines: 5000
-URxvt.letterSpace:-2
+URxvt.termName: rxvt
+URxvt.font: xft:Inconsolata:size=11
+URxvt.boldFont: xft:Inconsolata:size=11
+URxvt.letterSpace: -1
 
 !- perl extensions
-URxvt.perl-ext-common: matcher, font-size
-!URxvt.url-launcher: chromium
-!URxvt.matcher.button:   1
-!URxvt.colorUL: #4667b4
+URxvt.perl-ext-common: default,clipboard,url-select,keyboard-select
+URxvt.url-launcher: chromium
+! URxvt.matcher.button:   1
+! URxvt.colorUL: #4667b4
+! URxvt.url-select.launcher:  chromium
+! URxvt.url-select.underline: true
+! URxvt.keysym.M-u:           perl:url-select:select_next
+! URxvt.keysym.M-Escape:      perl:keyboard-select:activate
+! URxvt.keysym.M-s:           perl:keyboard-select:search
 
 URxvt.keysym.C-S-Up:     perl:font-size:increase
 URxvt.keysym.C-S-Down:   perl:font-size:decrease
@@ -35,42 +37,69 @@ URxvt.keysym.C-S-Down:   perl:font-size:decrease
 URxvt.iso14755: false
 URxvt.iso14755_52: false
 
-*fading: 0
 
-! Colours
+!-- Colours
 
-*.foreground:  #c5c8c6
-*.background:  #111213
-*.cursorColor: #aeafad
+URxvt.background: #111111
+URxvt*foreground: #9E8C7A
 
-! Black / Grey
-*.color0:       #2f2f2f
-*.color8:       #4d4d4d
+! BLACK
+*color0: #2D2D2D
+*color8: #525252
+! RED
+*color1: #98414F
+*color9: #D65859
+! GREEN
+*color2: #78924A
+*color10: #BBBB87
+! YELLOW
+*color3: #D1A743
+*color11: #E3CC78
+! BLUE
+*color4: #6F77A4
+*color12: #517088
+! MAGENTA
+*color5: #854756
+*color13: #D6AEBF
+! CYAN
+*color6: #88AFBB
+*color14: #9DE3E3
+! WHITE
+*color7: #A0A0A0
+*color15: #FFFFFF
 
-! Red / Bright Red
-*.color1:       #cc6666
-*.color9:       #FF3334
+! *.foreground:  #c5c8c6
+! *.background:  #111213
+! *.cursorColor: #aeafad
 
-! Green + Bright Green
-*.color2:       #b5bd68
-*.color10:      #9ec400
+! ! Black / Grey
+! *.color0:       #2f2f2f
+! *.color8:       #4d4d4d
 
-! Yellow (Orange) + Bright Yellow (Yellow)
-*.color3:       #de935f
-*.color11:      #f0c674
+! ! Red / Bright Red
+! *.color1:       #cc6666
+! *.color9:       #FF3334
 
-! Blue + Bright Blue
-*.color4:       #81a2be
-*.color12:      #81a2be
+! ! Green + Bright Green
+! *.color2:       #b5bd68
+! *.color10:      #9ec400
 
-! Magenta (Purple) + Bright Magenta
-*.color5:       #b294bb
-*.color13:      #b777e0
+! ! Yellow (Orange) + Bright Yellow (Yellow)
+! *.color3:       #de935f
+! *.color11:      #f0c674
 
-! Cyan (Aqua) + Bright Cyan
-*.color6:       #8abeb7
-*.color14:      #54ced6
+! ! Blue + Bright Blue
+! *.color4:       #81a2be
+! *.color12:      #81a2be
 
-! Light Grey (Selection) + White (Current Line)
-*.color7:       #c5c8c6
-*.color15:      #c5c8c6
+! ! Magenta (Purple) + Bright Magenta
+! *.color5:       #b294bb
+! *.color13:      #b777e0
+
+! ! Cyan (Aqua) + Bright Cyan
+! *.color6:       #8abeb7
+! *.color14:      #54ced6
+
+! ! Light Grey (Selection) + White (Current Line)
+! *.color7:       #c5c8c6
+! *.color15:      #c5c8c6

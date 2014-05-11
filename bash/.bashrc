@@ -16,12 +16,10 @@ shopt -s checkwinsize
 
 complete -cf sudo
 
-# autocd
-#shopt -s autocd
-
 # cortar directorios a 5
 PROMPT_DIRTRIM=5
 
+# colours
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'

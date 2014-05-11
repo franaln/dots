@@ -42,8 +42,9 @@ alias diff='colordiff'              # requires colordiff package
 alias grep='grep --color=auto'
 alias df='df -h | \grep -i /dev/sd'
 alias du='du -sh'
-alias loadfonts='fc-cache -v'
+alias reloadfonts='fc-cache -rv ; xset fp rehash'
 alias nocomment='grep -Ev "^(#|$)"'
+alias dmesgtail='dmesg | tail'
 
 if [[ `uname -v` == *"Ubuntu"* ]] ; then
     # apt-get and aptitude
@@ -63,10 +64,10 @@ else
 
     # packer
     alias packer='packer --auronly'
-    alias auu='packer -Syu'
-    alias aui='packer -S'
-    alias aur='packer -R'
-    alias aus='packer -Ss'
+    alias auru='packer -Syu'
+    alias auri='packer -S'
+    alias aurr='packer -R'
+    alias aurs='packer -Ss'
 fi
 
 # security/safety features
