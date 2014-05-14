@@ -11,5 +11,5 @@ xrdb ~/.Xresources
 #exec cinnamon-session
 #exec gnome-session --session=gnome-classic
 
-autostart_compiz.sh &
+autostart.sh &
 exec compiz ccp
