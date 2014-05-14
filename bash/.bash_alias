@@ -8,10 +8,12 @@ alias ll='ls -lh'
 alias la='ls -A'
 
 # emacs
+alias emacs='emacs -nw'
 alias emw='emacs -nw'
 alias ewm='emacs -nw'
 alias em='emacs -nw'
 alias e='emacs -nw'
+alias semw='sudo emacs -nw'
 
 # python
 #alias python='python2.7'
@@ -44,7 +46,7 @@ alias df='df -h | \grep -i /dev/sd'
 alias du='du -sh'
 alias reloadfonts='fc-cache -rv ; xset fp rehash'
 alias nocomment='grep -Ev "^(#|$)"'
-alias dmesgtail='dmesg | tail'
+alias dmesgt='dmesg | tail'
 
 if [[ `uname -v` == *"Ubuntu"* ]] ; then
     # apt-get and aptitude
@@ -80,7 +82,7 @@ alias ln='ln -i'
 alias sc='svn status | grep -v ?' # (s)how (c)hanges
 
 # go to
-alias gosusy='cd ~/Susy/SinglePhotonAnalysis && source ./setup.sh'
+alias gosusy='cd ~/Susy/SinglePhotonAnalysis'
 
 # delete files older than 30 days
 alias del_older='find * -mtime +30 -exec sudo rm {} \;'
