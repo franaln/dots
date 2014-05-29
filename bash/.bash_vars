@@ -3,7 +3,7 @@
 # frani
 
 # default editor
-export EDITOR='emacs'
+export EDITOR='emacs -nw'
 
 #default browser
 export BROWSER='chromium'

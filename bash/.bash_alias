@@ -9,10 +9,9 @@ alias la='ls -A'
 
 # emacs
 alias emacs='emacs -nw'
-alias emw='emacs -nw'
-alias ewm='emacs -nw'
-alias em='emacs -nw'
-alias e='emacs -nw'
+alias emw='emacs'
+alias ewm='emacs'
+alias em='emacs'
 alias semw='sudo emacs -nw'
 
 # python
@@ -33,7 +32,7 @@ alias ..='cd ..'
 alias ...='cd ../..'
 
 # music player
-alias mocp='mocp -m ~/Music -T ~/.moc/config.txt'
+alias mocp='mocp -m ~/Music -T dante'
 alias ncmpcpp='ncmpcpp -c ~/.config/ncmpcpp/config'
 
 # demas
@@ -86,3 +85,6 @@ alias gosusy='cd ~/Susy/SinglePhotonAnalysis'
 
 # delete files older than 30 days
 alias del_older='find * -mtime +30 -exec sudo rm {} \;'
+
+# rpi
+alias spi='ssh 192.168.0.104'
