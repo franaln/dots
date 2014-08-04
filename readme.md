@@ -7,12 +7,9 @@ Include configuration files for:
 
  * bash
  * emacs
- * openbox
+ * openbox/compiz
  * tint2
  * dunst
  * gtk theme
- * mpd and ncmpcpp
- * skippy-xd
+ * moc/mpd
  * xinitrc and Xresources
- 
-

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <!-- OpenBox config ($HOME/.config/openbox/rc.xml) Frani 2013 -->
 <openbox_config xmlns="http://openbox.org/3.4/rc" xmlns:xi="http://www.w3.org/2001/XInclude">
   <resistance>
@@ -20,7 +21,7 @@
     <primaryMonitor>1</primaryMonitor>
   </placement>
   <theme>
-    <name>elemental</name>
+    <name>emmental</name>
     <!--
       available characters are NDSLIMC, each can occur at most once.
       N: window icon
@@ -329,7 +330,7 @@
          <enabled>true</enabled>
          <name>terminal</name>
        </startupnotify>
-       <command>gnome-terminal</command>
+       <command>urxvtdc</command>
      </action>
    </keybind>
 
@@ -348,14 +349,14 @@
       </action>
     </keybind>
 
-    <keybind key="Menu">
-      <action name="Execute">
-        <startupnotify>
-          <enabled>true</enabled>
-        </startupnotify>
-        <command>/home/fran/dev/sherlock/sherlock.py</command>
-      </action>
-    </keybind>
+    <!-- <keybind key="Menu"> -->
+    <!--   <action name="Execute"> -->
+    <!--     <startupnotify> -->
+    <!--       <enabled>true</enabled> -->
+    <!--     </startupnotify> -->
+    <!--     <command>/home/fran/dev/sherlock/sherlock.py</command> -->
+    <!--   </action> -->
+    <!-- </keybind> -->
 
     <keybind key="C-S-Escape">
       <action name="Execute">
@@ -367,17 +368,17 @@
     </keybind>
 
    <!-- audio keys -->
-    <keybind key="W-F12">    <!--XF86AudioRaiseVolume"-->
+    <keybind key="XF86AudioRaiseVolume">
       <action name="Execute">
         <command>volume up</command>
       </action>
     </keybind>
-    <keybind key="W-F11">   <!--XF86AudioLowerVolume"-->
+    <keybind key="XF86AudioLowerVolume">
       <action name="Execute">
         <command>volume down</command>
       </action>
     </keybind>
-    <keybind key="W-F10">    <!--XF86AudioMute"-->
+    <keybind key="XF86AudioMute">
       <action name="Execute">
         <command>volume toggle</command>
       </action>
@@ -404,12 +405,6 @@
     <keybind key="XF86MonBrightnessDown">
       <action name="Execute">
         <command>screenbacklight down</command>
-      </action>
-    </keybind>
-
-    <keybind key="Pause">
-      <action name="Execute">
-        <command>skippy-xd --activate-window-picker</command>
       </action>
     </keybind>
 
@@ -736,18 +731,18 @@
       <desktop>1</desktop>
     </application>
 
-    <!-- <application name="urxvtq"> -->
-    <!--   <decor>no</decor> -->
-    <!--   <position force="yes"> -->
-    <!--     <x>center</x> -->
-    <!--     <y>0</y> -->
-    <!--   </position> -->
-    <!--   <desktop>all</desktop> -->
-    <!--   <layer>above</layer> -->
-    <!--   <skip_pager>yes</skip_pager> -->
-    <!--   <skip_taskbar>yes</skip_taskbar> -->
-    <!--   <maximized>Horizontal</maximized> -->
-    <!-- </application> -->
+    <application name="urxvtq">
+      <decor>no</decor>
+      <position force="yes">
+        <x>center</x>
+        <y>0</y>
+      </position>
+      <desktop>all</desktop>
+      <layer>above</layer>
+      <skip_pager>yes</skip_pager>
+      <skip_taskbar>yes</skip_taskbar>
+      <maximized>Horizontal</maximized>
+    </application>
 
   </applications>
 </openbox_config>
