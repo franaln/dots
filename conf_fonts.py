@@ -1,6 +1,6 @@
 #! /usr/bin/env python
 
-to_add = """
+config = """
   <match target="font" >
     <edit mode="assign" name="autohint">  <bool>true</bool></edit>
     <edit mode="assign" name="hinting">  <bool>false</bool></edit>
@@ -31,15 +31,13 @@ to_add = """
 
 def main():
 
-    with open('/etc/fonts.conf', 'w') as f:
+    with open('~/.config/fontconfig/fonts.conf', 'w') as f:
 
-        lines = f.read().split('\n')
+        text = f.read()
 
-        for line in lines:
-            if '</fontconfig>' in line:
+        text = text.replace('</fontconfig>', config+'\n</fontconfig>')
 
-
-        f.write(to_add)
+        f.write(text)
 
 
 
