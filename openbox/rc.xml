@@ -721,16 +721,19 @@
   </mouse>
 
   <applications>
-    <!-- <application class="Firefox"> -->
-    <!--   <decor>no</decor> -->
-    <!--   <desktop>1</desktop> -->
-    <!--   <maximized>true</maximized> -->
-    <!-- </application> -->
+
+    <!-- Undecorate all windows -->
+    <application class="*">
+      <decor>no</decor>
+    </application>
+
+    <!-- Chromium in the first worksapce -->
     <application name="chromium">
       <maximized>true</maximized>
       <desktop>1</desktop>
     </application>
 
+    <!-- scratchpad terminal -->
     <application name="urxvtq">
       <decor>no</decor>
       <position force="yes">
@@ -745,4 +748,5 @@
     </application>
 
   </applications>
+
 </openbox_config>
