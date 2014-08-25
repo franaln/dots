@@ -7,5 +7,3 @@ xrdb ~/.Xresources
 
 # start wm
 exec openbox-session
-#autostart.sh &
-#exec compiz ccp

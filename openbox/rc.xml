@@ -161,47 +161,47 @@
         <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="W-F1">
+    <keybind key="W-1">
       <action name="GoToDesktop">
         <to>1</to>
       </action>
     </keybind>
-    <keybind key="W-F2">
+    <keybind key="W-2">
       <action name="GoToDesktop">
         <to>2</to>
       </action>
     </keybind>
-    <keybind key="W-F3">
+    <keybind key="W-3">
       <action name="GoToDesktop">
         <to>3</to>
       </action>
     </keybind>
-    <keybind key="W-F4">
+    <keybind key="W-4">
       <action name="GoToDesktop">
         <to>4</to>
       </action>
     </keybind>
-    <keybind key="W-F5">
+    <keybind key="W-5">
       <action name="GoToDesktop">
         <to>5</to>
       </action>
     </keybind>
-    <keybind key="W-F6">
+    <keybind key="W-6">
       <action name="GoToDesktop">
         <to>6</to>
       </action>
     </keybind>
-    <keybind key="W-F7">
+    <keybind key="W-7">
       <action name="GoToDesktop">
         <to>7</to>
       </action>
     </keybind>
-    <keybind key="W-F8">
+    <keybind key="W-8">
       <action name="GoToDesktop">
         <to>8</to>
       </action>
     </keybind>
-    <keybind key="W-F9">
+    <keybind key="W-9">
       <action name="GoToDesktop">
         <to>9</to>
       </action>
@@ -334,6 +334,12 @@
      </action>
    </keybind>
 
+   <keybind key="C-A-s">
+     <action name="Execute">
+       <command>urxvtq</command>
+     </action>
+   </keybind>
+
     <keybind key="Print">
       <action name="Execute">
         <command>ksnapshot</command>
@@ -348,15 +354,6 @@
         <command>sherlock</command>
       </action>
     </keybind>
-
-    <!-- <keybind key="Menu"> -->
-    <!--   <action name="Execute"> -->
-    <!--     <startupnotify> -->
-    <!--       <enabled>true</enabled> -->
-    <!--     </startupnotify> -->
-    <!--     <command>/home/fran/dev/sherlock/sherlock.py</command> -->
-    <!--   </action> -->
-    <!-- </keybind> -->
 
     <keybind key="C-S-Escape">
       <action name="Execute">
