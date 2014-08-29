@@ -1,6 +1,5 @@
 # -*- mode: sh -*-
 # .bashrc
-# frani
 
 # custom PS1
 [ -z "$PS1" ] && return
@@ -33,6 +32,17 @@ if [ -f /usr/share/bash-completion/bash_completion ] && ! shopt -oq posix; then
     . /usr/share/bash-completion/bash_completion
 fi
 
+# default apps
+export EDITOR='emacs -nw'
+export BROWSER='chromium'
+
+# my bins
+export MYBIN=$HOME/bin
+
+# SVN@CERN
+export SVNPHYS='svn+ssh://svn.cern.ch/reps/atlasphys'
+export SVNUNLP='svn+ssh://svn.cern.ch/reps/UNLP'
+
 # alias definitions
 if [ -f ~/.bash_alias ]; then
     . ~/.bash_alias
@@ -41,14 +51,4 @@ fi
 # functions definitions
 if [ -f ~/.bash_fns ] ; then
     . ~/.bash_fns
-fi
-
-# vars definitions
-if [ -f ~/.bash_vars ] ; then
-    . ~/.bash_vars
-fi
-
-# private
-if [ -f ~/.bash_private ] ; then
-    . ~/.bash_private
 fi

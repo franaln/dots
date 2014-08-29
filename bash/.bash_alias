@@ -1,6 +1,5 @@
 # -*- mode: sh -*-
 # bash aliases
-# frani
 
 # ls
 alias sl='ls'
@@ -47,6 +46,7 @@ alias reloadfonts='fc-cache -rv ; xset fp rehash'
 alias nocomment='grep -Ev "^(#|$)"'
 alias dmesgt='dmesg | tail'
 
+# packages
 if [[ `uname -v` == *"Ubuntu"* ]] ; then
     # apt-get and aptitude
     alias apu='sudo apt-get update'
@@ -59,7 +59,7 @@ else
     # pacman
     alias pacu='sudo pacman -Syu'
     alias paci='sudo pacman -S'
-    alias pacr='sudo pacman -R'
+    alias pacr='sudo pacman -Rs'
     alias pacs='pacsearch'
     alias pacq='pacman -Q'
 
@@ -88,3 +88,13 @@ alias del_older='find * -mtime +30 -exec sudo rm {} \;'
 
 # rpi
 alias spi='ssh 192.168.0.104'
+
+# lxplus
+alias sx='ssh -Y falonso@lxplus5.cern.ch'
+alias sx6='ssh -Y falonso@lxplus.cern.ch'
+alias s1='ssh -Y falonso@pcunlp001.cern.ch'
+alias s2='ssh -Y falonso@pcunlp002.cern.ch'
+
+# fisica.unlp.edu.ar
+alias smetis='ssh -Y falonso@metis.fisica.unlp.edu.ar'
+alias sleda='ssh -Y fran@leda.fisica.unlp.edu.ar'

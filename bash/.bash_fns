@@ -48,3 +48,34 @@ load_root() {
     source thisroot.sh
     cd - > /dev/null
 }
+
+sendpi() {
+
+    rpi="192.168.0.104"
+    pass="melena"
+
+    if [ $# -eq 0 ] ; then
+        cmd="ssh fran@${rpi}"
+        $cmd
+    else
+        cmd="ssh fran@${rpi} ${@}"
+
+        /usr/bin/expect<<EOF
+spawn $cmd
+expect "*?assword:"
+send "$pass\n"
+expect "$ "
+
+EOF
+    fi
+
+}
+
+usm () {
+    DRIVE="/dev/sdb1";
+    if mount | grep -q $DRIVE; then
+        sudo umount $DRIVE;
+    else
+        sudo mount -o user,rw,umask=000 $DRIVE /media/usb;
+    fi
+}
