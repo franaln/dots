@@ -1,5 +1,8 @@
 ;; -- emacs keys
-;; frani
+
+;; urxvt's keycodes fixes
+(global-set-key (kbd "\033[1;5D") 'backward-word)
+(global-set-key (kbd "\033[1;5C") 'forward-word)
 
 ;; Transpose stuff with M-t
 (global-unset-key (kbd "M-t")) ;; which used to be transpose-words
@@ -22,14 +25,14 @@
 (global-set-key [remap move-beginning-of-line] 'smarter-move-beginning-of-line)
 
 ;; others
-(global-set-key (kbd "C-c k")    'kill-other-buffers)
-(global-set-key (kbd "C-c v")    'switch-src-header)
-(global-set-key (kbd "C-c t")    'mo-toggle-identifier-naming-style)
-(global-set-key (kbd "C-\"")     'toggle-quotes)
 (global-set-key (kbd "C-l")      'goto-line)
 (global-set-key (kbd "C-h")      'delete-backward-char)
 (global-set-key (kbd "\C-x\C-u") 'shell)
 (global-set-key (kbd "M-SPC")    'multi-line-just-one-space)
+(global-set-key (kbd "C-c k")    'kill-other-buffers)
+(global-set-key (kbd "C-c v")    'switch-src-header)
+(global-set-key (kbd "C-c t")    'mo-toggle-identifier-naming-style)
+(global-set-key (kbd "C-\"")     'toggle-quotes)
 (global-set-key (kbd "C-c +")    'increment-number-at-point)
 (global-set-key (kbd "C-c r")    'rename-this-file-and-buffer)
 (global-set-key (kbd "C-c d")    'delete-this-file)

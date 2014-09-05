@@ -69,7 +69,6 @@
   (windmove-default-keybindings)
   (setq windmove-wrap-around t))
 
-
 ;; autorefresh files
 (global-auto-revert-mode t)
 
@@ -107,28 +106,35 @@
 (autoload 'insert-elisp-big-header "e-seperators" nil t)
 (autoload 'insert-script-big-header "e-seperators" nil t)
 (autoload 'insert-text-seperator-line "e-seperators" nil t)
-
 (autoload 'markdown-mode "markdown-mode" "Major mode for editing Markdown files" t)
 (add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 
-;; fix for shift+up (bug in xterm)
-;; (if (equal "xterm" (tty-type))
-;;     (define-key input-decode-map "\e[1;2A" [S-up]))
-;; (defadvice terminal-init-xterm (after select-shift-up activate)
-;;   (define-key input-decode-map "\e[1;2A" [S-up]))
-
-;; ansi colours
-(add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
-(autoload 'ansi-color-for-comint-mode-on "ansi-color" nil t)
-
-;; tramp
-(require 'tramp)
-(setq tramp-default-method "ssh")
-
 ;; custom faces
 (set-face-background 'hl-line "#1d1f20") ;; current line
 (set-face-foreground 'hl-line "#ffffff")
-(set-face-background 'region "green")    ;; selected region
-(set-face-foreground 'region "black")
+(set-face-background 'region  "green")    ;; selected region
+(set-face-foreground 'region  "black")
+
+;; google translate
+(require 'google-translate)
+(require 'google-translate-smooth-ui)
+(global-set-key "\C-ct" 'google-translate-smooth-translate)
+(setq google-translate-translation-directions-alist
+      '(("en" . "es") ("es" . "en") ))
+
+;; compilation
+;; Helper for compilation. Close the compilation window if
+;; there was no error at all.
+(defun compilation-exit-autoclose (status code msg)
+  ;; If M-x compile exists with a 0
+  (when (and (eq status 'exit) (zerop code))
+    ;; then bury the *compilation* buffer, so that C-x b doesn't go there
+    (bury-buffer)
+    ;; and delete the *compilation* window
+    (delete-window (get-buffer-window (get-buffer "*compilation*"))))
+  ;; Always return the anticipated result of compilation-exit-message-function
+  (cons msg code))
+;; Specify my function (maybe I should have done a lambda function)
+  (setq compilation-exit-message-function 'compilation-exit-autoclose)
