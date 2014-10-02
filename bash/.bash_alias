@@ -90,8 +90,7 @@ alias del_older='find * -mtime +30 -exec sudo rm {} \;'
 alias spi='ssh 192.168.0.104'
 
 # lxplus
-alias sx='ssh -Y falonso@lxplus5.cern.ch'
-alias sx6='ssh -Y falonso@lxplus.cern.ch'
+alias sx='ssh -Y falonso@lxplus.cern.ch'
 alias s1='ssh -Y falonso@pcunlp001.cern.ch'
 alias s2='ssh -Y falonso@pcunlp002.cern.ch'
 
