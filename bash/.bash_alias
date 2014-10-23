@@ -40,7 +40,7 @@ alias matrix='echo -e "\e[32m"; while :; do printf '%*c' $(($RANDOM % 30)) $(($R
 alias pingg='ping -c 3 www.google.com'
 alias diff='colordiff'              # requires colordiff package
 alias grep='grep --color=auto'
-alias df='df -h | \grep -i /dev/sd'
+alias df='df -h'
 alias du='du -sh'
 alias reloadfonts='fc-cache -rv ; xset fp rehash'
 alias nocomment='grep -Ev "^(#|$)"'
@@ -90,8 +90,7 @@ alias del_older='find * -mtime +30 -exec sudo rm {} \;'
 alias spi='ssh 192.168.0.104'
 
 # lxplus
-alias sx='ssh -Y falonso@lxplus5.cern.ch'
-alias sx6='ssh -Y falonso@lxplus.cern.ch'
+alias sx='ssh -Y falonso@lxplus.cern.ch'
 alias s1='ssh -Y falonso@pcunlp001.cern.ch'
 alias s2='ssh -Y falonso@pcunlp002.cern.ch'
 

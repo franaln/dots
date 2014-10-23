@@ -10,7 +10,7 @@
 (setq inhibit-startup-message t)
 
 ;; setup load path
-(add-to-list 'load-path "~/.emacs.d")
+(add-to-list 'load-path "~/.emacs.d/lisp")
 
 ;; enter syntaxis color mode
 (global-font-lock-mode t)
@@ -69,9 +69,6 @@
   (windmove-default-keybindings)
   (setq windmove-wrap-around t))
 
-;; autorefresh files
-(global-auto-revert-mode t)
-
 ;; setup extensions
 (add-to-list 'load-path "~/.emacs.d/plugins")
 (require 'setup-yasnippet)
@@ -118,11 +115,11 @@
 (set-face-foreground 'region  "black")
 
 ;; google translate
-(require 'google-translate)
-(require 'google-translate-smooth-ui)
-(global-set-key "\C-ct" 'google-translate-smooth-translate)
-(setq google-translate-translation-directions-alist
-      '(("en" . "es") ("es" . "en") ))
+;; (require 'google-translate)
+;; (require 'google-translate-smooth-ui)
+;; (global-set-key "\C-ct" 'google-translate-smooth-translate)
+;; (setq google-translate-translation-directions-alist
+;;       '(("en" . "es") ("es" . "en") ))
 
 ;; compilation
 ;; Helper for compilation. Close the compilation window if
@@ -134,7 +131,7 @@
     (bury-buffer)
     ;; and delete the *compilation* window
     (delete-window (get-buffer-window (get-buffer "*compilation*"))))
-  ;; Always return the anticipated result of compilation-exit-message-function
-  (cons msg code))
-;; Specify my function (maybe I should have done a lambda function)
-  (setq compilation-exit-message-function 'compilation-exit-autoclose)
+    ;; Always return the anticipated result of compilation-exit-message-function
+    (cons msg code))
+    ;; Specify my function (maybe I should have done a lambda function)
+    (setq compilation-exit-message-function 'compilation-exit-autoclose)
