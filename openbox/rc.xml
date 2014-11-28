@@ -113,6 +113,14 @@
     <chainQuitKey>C-g</chainQuitKey>
 
     <!-- desktop switching -->
+    <keybind key="C-A-d" chroot="true">
+      <keybind key="Up"><action name="DesktopUp"><dialog>no</dialog></action></keybind>
+      <keybind key="Down"><action name="DesktopDown"><dialog>no</dialog></action></keybind>
+      <keybind key="Left"><action name="DesktopLeft"><dialog>no</dialog></action></keybind>
+      <keybind key="Right"><action name="DesktopRight"><dialog>no</dialog></action></keybind>
+      <keybind key="Escape"><action name="BreakChroot"/></keybind>
+    </keybind>
+
     <keybind key="C-A-Left">
       <action name="GoToDesktop">
         <to>left</to>
@@ -352,6 +360,15 @@
           <enabled>true</enabled>
         </startupnotify>
         <command>sherlock</command>
+      </action>
+    </keybind>
+
+    <keybind key="A-F1">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+        </startupnotify>
+        <command>/home/fran/dev/sherlock/sherlock.py</command>
       </action>
     </keybind>
 
@@ -720,7 +737,7 @@
   <applications>
 
     <!-- Undecorate all windows -->
-    <application class="*">
+    <application class="urxvt*">
       <decor>no</decor>
     </application>
 
