@@ -381,15 +381,25 @@
       </action>
     </keybind>
 
-   <!-- audio keys -->
-    <keybind key="XF86AudioRaiseVolume">
+
+    <keybind key="XF86KbdBrightnessDown">
       <action name="Execute">
-        <command>volume up</command>
+        <command>kbdbacklight down</command>
       </action>
     </keybind>
-    <keybind key="XF86AudioLowerVolume">
+    <keybind key="XF86KbdBrightnessUp">
       <action name="Execute">
-        <command>volume down</command>
+        <command>kbdbacklight up</command>
+      </action>
+    </keybind>
+    <keybind key="XF86MonBrightnessDown">
+      <action name="Execute">
+        <command>screenbacklight down</command>
+      </action>
+    </keybind>
+    <keybind key="XF86MonBrightnessUp">
+      <action name="Execute">
+        <command>screenbacklight up</command>
       </action>
     </keybind>
     <keybind key="XF86AudioMute">
@@ -397,28 +407,20 @@
         <command>volume toggle</command>
       </action>
     </keybind>
-
-    <!-- keyboard backlight keys -->
-    <keybind key="XF86KbdBrightnessUp">
+    <keybind key="XF86AudioLowerVolume">
       <action name="Execute">
-        <command>kbdbacklight up</command>
+        <command>volume down</command>
       </action>
     </keybind>
-    <keybind key="XF86KbdBrightnessDown">
+    <keybind key="XF86AudioRaiseVolume">
       <action name="Execute">
-        <command>kbdbacklight down</command>
+        <command>volume up</command>
       </action>
     </keybind>
 
-    <!-- screen backlight keys -->
-    <keybind key="XF86MonBrightnessUp">
+    <keybind key="XF86Display">
       <action name="Execute">
-        <command>screenbacklight up</command>
-      </action>
-    </keybind>
-    <keybind key="XF86MonBrightnessDown">
-      <action name="Execute">
-        <command>screenbacklight down</command>
+        <command>switch_screen</command>
       </action>
     </keybind>
 
