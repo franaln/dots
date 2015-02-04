@@ -43,6 +43,9 @@ export MYBIN=$HOME/bin
 export SVNPHYS='svn+ssh://svn.cern.ch/reps/atlasphys'
 export SVNUNLP='svn+ssh://svn.cern.ch/reps/UNLP'
 
+# root
+export LD_LIBRARY_PATH=/usr/lib/root:$PYTHONDIR/lib:$LD_LIBRARY_PATH
+
 # alias definitions
 if [ -f ~/.bash_alias ]; then
     . ~/.bash_alias

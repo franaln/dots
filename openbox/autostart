@@ -1,12 +1,13 @@
 numlockx on &
-setxkbmap -layout us -option ctrl:nocaps &
+setxkbmap -layout us &
 setlayout 0 3 3 0 &
 touchpad.sh &
 nitrogen --restore &
 tint2 &
 batterytray &
 volumetray &
+blanktray &
 nm-applet --sm-disable &
-dunst -conf $HOME/.dunstrc &
+dunst -conf $HOME/.config/dunst/.dunstrc &
 compton -b &
 (sleep 2 && dropboxd) &

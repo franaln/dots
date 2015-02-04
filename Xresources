@@ -16,8 +16,9 @@ URxvt.cursorBlink: false
 URxvt.scrollBar: false
 URxvt.saveLines: 5000
 URxvt.termName: rxvt
-URxvt.font: xft:Inconsolata:size=9
-URxvt.boldFont: xft:Inconsolata:size=9
+!URxvt.font: xft:Inconsolata:size=9
+!URxvt.boldFont: xft:Inconsolata:size=9
+URxvt*font: xft:Monospace:pixelsize=12
 URxvt.letterSpace: -1
 
 URxvt.perl-ext-common: default,url-select
