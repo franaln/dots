@@ -1,6 +1,6 @@
 # name: itemize environment
 # key: itemize
 # --
-\begin{itemize}\itemsep${1:0.2}cm
+\begin{itemize}\itemsep0.2cm\parskip0.2cm
     \item $0
 \end{itemize}

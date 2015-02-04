@@ -110,6 +110,7 @@
 (add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.tex\\'" . latex-mode))
 
 ;; custom faces
 (set-face-background 'hl-line "#1d1f20") ;; current line
@@ -118,11 +119,11 @@
 (set-face-foreground 'region  "black")
 
 ;; google translate
-(require 'google-translate)
-(require 'google-translate-smooth-ui)
-(global-set-key "\C-ct" 'google-translate-smooth-translate)
-(setq google-translate-translation-directions-alist
-      '(("en" . "es") ("es" . "en") ))
+;; (require 'google-translate)
+;; (require 'google-translate-smooth-ui)
+;; (global-set-key "\C-ct" 'google-translate-smooth-translate)
+;; (setq google-translate-translation-directions-alist
+;;       '(("en" . "es") ("es" . "en") ))
 
 ;; compilation
 ;; Helper for compilation. Close the compilation window if
