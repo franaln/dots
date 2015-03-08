@@ -44,7 +44,6 @@ alias du='du -sh'
 alias reloadfonts='fc-cache -rv ; xset fp rehash'
 alias nocomment='grep -Ev "^(#|$)"'
 alias dmesgt='dmesg | tail'
-alias top='top -M'
 alias setup='test -f setup.sh && source ./setup.sh || echo setup: no setup.sh in the current directory.'
 alias lg='ll | grep'
 
