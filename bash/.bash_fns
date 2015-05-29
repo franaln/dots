@@ -45,7 +45,7 @@ search_tar() {
 
 load_root() {
     cd ~/root/bin
-    source thisroot.sh
+    . thisroot.sh
     cd - > /dev/null
 }
 

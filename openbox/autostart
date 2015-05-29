@@ -1,5 +1,6 @@
 numlockx on &
 setxkbmap -layout us &
+setxkbmap -option compose:menu &
 setlayout 0 3 3 0 &
 touchpad.sh &
 nitrogen --restore &
