@@ -136,3 +136,6 @@
     (cons msg code))
     ;; Specify my function (maybe I should have done a lambda function)
     (setq compilation-exit-message-function 'compilation-exit-autoclose)
+
+
+(setq ispell-dictionary "castellano")
