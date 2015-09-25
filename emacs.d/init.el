@@ -115,12 +115,6 @@
 (set-face-background 'region  "green")    ;; selected region
 (set-face-foreground 'region  "black")
 
-;; google translate
-;; (require 'google-translate)
-;; (require 'google-translate-smooth-ui)
-;; (global-set-key "\C-ct" 'google-translate-smooth-translate)
-;; (setq google-translate-translation-directions-alist
-;;       '(("en" . "es") ("es" . "en") ))
 
 ;; compilation
 ;; Helper for compilation. Close the compilation window if
@@ -139,33 +133,6 @@
 
 
 
-;; Center text
-(defun center-text ()
-  "Center the text in the middle of the buffer. Works best in full screen"
-  (interactive)
-  (set-window-margins (car (get-buffer-window-list (current-buffer) nil t))
-                      (/ (window-width) 4)
-                      (/ (window-width) 4))
-  )
-
-(defun center-text-clear ()
-  (interactive)
-  (set-window-margins (car (get-buffer-window-list (current-buffer) nil t))
-                      nil
-                      nil))
-
-(setq centered nil)
-
-(defun center-text-mode ()
-  (interactive)
-  (if centered
-      (progn (center-text-clear)
-             (setq centered nil))
-      (progn (center-text)
-             (setq centered t))))
-
-(define-key global-map (kbd "C-c M-t") 'center-text-mode)
-
 (set-face-attribute 'fringe nil :background "#3f4f5b" :foreground "#2E2920")
 
 
@@ -178,3 +145,5 @@
          (string= (buffer-name buf) "*Shell Command Output*")
          (with-current-buffer buf
            (ansi-color-apply-on-region (point-min) (point-max))))))
+
+(require 'beam-mode)

@@ -44,4 +44,6 @@
 ; Fixing another key binding bug in iedit mode
 (define-key global-map (kbd "C-c o") 'iedit-mode)
 
+(define-key global-map (kbd "C-c M-t") 'center-text-mode)
+
 (provide 'keys)
