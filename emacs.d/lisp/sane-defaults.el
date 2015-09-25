@@ -69,7 +69,7 @@
 (setq-default truncate-lines t)
 
 ;; Keep cursor away from edges when scrolling up/down
-(require 'smooth-scrolling)
+;;(require 'smooth-scrolling)
 
 ;; Allow recursive minibuffers
 (setq enable-recursive-minibuffers t)
@@ -103,13 +103,17 @@
 
 (electric-indent-mode +1)
 
-; require final newlines in files when they are saved
+;; require final newlines in files when they are saved
 (setq require-final-newline t)
 
-; ignore case when searching
+;; ignore case when searching
 (setq case-fold-search t)
 
-; don't blink the cursor
+;; don't blink the cursor
 (blink-cursor-mode nil)
+
+;; ispell default language
+(setq ispell-dictionary "castellano")
+
 
 (provide 'sane-defaults)

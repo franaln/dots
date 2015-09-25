@@ -11,4 +11,4 @@ blanktray &
 nm-applet --sm-disable &
 dunst -conf $HOME/.config/dunst/.dunstrc &
 compton -b &
-(sleep 2 && dropboxd) &
+(sleep 10 && dropboxd) &

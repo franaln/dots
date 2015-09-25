@@ -138,6 +138,7 @@
     (setq compilation-exit-message-function 'compilation-exit-autoclose)
 
 
+
 ;; Center text
 (defun center-text ()
   "Center the text in the middle of the buffer. Works best in full screen"
