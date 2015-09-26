@@ -103,17 +103,20 @@
 
 (electric-indent-mode +1)
 
-; require final newlines in files when they are saved
+;; require final newlines in files when they are saved
 (setq require-final-newline t)
 
-; ignore case when searching
+;; ignore case when searching
 (setq case-fold-search t)
 
-; don't blink the cursor
+;; don't blink the cursor
 (blink-cursor-mode nil)
 
 ; color in shell output
 (add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
 (add-to-list 'comint-output-filter-functions 'ansi-color-process-output)
+
+;; ispell default language
+(setq ispell-dictionary "castellano")
 
 (provide 'sane-defaults)

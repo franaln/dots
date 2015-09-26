@@ -115,12 +115,6 @@
 (set-face-background 'region  "green")    ;; selected region
 (set-face-foreground 'region  "black")
 
-;; google translate
-;; (require 'google-translate)
-;; (require 'google-translate-smooth-ui)
-;; (global-set-key "\C-ct" 'google-translate-smooth-translate)
-;; (setq google-translate-translation-directions-alist
-;;       '(("en" . "es") ("es" . "en") ))
 
 ;; compilation
 ;; Helper for compilation. Close the compilation window if
@@ -138,4 +132,18 @@
     (setq compilation-exit-message-function 'compilation-exit-autoclose)
 
 
-(setq ispell-dictionary "castellano")
+
+(set-face-attribute 'fringe nil :background "#3f4f5b" :foreground "#2E2920")
+
+
+(require 'ansi-color)
+
+(defadvice display-message-or-buffer (before ansi-color activate)
+  "Process ANSI color codes in shell output."
+  (let ((buf (ad-get-arg 0)))
+    (and (bufferp buf)
+         (string= (buffer-name buf) "*Shell Command Output*")
+         (with-current-buffer buf
+           (ansi-color-apply-on-region (point-min) (point-max))))))
+
+(require 'beam-mode)
