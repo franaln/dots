@@ -37,5 +37,6 @@
 ;;   )
 
 (add-to-list 'auto-mode-alist '("\\.beam\\'" . latex-mode))
+(add-to-list 'auto-mode-alist '("\\.sld\\'" . latex-mode))
 
 (provide 'beam-mode)

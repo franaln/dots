@@ -51,6 +51,7 @@
 
 ;; Lines should be 80 characters wide, not 72
 (setq fill-column 80)
+(setq-default fill-column 80)
 
 ;; Undo/redo window configuration with C-c <left>/<right>
 (winner-mode 1)
@@ -110,5 +111,9 @@
 
 ; don't blink the cursor
 (blink-cursor-mode nil)
+
+; color in shell output
+(add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
+(add-to-list 'comint-output-filter-functions 'ansi-color-process-output)
 
 (provide 'sane-defaults)
