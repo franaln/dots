@@ -9,6 +9,7 @@ batterytray &
 volumetray &
 blanktray &
 nm-applet --sm-disable &
-dunst -conf $HOME/.config/dunst/.dunstrc &
+dunst -conf $HOME/.config/dunst/dunstrc &
 compton -b &
 (sleep 10 && dropboxd) &
+(sleep 10 && chromium) &

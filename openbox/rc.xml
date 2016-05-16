@@ -350,7 +350,7 @@
 
     <keybind key="Print">
       <action name="Execute">
-        <command>ksnapshot</command>
+        <command>shutter -f -e -o './%y-%m-%d_$w_$h.png'</command>
       </action>
     </keybind>
 
@@ -380,6 +380,12 @@
         <command>gnome-system-monitor</command>
       </action>
     </keybind>
+
+   <keybind key="C-A-l">
+     <action name="Execute">
+       <command>slimlock</command>
+     </action>
+   </keybind>
 
 
     <keybind key="XF86KbdBrightnessDown">
@@ -462,46 +468,46 @@
         <action name="FocusToBottom"/>
         <action name="Unfocus"/>
       </mousebind>
-      <mousebind button="C-A-Up" action="Click">
-        <action name="GoToDesktop">
-          <to>up</to>
-        </action>
-      </mousebind>
-      <mousebind button="C-A-Down" action="Click">
-        <action name="GoToDesktop">
-          <to>down</to>
-        </action>
-      </mousebind>
-      <mousebind button="C-A-Left" action="Click">
-        <action name="GoToDesktop">
-          <to>left</to>
-        </action>
-      </mousebind>
-      <mousebind button="C-A-Right" action="Click">
-        <action name="GoToDesktop">
-          <to>right</to>
-        </action>
-      </mousebind>
-      <mousebind button="A-S-Up" action="Click">
-        <action name="SendToDesktop">
-          <to>up</to>
-        </action>
-      </mousebind>
-      <mousebind button="A-S-Down" action="Click">
-        <action name="SendToDesktop">
-          <to>down</to>
-        </action>
-      </mousebind>
-      <mousebind button="A-S-Left" action="Click">
-        <action name="SendToDesktop">
-          <to>left</to>
-        </action>
-      </mousebind>
-      <mousebind button="A-S-Right" action="Click">
-        <action name="SendToDesktop">
-          <to>right</to>
-        </action>
-      </mousebind>
+      <!-- <mousebind button="C-A-Up" action="Click"> -->
+      <!--   <action name="GoToDesktop"> -->
+      <!--     <to>up</to> -->
+      <!--   </action> -->
+      <!-- </mousebind> -->
+      <!-- <mousebind button="C-A-Down" action="Click"> -->
+      <!--   <action name="GoToDesktop"> -->
+      <!--     <to>down</to> -->
+      <!--   </action> -->
+      <!-- </mousebind> -->
+      <!-- <mousebind button="C-A-Left" action="Click"> -->
+      <!--   <action name="GoToDesktop"> -->
+      <!--     <to>left</to> -->
+      <!--   </action> -->
+      <!-- </mousebind> -->
+      <!-- <mousebind button="C-A-Right" action="Click"> -->
+      <!--   <action name="GoToDesktop"> -->
+      <!--     <to>right</to> -->
+      <!--   </action> -->
+      <!-- </mousebind> -->
+      <!-- <mousebind button="A-S-Up" action="Click"> -->
+      <!--   <action name="SendToDesktop"> -->
+      <!--     <to>up</to> -->
+      <!--   </action> -->
+      <!-- </mousebind> -->
+      <!-- <mousebind button="A-S-Down" action="Click"> -->
+      <!--   <action name="SendToDesktop"> -->
+      <!--     <to>down</to> -->
+      <!--   </action> -->
+      <!-- </mousebind> -->
+      <!-- <mousebind button="A-S-Left" action="Click"> -->
+      <!--   <action name="SendToDesktop"> -->
+      <!--     <to>left</to> -->
+      <!--   </action> -->
+      <!-- </mousebind> -->
+      <!-- <mousebind button="A-S-Right" action="Click"> -->
+      <!--   <action name="SendToDesktop"> -->
+      <!--     <to>right</to> -->
+      <!--   </action> -->
+      <!-- </mousebind> -->
     </context>
     <context name="Titlebar">
       <mousebind button="Left" action="Drag">
@@ -695,6 +701,13 @@
       </mousebind>
     </context>
     <context name="Desktop">
+
+      <mousebind button="Middle" action="Click">
+        <action name="Execute">
+          <command>sherlock.py</command>
+        </action>
+      </mousebind>
+
       <mousebind button="Up" action="Click">
         <action name="GoToDesktop">
           <to>previous</to>

@@ -2,6 +2,7 @@
 # bash aliases
 
 # ls
+alias ls='ls -N --color=auto'
 alias sl='ls'
 alias ll='ls -lh'
 alias la='ls -A'
@@ -36,6 +37,7 @@ alias ncmpcpp='ncmpcpp -c ~/.config/ncmpcpp/config'
 
 # demas
 alias reload='source ~/.bashrc'
+alias grep='grep --color=auto'
 alias pingg='ping -c 3 www.google.com'
 alias diff='colordiff' # requires colordiff package
 alias grep='grep --color=auto'
