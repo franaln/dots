@@ -7,7 +7,7 @@
 # ID 1
 rounded = 0
 border_width = 0
-background_color = #2D2D2D 100
+background_color = #2d2d2d 100
 border_color = #484848 100
 # background_color = #1a1a1a 100
 # border_color = #ffffff 0
@@ -31,7 +31,7 @@ border_color = #272727 100
 #----------
 panel_monitor = 1
 panel_position = top center horizontal
-panel_size = 100% 32
+panel_size = 100% 38
 panel_margin = -2 -1
 panel_padding = 0 0 10
 panel_dock = 0
@@ -72,7 +72,7 @@ task_iconified_icon_asb = 70 0 0
 #----------
 # Fonts
 #----------
-task_font = Cantarell 9
+task_font = Fira Sans Light 10
 task_font_color = #dcdcdc 100
 task_active_font_color = #ffffff 100
 task_urgent_font_color = #ffffff 100
@@ -93,7 +93,7 @@ systray_icon_asb = 100 0 0
 # Clock
 #----------
 time1_format = %H:%M
-time1_font = Cantarell 12
+time1_font = Fira Sans Light 14
 clock_font_color = #dcdcdc 100
 clock_padding = 10 6
 clock_background_id = 0
@@ -107,7 +107,7 @@ tooltip_padding = 2 2
 tooltip_show_timeout = 0.7
 tooltip_hide_timeout = 0.3
 tooltip_background_id = 3
-tooltip_font = Cantarell 11
+tooltip_font = Fira Sans Light 12
 tooltip_font_color = #1a1a1a 100
 
 #----------
