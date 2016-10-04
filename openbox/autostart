@@ -11,5 +11,6 @@ blanktray &
 nm-applet --sm-disable &
 dunst -conf $HOME/.config/dunst/dunstrc &
 compton -b &
+/usr/bin/unclutter -noevents -idle 5 &
 (sleep 10 && dropboxd) &
 (sleep 10 && chromium) &

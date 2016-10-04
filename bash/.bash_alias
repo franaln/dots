@@ -32,7 +32,7 @@ alias ..='cd ..'
 alias ...='cd ../..'
 
 # music player
-alias mocp='mocp -m ~/Music -T dante'
+alias mocp='mocp -m ~/music -T dante'
 alias ncmpcpp='ncmpcpp -c ~/.config/ncmpcpp/config'
 
 # demas
@@ -48,6 +48,7 @@ alias nocomment='grep -Ev "^(#|$)"'
 alias dmesgt='dmesg | tail'
 alias setup='test -f setup.sh && source ./setup.sh || echo setup: no setup.sh in the current directory.'
 alias lg='ll | grep'
+alias o='open'
 
 # packages
 if [[ `uname -v` == *"Ubuntu"* ]] ; then

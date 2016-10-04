@@ -49,3 +49,5 @@ if [ -f ~/.bash_fns ] ; then
 fi
 
 export CUPS_SERVER=localhost
+
+export THEME="dark"
