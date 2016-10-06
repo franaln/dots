@@ -350,7 +350,7 @@
 
     <keybind key="Print">
       <action name="Execute">
-        <command>shutter -f -e -o './%y-%m-%d_$w_$h.png'</command>
+        <command>shutter -f -e -o '~/Pictures/%y-%m-%d_$w_$h.png'</command>
       </action>
     </keybind>
 
@@ -369,6 +369,15 @@
           <enabled>true</enabled>
         </startupnotify>
         <command>sherlock.py</command>
+      </action>
+    </keybind>
+
+    <keybind key="F1">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+        </startupnotify>
+        <command>~/dev/sherlock/sherlock2.py</command>
       </action>
     </keybind>
 

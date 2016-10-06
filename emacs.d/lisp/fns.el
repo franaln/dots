@@ -290,4 +290,9 @@ Don't mess with special buffers."
              (setq centered t))))
 
 
+(defun execute-shell-command-on-buffer ()
+  (interactive "MRunning clatex -f")
+  (shell-command "clatex -f" buffer-file-name)
+  )
+
 (provide 'fns)

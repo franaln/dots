@@ -25,10 +25,10 @@
                           '(
                             ("\\.title\\|\\.author\\|\\.date\\|\\.institute\\|\\.meeting" . 'font-lock-special-macro-face )
                             ("\\.slidetitle\\|^\\.slide" . 'font-lock-special-slide-face )
-                            ("\\.item\\|\\.subitem" . 'font-lock-special-macro-face )
+                            ("\\.item\\|\\.iitem\\|\\.iiitem" . 'font-lock-special-macro-face )
                             ("\\.top\\|\\.bottom\\|\\.left\\|\\.right" . 'font-lock-special-macro-face )
                             ("\\.tl\\|\\.tr\\|\\.bl\\|\\.br" . 'font-lock-special-macro-face )
-                            ("\\.img\\|\\.header" . 'font-lock-special-macro-face )
+                            ("\\.img\\|\\.header\\|\\.scale" . 'font-lock-special-macro-face )
                             ("^#.*" . 'font-lock-comment-face )
                             )
                           )

@@ -44,35 +44,6 @@ URxvt.iso14755_52: false
 *pointerColorBackground: #EEEEEE
 *pointerColorForeground: #121212
 
-! *background: #121212
-! *foreground: #ffffff
-! *cursorColor:     #d1b217
-
-! !black
-! *color0:  #333333
-! *color8:  #444444
-! !red
-! *color1:  #D45E68
-! *color9:  #ED6975
-! !green
-! *color2:  #A4D45E
-! *color10: #B8ED69
-! !yellow
-! *color3:  #D4C95E
-! *color11: #EDE169
-! !blue
-! *color4:  #5EA4D4
-! *color12: #69B8ED
-! !magenta
-! *color5:  #D45EA4
-! *color13: #ED69B8
-! !cyan
-! *color6:  #5ED4C9
-! *color14: #69EDE1
-! !white
-! *color7:  #AAAAAA
-! *color15: #CCCCCC
-
 ! atelierdune.dark
 ! special
 *.foreground:   #c7c5b7
@@ -110,3 +81,42 @@ URxvt.iso14755_52: false
 ! white
 *.color7:       #a6a28c
 *.color15:      #fefbec
+
+
+! ! 3024.light
+! ! special
+! *.foreground:   #4a4543
+! *.background:   #f7f7f7
+! *.cursorColor:  #4a4543
+
+! ! black
+! *.color0:       #090300
+! *.color8:       #5c5855
+
+! ! red
+! *.color1:       #db2d20
+! *.color9:       #db2d20
+
+! ! green
+! *.color2:       #01a252
+! *.color10:      #01a252
+
+! ! yellow
+! *.color3:       #fded02
+! *.color11:      #fded02
+
+! ! blue
+! *.color4:       #01a0e4
+! *.color12:      #01a0e4
+
+! ! magenta
+! *.color5:       #a16a94
+! *.color13:      #a16a94
+
+! ! cyan
+! *.color6:       #b5e4f4
+! *.color14:      #b5e4f4
+
+! ! white
+! *.color7:       #a5a2a2
+! *.color15:      #f7f7f7
