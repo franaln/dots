@@ -1,16 +1,15 @@
 numlockx on &
 setxkbmap -layout us &
 setxkbmap -option compose:menu &
+/usr/bin/unclutter -noevents -idle 5 &
 setlayout 0 3 3 0 &
 touchpad.sh &
 nitrogen --restore &
 tint2 &
 batterytray &
 volumetray &
-blanktray &
 nm-applet --sm-disable &
 dunst -conf $HOME/.config/dunst/dunstrc &
 compton -b &
-/usr/bin/unclutter -noevents -idle 5 &
-(sleep 10 && dropboxd) &
-(sleep 10 && chromium) &
+(sleep 3 && dropboxd) &
+(sleep 3 && chromium) &
