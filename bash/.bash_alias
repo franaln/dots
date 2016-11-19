@@ -6,12 +6,14 @@ alias ls='ls -N --color=auto'
 alias sl='ls'
 alias ll='ls -lh'
 alias la='ls -A'
+alias lt='ls | sort -k 2 -k 1M -k2'
 
 # emacs
 alias emacs='emacs -nw'
 alias emw='emacs'
 alias ewm='emacs'
 alias em='emacs'
+alias e='emacs'
 alias semw='sudo emacs -nw'
 
 # python
@@ -81,11 +83,6 @@ alias mv='mv -i'
 alias rm='rm -I'
 alias ln='ln -i'
 
-# svn
-#alias sc='svn status | grep -v ?' # (s)how (c)hanges
-
-# go to
-alias gosusy='cd ~/Susy/SinglePhotonAnalysis'
 
 # delete files older than 30 days
 alias del_older='find * -mtime +30 -exec sudo rm {} \;'

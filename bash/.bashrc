@@ -48,6 +48,8 @@ if [ -f ~/.bash_fns ] ; then
     . ~/.bash_fns
 fi
 
-export CUPS_SERVER=localhost
+# autojump
+. /etc/profile.d/autojump.bash
 
+export CUPS_SERVER=localhost
 export THEME="dark"
