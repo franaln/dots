@@ -1,13 +1,13 @@
 numlockx on &
 setxkbmap -layout us &
 setxkbmap -option compose:menu &
-/usr/bin/unclutter -noevents -idle 5 &
 setlayout 0 3 3 0 &
+/usr/bin/unclutter -noevents -idle 5 &
 touchpad.sh &
 nitrogen --restore &
 tint2 &
-batterytray &
 volumetray &
+monitortray.py &
 nm-applet --sm-disable &
 dunst -conf $HOME/.config/dunst/dunstrc &
 compton -b &

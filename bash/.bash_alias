@@ -6,7 +6,7 @@ alias ls='ls -N --color=auto'
 alias sl='ls'
 alias ll='ls -lh'
 alias la='ls -A'
-alias lt='ls | sort -k 2 -k 1M -k2'
+alias lt='ls -N --color=auto | sort -k 2 -k 1M -k2'
 
 # emacs
 alias emacs='emacs -nw'
@@ -70,11 +70,11 @@ else
     alias pacq='pacman -Q'
 
     # packer
-    alias packer='packer --auronly'
-    alias auru='packer -Syu'
-    alias auri='packer -S'
-    alias aurr='packer -R'
-    alias aurs='packer -Ss'
+    alias pacaur='pacaur -a'
+    alias auru='pacaur -Syu'
+    alias auri='pacaur -S'
+    alias aurr='pacaur -R'
+    alias aurs='pacaur -Ss'
 fi
 
 # security/safety features
@@ -85,7 +85,7 @@ alias ln='ln -i'
 
 
 # delete files older than 30 days
-alias del_older='find * -mtime +30 -exec sudo rm {} \;'
+##alias del_older='find * -mtime +30 -exec sudo rm {} \;'
 
 # rpi
 alias spi='ssh 192.168.0.104'
