@@ -98,3 +98,6 @@ alias s2='ssh -Y falonso@pcunlp002.cern.ch'
 # fisica.unlp.edu.ar
 alias smetis='ssh -Y falonso@metis.fisica.unlp.edu.ar'
 alias sleda='ssh -Y fran@leda.fisica.unlp.edu.ar'
+
+alias hoff='set +o history'
+alias hon='set -o history'

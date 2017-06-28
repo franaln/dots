@@ -11,5 +11,6 @@ monitortray.py &
 nm-applet --sm-disable &
 dunst -conf $HOME/.config/dunst/dunstrc &
 compton -b &
+umonitor --listen --quiet &
 (sleep 3 && dropboxd) &
 (sleep 3 && chromium) &
