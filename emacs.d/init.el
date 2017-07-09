@@ -114,9 +114,9 @@
 (add-to-list 'auto-mode-alist '("\\.tex\\'" . latex-mode))
 
 ;; custom faces
-(set-face-background 'hl-line "#292c2e") ;; "#111213") ;; current line
+(set-face-background 'hl-line "#292c2e") ;; current line
 (set-face-foreground 'hl-line "#ffffff")
-(set-face-background 'region  "green")    ;; selected region
+(set-face-background 'region  "green")   ;; selected region
 (set-face-foreground 'region  "black")
 
 ;; Close the compilation window if
