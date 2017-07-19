@@ -90,7 +90,7 @@ task_active_icon_asb = 100 0 0
 task_urgent_icon_asb = 100 0 0
 task_iconified_icon_asb = 100 0 0
 
-task_font = Fira Sans Light 10
+task_font = Fira Sans Light 12
 task_font_color = #ffffff 80
 task_active_font_color = #FFFFFF 85
 task_urgent_font_color = #FFFFFF 100

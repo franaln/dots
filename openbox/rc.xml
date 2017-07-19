@@ -89,7 +89,7 @@
     </popupFixedPosition>
   </resize>
   <margins>
-    <top>28</top>
+    <top>42</top>
     <bottom>0</bottom>
     <left>0</left>
     <right>0</right>
@@ -377,7 +377,16 @@
         <startupnotify>
           <enabled>true</enabled>
         </startupnotify>
-        <command>~/dev/sherlock/sherlock2.py</command>
+        <command>/home/fran/dev/sherlock/sherlock.py</command>
+      </action>
+    </keybind>
+
+        <keybind key="F2">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+        </startupnotify>
+        <command>skippy-xd</command>
       </action>
     </keybind>
 
@@ -453,6 +462,7 @@
     <!-- Set this to TRUE to move the mouse pointer across the desktop when
        switching due to hitting the edge of the screen -->
     <screenEdgeWarpMouse>false</screenEdgeWarpMouse>
+
     <context name="Frame">
       <mousebind button="A-Left" action="Press">
         <action name="Focus"/>
@@ -477,26 +487,27 @@
         <action name="FocusToBottom"/>
         <action name="Unfocus"/>
       </mousebind>
-      <!-- <mousebind button="C-A-Up" action="Click"> -->
-      <!--   <action name="GoToDesktop"> -->
-      <!--     <to>up</to> -->
-      <!--   </action> -->
-      <!-- </mousebind> -->
-      <!-- <mousebind button="C-A-Down" action="Click"> -->
-      <!--   <action name="GoToDesktop"> -->
-      <!--     <to>down</to> -->
-      <!--   </action> -->
-      <!-- </mousebind> -->
-      <!-- <mousebind button="C-A-Left" action="Click"> -->
-      <!--   <action name="GoToDesktop"> -->
-      <!--     <to>left</to> -->
-      <!--   </action> -->
-      <!-- </mousebind> -->
-      <!-- <mousebind button="C-A-Right" action="Click"> -->
-      <!--   <action name="GoToDesktop"> -->
-      <!--     <to>right</to> -->
-      <!--   </action> -->
-      <!-- </mousebind> -->
+
+      <mousebind button="Button10" action="Click">
+        <action name="GoToDesktop">
+          <to>up</to>
+        </action>
+      </mousebind>
+      <mousebind button="Button11" action="Click">
+        <action name="GoToDesktop">
+          <to>down</to>
+        </action>
+      </mousebind>
+      <mousebind button="Button8" action="Click">
+        <action name="GoToDesktop">
+          <to>left</to>
+        </action>
+      </mousebind>
+      <mousebind button="Button9" action="Click">
+        <action name="GoToDesktop">
+          <to>right</to>
+        </action>
+      </mousebind>
       <!-- <mousebind button="A-S-Up" action="Click"> -->
       <!--   <action name="SendToDesktop"> -->
       <!--     <to>up</to> -->
@@ -517,7 +528,9 @@
       <!--     <to>right</to> -->
       <!--   </action> -->
       <!-- </mousebind> -->
+
     </context>
+
     <context name="Titlebar">
       <mousebind button="Left" action="Drag">
         <action name="Move"/>
