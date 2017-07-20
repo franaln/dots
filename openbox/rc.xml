@@ -36,37 +36,37 @@
     <keepBorder>no</keepBorder>
     <animateIconify>no</animateIconify>
     <font place="ActiveWindow">
-      <name>Cantarell</name>
+      <name>Fira Sans</name>
       <size>12</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="InactiveWindow">
-      <name>Cantarell</name>
+      <name>Fira Sans</name>
       <size>12</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="MenuHeader">
-      <name>Cantarell</name>
+      <name>Fira Sans</name>
       <size>10</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="MenuItem">
-      <name>Cantarell</name>
+      <name>Fira Sans</name>
       <size>10</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="ActiveOnScreenDisplay">
-      <name>Cantarell</name>
+      <name>Fira Sans</name>
       <size>12</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="InactiveOnScreenDisplay">
-      <name>Cantarell</name>
+      <name>Fira Sans</name>
       <size>12</size>
       <weight>Bold</weight>
       <slant>Normal</slant>
