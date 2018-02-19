@@ -112,8 +112,11 @@
 ;; don't blink the cursor
 (blink-cursor-mode nil)
 
+; color in shell output
+(add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
+(add-to-list 'comint-output-filter-functions 'ansi-color-process-output)
+
 ;; ispell default language
 (setq ispell-dictionary "castellano")
-
 
 (provide 'sane-defaults)

@@ -1,7 +1,7 @@
 [global]
     font = Cantarell 12
     allow_markup = yes
-    format = "<b>%s</b> \n %b"
+    format = "%s \n %b"
     sort = yes
     indicate_hidden = yes
     alignment = center
@@ -10,8 +10,8 @@
     show_indicators = no
     word_wrap = yes
     ignore_newline = no
-    geometry = "320x10-40+50"
-    transparency = 0
+    geometry = "300x10-40+50"
+    transparency = 6
     idle_threshold = 120
     monitor = 0
     follow = mouse
@@ -36,16 +36,16 @@
     context = ctrl+shift+period
 
 [urgency_low]
-    background = "#cccccc"
+    background = "#f2f2f2"
     foreground = "#030303"
     timeout = 10
 
 [urgency_normal]
-    background = "#cccccc"
+    background = "#f2f2f2"
     foreground = "#030303"
     timeout = 10
 
 [urgency_critical]
-    background = "#ff4d4d"
-    foreground = "#e1e1e1"
+    background = "#ff3434"
+    foreground = "#030303"
     timeout = 30

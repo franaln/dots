@@ -5,7 +5,7 @@
 [ -z "$PS1" ] && return
 PS1='\[\e[1;34m\][\u@\h]\[\e[m\] \w $ '
 
-export HISTIGNORE="&:ls:ll:[bf]g:exit:[cxh]:a\ "
+export HISTIGNORE="&:ls:ll:[bf]g:exit:mpv:[cxh]:a\ :[ \t]*"
 
 HISTCONTROL=$HISTCONTROL${HISTCONTROL+:}ignoredups
 HISTCONTROL=ignoreboth
@@ -17,15 +17,6 @@ complete -cf sudo
 
 # cortar directorios a 5
 PROMPT_DIRTRIM=5
-
-# colours
-if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
-fi
 
 # load bash completion
 if [ -f /usr/share/bash-completion/bash_completion ] && ! shopt -oq posix; then
@@ -44,7 +35,8 @@ export SVNPHYS='svn+ssh://svn.cern.ch/reps/atlasphys'
 export SVNUNLP='svn+ssh://svn.cern.ch/reps/UNLP'
 
 # root
-export LD_LIBRARY_PATH=/usr/lib/root:$PYTHONDIR/lib:$LD_LIBRARY_PATH
+# export LD_LIBRARY_PATH=/home/fran/root/root5/lib:$PYTHONDIR/lib:$LD_LIBRARY_PATH
+export PYTHONPATH=/usr/lib/root:$PYTHONPATH
 
 # alias definitions
 if [ -f ~/.bash_alias ]; then
@@ -55,6 +47,12 @@ fi
 if [ -f ~/.bash_fns ] ; then
     . ~/.bash_fns
 fi
+
+# autojump
+. /etc/profile.d/autojump.bash
+
+export CUPS_SERVER=localhost
+export THEME="dark"
 
 export PATH=~/.local/bin:$PATH
 alias load_root='source ~/root/root/build/bin/thisroot.sh'

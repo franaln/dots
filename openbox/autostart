@@ -2,13 +2,15 @@ numlockx on &
 setxkbmap -layout us &
 setxkbmap -option compose:menu &
 setlayout 0 3 3 0 &
+/usr/bin/unclutter -noevents -idle 5 &
 touchpad.sh &
 nitrogen --restore &
 tint2 &
-batterytray &
 volumetray &
-blanktray &
+monitortray.py &
 nm-applet --sm-disable &
-dunst -conf $HOME/.config/dunst/.dunstrc &
+dunst -conf $HOME/.config/dunst/dunstrc &
 compton -b &
-(sleep 10 && dropboxd) &
+umonitor --listen --quiet &
+(sleep 3 && dropboxd) &
+(sleep 3 && chromium) &

@@ -28,6 +28,10 @@
 
 ;; tab == 4 spaces
 (custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(tab-width 4))
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
@@ -112,14 +116,12 @@
 (add-to-list 'auto-mode-alist '("\\.tex\\'" . latex-mode))
 
 ;; custom faces
-(set-face-background 'hl-line "#1d1f20") ;; current line
+(set-face-background 'hl-line "#292c2e") ;; current line
 (set-face-foreground 'hl-line "#ffffff")
-(set-face-background 'region  "green")    ;; selected region
+(set-face-background 'region  "green")   ;; selected region
 (set-face-foreground 'region  "black")
 
-
-;; compilation
-;; Helper for compilation. Close the compilation window if
+;; Close the compilation window if
 ;; there was no error at all.
 (defun compilation-exit-autoclose (status code msg)
   ;; If M-x compile exists with a 0
@@ -133,12 +135,10 @@
     ;; Specify my function (maybe I should have done a lambda function)
     (setq compilation-exit-message-function 'compilation-exit-autoclose)
 
-
-
 (set-face-attribute 'fringe nil :background "#3f4f5b" :foreground "#2E2920")
 
-
 (require 'ansi-color)
+(require 'slides-mode)
 
 (defadvice display-message-or-buffer (before ansi-color activate)
   "Process ANSI color codes in shell output."
@@ -148,5 +148,11 @@
          (with-current-buffer buf
            (ansi-color-apply-on-region (point-min) (point-max))))))
 
-(require 'beam-mode)
 (require 'yaml-mode)
+
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(font-lock-keyword-face ((t (:foreground "darkslategray2" :underline nil :weight normal)))))

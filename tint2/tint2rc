@@ -4,111 +4,133 @@
 #-----------------------
 # Background definitions
 #-----------------------
-# ID 1
+# ID 1 - panel
 rounded = 0
 border_width = 0
-background_color = #2D2D2D 100
-border_color = #484848 100
-# background_color = #1a1a1a 100
-# border_color = #ffffff 0
+background_color = #000000 10
+border_color = #000000 10
 
-# ID 2
-rounded = 0
-border_width = 0
-# background_color = #1a1a1a 100
-# border_color = #272727 100
-background_color = #1C1C1C 100
-border_color = #000000 100
+# ID 2 - active task
+rounded = 3
+border_width = 2
+background_color = #ffffff 30
+border_color = #000000 60
 
-# ID 3
-rounded = 0
+# ID 3 - urgent task
+rounded = 3
+border_width = 2
+background_color = #4285F4 30
+border_color = #4285F4 100
+
+# ID 4 - system tray
+rounded = 2
 border_width = 0
-background_color = #ffffff 100
-border_color = #272727 100
+background_color = #000000 50
+border_color = #000000 60
+
+# ID 5 - tooltip
+rounded = 3
+border_width = 0
+background_color = #000000 100
+border_color = #000000 0
+
+# ID 6 - selected window
+rounded = 2
+border_width = 3
+background_color = #000000 50
+border_color = #000000 60
 
 #----------
 # Panel
 #----------
 panel_monitor = 1
 panel_position = top center horizontal
-panel_size = 100% 32
-panel_margin = -2 -1
-panel_padding = 0 0 10
+panel_items = TSC
+panel_size = 100% 42
+panel_margin = 10 0
+panel_padding = 0 4 -2
 panel_dock = 0
 wm_menu = 0
 panel_layer = top
 panel_background_id = 1
+autohide = 0
+autohide_show_timeout = 0.5
+autohide_hide_timeout = 0.5
+autohide_height = 4.0
+strut_policy = follow_size
 
 #----------
 # Taskbar
 #----------
 taskbar_mode = single_desktop
-taskbar_padding = 0 0 10
-taskbar_background_id = 0
+taskbar_padding = 18 -4 18
+taskbar_background_id = 6
 taskbar_active_background_id = 0
+# taskbar_name = 0
+# taskbar_name_font = KG Defying Gravity 18
+# taskbar_name_font_color = #FFFFFF 25
+# taskbar_name_active_font_color = #FFFFFF 50
 
 #----------
 # Tasks
 #----------
-urgent_nb_of_blink = 20
+urgent_nb_of_blink = 5
 task_icon = 0
 task_text = 1
 task_centered = 1
-task_maximum_size = 200 32
-task_padding = 10 4
-task_background_id = 0
-task_active_background_id = 2
-task_urgent_background_id = 0
-task_iconified_background_id = 0
+task_maximum_size = 200 5
+task_padding = 0 10
+task_background_id = 1
+task_active_background_id = 6
+task_urgent_background_id = 3
+task_iconified_background_id = 1
 
-#------------
-# Task Icons
-#------------
-task_icon_asb = 70 0 0
+task_icon_asb = 100 0 0
 task_active_icon_asb = 100 0 0
 task_urgent_icon_asb = 100 0 0
-task_iconified_icon_asb = 70 0 0
+task_iconified_icon_asb = 100 0 0
 
-#----------
-# Fonts
-#----------
-task_font = Cantarell 9
-task_font_color = #dcdcdc 100
-task_active_font_color = #ffffff 100
-task_urgent_font_color = #ffffff 100
-task_iconified_font_color = #dcdcdc 80
+task_font = Fira Sans Light 12
+task_font_color = #ffffff 80
+task_active_font_color = #FFFFFF 85
+task_urgent_font_color = #FFFFFF 100
+task_iconified_font_color = #d8d8d8 60
 font_shadow = 0
+
 
 #-------------
 # System Tray
 #-------------
 systray = 1
-systray_padding = 0 6 15
+systray_padding = 10 0 10
 systray_sort = right2left
-systray_background_id = 0
-systray_icon_size = 16
+systray_background_id = 4
+systray_icon_size = 22
 systray_icon_asb = 100 0 0
 
 #----------
 # Clock
 #----------
 time1_format = %H:%M
-time1_font = Cantarell 12
-clock_font_color = #dcdcdc 100
-clock_padding = 10 6
-clock_background_id = 0
-clock_tooltip = %A, %d %b %Y
+time1_timezone = Europe/Zurich
+time1_font = Fira Sans Light 14
+# time2_format = %H:%M
+# time2_font = Fira Sans Light 12
+# time2_timezone = America/Argentina/Buenos_Aires
+clock_font_color = #ffffff 100
+clock_padding = 8 0 8
+clock_background_id = 4
 
 #----------
 # Tooltips
 #----------
 tooltip = 0
 tooltip_padding = 2 2
-tooltip_show_timeout = 0.7
-tooltip_hide_timeout = 0.3
-tooltip_background_id = 3
-tooltip_font = Cantarell 11
-tooltip_font_color = #1a1a1a 100
+tooltip_show_timeout = 0.0
+tooltip_hide_timeout = 0.0
+tooltip_background_id = 5
+tooltip_font_color = #ffffff 100
+tooltip_font = Sans normal 10
 
 #----------
 # Mouse
@@ -117,16 +139,3 @@ mouse_middle = close
 mouse_right = none
 mouse_scroll_up = none
 mouse_scroll_down = none
-
-#----------
-# Battery
-#----------
-battery = 0
-battery_low_status = 10
-battery_low_cmd = notify-send "Battery low" "Connect your charger now!!!"
-battery_hide = 98
-bat1_font = DroidSans 11
-bat2_font = DroidSans 0
-battery_font_color = #b6b6b6 100
-battery_padding = 1 0
-battery_background_id = 0

@@ -47,6 +47,7 @@ load_root() {
     cd ~/root/bin
     . thisroot.sh
     cd - > /dev/null
+    alias python='python2.7'
 }
 
 sendpi() {
@@ -82,8 +83,24 @@ usm () {
 
 function sc () {
     if [ -d .git ] ; then
-        git st
+        git st -uno
     elif [ -d .svn ] ; then
         svn status | grep -v ?
     fi
+}
+
+function countdown(){
+    date1=$((`date +%s` + $1));
+    while [ "$date1" -ne `date +%s` ]; do
+        echo -ne "$(date -u --date @$(($date1 - `date +%s`)) +%H:%M:%S)\r";
+        sleep 0.1
+    done
+}
+
+function stopwatch(){
+    date1=`date +%s`;
+    while true; do
+        echo -ne "$(date -u --date @$((`date +%s` - $date1)) +%H:%M:%S)\r";
+        sleep 0.1
+    done
 }
