@@ -76,6 +76,8 @@
 ;; sane defaults
 (require 'sane-defaults)
 
+(require 'highlight)
+
 ;; custom config
 (require 'modeline)
 (require 'fns)
@@ -147,3 +149,4 @@
            (ansi-color-apply-on-region (point-min) (point-max))))))
 
 (require 'beam-mode)
+(require 'yaml-mode)

@@ -46,4 +46,8 @@
 
 (define-key global-map (kbd "C-c M-t") 'center-text-mode)
 
+
+(global-set-key (kbd "M-<up>") 'move-line-up)
+(global-set-key (kbd "M-<down>") 'move-line-down)
+
 (provide 'keys)
