@@ -55,3 +55,6 @@ fi
 if [ -f ~/.bash_fns ] ; then
     . ~/.bash_fns
 fi
+
+export PATH=~/.local/bin:$PATH
+alias load_root='source ~/root/root/build/bin/thisroot.sh'
