@@ -137,6 +137,7 @@
 
 (require 'ansi-color)
 (require 'slides-mode)
+(require 'yaml-mode)
 
 (defadvice display-message-or-buffer (before ansi-color activate)
   "Process ANSI color codes in shell output."

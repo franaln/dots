@@ -48,7 +48,7 @@ if [ -f ~/.bash_fns ] ; then
     . ~/.bash_fns
 fi
 
-# autojump
+## autojump
 . /etc/profile.d/autojump.bash
 
 export CUPS_SERVER=localhost
