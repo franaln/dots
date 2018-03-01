@@ -50,27 +50,6 @@ load_root() {
     alias python='python2.7'
 }
 
-sendpi() {
-
-    rpi="192.168.0.104"
-    pass="melena"
-
-    if [ $# -eq 0 ] ; then
-        cmd="ssh fran@${rpi}"
-        $cmd
-    else
-        cmd="ssh fran@${rpi} ${@}"
-
-        /usr/bin/expect<<EOF
-spawn $cmd
-expect "*?assword:"
-send "$pass\n"
-expect "$ "
-
-EOF
-    fi
-
-}
 
 usm () {
     DRIVE="/dev/sdb1";

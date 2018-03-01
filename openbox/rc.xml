@@ -2,10 +2,12 @@
 
 <!-- OpenBox config ($HOME/.config/openbox/rc.xml) Frani 2013 -->
 <openbox_config xmlns="http://openbox.org/3.4/rc" xmlns:xi="http://www.w3.org/2001/XInclude">
+
   <resistance>
     <strength>10</strength>
     <screen_edge_strength>20</screen_edge_strength>
   </resistance>
+
   <focus>
     <focusNew>yes</focusNew>
     <followMouse>no</followMouse>
@@ -14,12 +16,14 @@
     <focusDelay>200</focusDelay>
     <raiseOnFocus>no</raiseOnFocus>
   </focus>
+
   <placement>
     <policy>Smart</policy>
     <center>yes</center>
     <monitor>Primary</monitor>
     <primaryMonitor>1</primaryMonitor>
   </placement>
+
   <theme>
     <name>emmental</name>
     <!--
@@ -32,11 +36,11 @@
       S: shade (roll up/down)
       D: omnipresent (on all desktops).
     -->
-    <titleLayout>IMC</titleLayout>
+    <titleLayout>LIMC</titleLayout>
     <keepBorder>no</keepBorder>
     <animateIconify>no</animateIconify>
     <font place="ActiveWindow">
-      <name>Fira Sans</name>
+      <name>Source Sans Pro</name>
       <size>12</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
@@ -48,30 +52,31 @@
       <slant>Normal</slant>
     </font>
     <font place="MenuHeader">
-      <name>Fira Sans</name>
+      <name>Source Sans Pro</name>
       <size>10</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="MenuItem">
-      <name>Fira Sans</name>
+      <name>Source Sans Pro</name>
       <size>10</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="ActiveOnScreenDisplay">
-      <name>Fira Sans</name>
+      <name>Source Sans Pro</name>
       <size>12</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="InactiveOnScreenDisplay">
-      <name>Fira Sans</name>
+      <name>Source Sans Pro</name>
       <size>12</size>
-      <weight>Bold</weight>
+      <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
   </theme>
+
   <desktops>
     <number>9</number>
     <firstdesk>1</firstdesk>
@@ -79,6 +84,7 @@
     </names>
     <popupTime>875</popupTime>
   </desktops>
+
   <resize>
     <drawContents>yes</drawContents>
     <popupShow>Nonpixel</popupShow>
@@ -88,6 +94,7 @@
       <y>0</y>
     </popupFixedPosition>
   </resize>
+
   <margins>
     <top>42</top>
     <bottom>0</bottom>
@@ -108,7 +115,9 @@
     <moveButton>Middle</moveButton>
   </dock>
 
-  <!-- Keybindings -->
+  <!--          -->
+  <!-- Keyboard -->
+  <!--          -->
   <keyboard>
     <chainQuitKey>C-g</chainQuitKey>
 
@@ -342,24 +351,9 @@
      </action>
    </keybind>
 
-   <keybind key="C-A-s">
-     <action name="Execute">
-       <command>urxvtq</command>
-     </action>
-   </keybind>
-
     <keybind key="Print">
       <action name="Execute">
         <command>shutter -f -e -o '~/Pictures/%y-%m-%d_$w_$h.png'</command>
-      </action>
-    </keybind>
-
-    <keybind key="A-F2">
-      <action name="Execute">
-        <startupnotify>
-          <enabled>true</enabled>
-        </startupnotify>
-        <command>sherlock</command>
       </action>
     </keybind>
 
@@ -369,24 +363,6 @@
           <enabled>true</enabled>
         </startupnotify>
         <command>sherlock.py</command>
-      </action>
-    </keybind>
-
-    <keybind key="F1">
-      <action name="Execute">
-        <startupnotify>
-          <enabled>true</enabled>
-        </startupnotify>
-        <command>/home/fran/dev/sherlock/sherlock.py</command>
-      </action>
-    </keybind>
-
-        <keybind key="F2">
-      <action name="Execute">
-        <startupnotify>
-          <enabled>true</enabled>
-        </startupnotify>
-        <command>skippy-xd</command>
       </action>
     </keybind>
 
@@ -418,38 +394,36 @@
     </keybind>
     <keybind key="XF86MonBrightnessDown">
       <action name="Execute">
-        <command>screenbacklight down</command>
+        <command>monitorytray.py -b -1</command>
       </action>
     </keybind>
     <keybind key="XF86MonBrightnessUp">
       <action name="Execute">
-        <command>screenbacklight up</command>
+        <command>monitorytray.py -b +1</command>
       </action>
     </keybind>
     <keybind key="XF86AudioMute">
       <action name="Execute">
-        <command>volume toggle</command>
+        <command>monitortray.py --mute</command>
       </action>
     </keybind>
     <keybind key="XF86AudioLowerVolume">
       <action name="Execute">
-        <command>volume down</command>
+        <command>monitortray.py --vol -5</command>
       </action>
     </keybind>
     <keybind key="XF86AudioRaiseVolume">
       <action name="Execute">
-        <command>volume up</command>
-      </action>
-    </keybind>
-
-    <keybind key="XF86Display">
-      <action name="Execute">
-        <command>switch_screen</command>
+        <command>monitortray.py --vol +5</command>
       </action>
     </keybind>
 
   </keyboard>
 
+
+  <!--       -->
+  <!-- Mouse -->
+  <!--       -->
   <mouse>
     <!-- number of pixels the mouse must move before a drag begins -->
     <dragThreshold>1</dragThreshold>
@@ -730,16 +704,6 @@
         </action>
       </mousebind>
 
-      <mousebind button="Up" action="Click">
-        <action name="GoToDesktop">
-          <to>previous</to>
-        </action>
-      </mousebind>
-      <mousebind button="Down" action="Click">
-        <action name="GoToDesktop">
-          <to>next</to>
-        </action>
-      </mousebind>
       <mousebind button="A-Up" action="Click">
         <action name="GoToDesktop">
           <to>previous</to>
@@ -771,6 +735,10 @@
     </context>
   </mouse>
 
+
+  <!--              -->
+  <!-- Applications -->
+  <!--              -->
   <applications>
 
     <!-- Undecorate all windows -->
@@ -782,20 +750,6 @@
     <application name="chromium">
       <maximized>true</maximized>
       <desktop>1</desktop>
-    </application>
-
-    <!-- scratchpad terminal -->
-    <application name="urxvtq">
-      <decor>no</decor>
-      <position force="yes">
-        <x>center</x>
-        <y>0</y>
-      </position>
-      <desktop>all</desktop>
-      <layer>above</layer>
-      <skip_pager>yes</skip_pager>
-      <skip_taskbar>yes</skip_taskbar>
-      <maximized>Horizontal</maximized>
     </application>
 
   </applications>

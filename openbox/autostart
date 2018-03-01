@@ -6,11 +6,9 @@ setlayout 0 3 3 0 &
 touchpad.sh &
 nitrogen --restore &
 tint2 &
-volumetray &
-monitortray.py &
+compton -b &
 nm-applet --sm-disable &
 dunst -conf $HOME/.config/dunst/dunstrc &
-compton -b &
-umonitor --listen --quiet &
-(sleep 3 && dropboxd) &
+(sleep 3 && dropbox) &
 (sleep 3 && chromium) &
+(sleep 3 && monitortray.py) &

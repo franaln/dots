@@ -312,30 +312,30 @@ Don't mess with special buffers."
                        (get-number-at-point)))
                      mult)))))
 
-(defun highlight-line-dups-region (&optional start end face msgp)
-  (interactive `(,@(hlt-region-or-buffer-limits) nil t))
-  (let ((count  0)
-        line-re)
-    (save-excursion
-      (goto-char start)
-      (while (< (point) end)
-        (setq count    0
-              line-re  (concat "^" (regexp-quote (buffer-substring-no-properties
-                                                  (line-beginning-position)
-                                                  (line-end-position)))
-                               "$"))
-        (save-excursion
-          (goto-char start)
-          (while (< (point) end)
-            (if (not (re-search-forward line-re nil t))
-                (goto-char end)
-              (setq count  (1+ count))
-              (unless (< count 2)
-                (hlt-highlight-region
-                 (line-beginning-position) (line-end-position)
-                 face)
-                (forward-line 1)))))
-        (forward-line 1)))))
+;; (defun highlight-line-dups-region (&optional start end face msgp)
+;;   (interactive `(,@(hlt-region-or-buffer-limits) nil t))
+;;   (let ((count  0)
+;;         line-re)
+;;     (save-excursion
+;;       (goto-char start)
+;;       (while (< (point) end)
+;;         (setq count    0
+;;               line-re  (concat "^" (regexp-quote (buffer-substring-no-properties
+;;                                                   (line-beginning-position)
+;;                                                   (line-end-position)))
+;;                                "$"))
+;;         (save-excursion
+;;           (goto-char start)
+;;           (while (< (point) end)
+;;             (if (not (re-search-forward line-re nil t))
+;;                 (goto-char end)
+;;               (setq count  (1+ count))
+;;               (unless (< count 2)
+;;                 (hlt-highlight-region
+;;                  (line-beginning-position) (line-end-position)
+;;                  face)
+;;                 (forward-line 1)))))
+;;         (forward-line 1)))))
 
 (defun move-line (n)
   "Move the current line up or down by N lines."

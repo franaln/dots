@@ -34,7 +34,7 @@ alias ..='cd ..'
 alias ...='cd ../..'
 
 # music player
-alias mocp='mocp -m ~/music -T dante'
+alias mocp='mocp -m ~/Music -T dante'
 alias ncmpcpp='ncmpcpp -c ~/.config/ncmpcpp/config'
 
 # demas
@@ -83,12 +83,8 @@ alias mv='mv -i'
 alias rm='rm -I'
 alias ln='ln -i'
 
-
 # delete files older than 30 days
 ##alias del_older='find * -mtime +30 -exec sudo rm {} \;'
-
-# rpi
-alias spi='ssh 192.168.0.104'
 
 # lxplus
 alias sx='ssh -Y falonso@lxplus.cern.ch'

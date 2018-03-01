@@ -80,8 +80,6 @@
 ;; sane defaults
 (require 'sane-defaults)
 
-(require 'highlight)
-
 ;; custom config
 (require 'modeline)
 (require 'fns)
@@ -138,7 +136,6 @@
 (set-face-attribute 'fringe nil :background "#3f4f5b" :foreground "#2E2920")
 
 (require 'ansi-color)
-(require 'slides-mode)
 (require 'yaml-mode)
 
 (defadvice display-message-or-buffer (before ansi-color activate)
@@ -148,8 +145,6 @@
          (string= (buffer-name buf) "*Shell Command Output*")
          (with-current-buffer buf
            (ansi-color-apply-on-region (point-min) (point-max))))))
-
-(require 'yaml-mode)
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
