@@ -53,3 +53,6 @@ fi
 
 export CUPS_SERVER=localhost
 export THEME="dark"
+
+export PATH=~/.local/bin:$PATH
+alias load_root='source ~/root/root/build/bin/thisroot.sh'

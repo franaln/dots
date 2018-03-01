@@ -41,16 +41,21 @@
 (global-set-key (kbd "C-c s")    'win-swap)
 (global-set-key (kbd "C-c C-v")  'atl-switch-src)
 
+(global-set-key (kbd "M-<up>") 'move-line-up)
+(global-set-key (kbd "M-<down>") 'move-line-down)
+
+
 ; Fixing another key binding bug in iedit mode
 (define-key global-map (kbd "C-c o") 'iedit-mode)
 
 (define-key global-map (kbd "C-c M-t") 'center-text-mode)
-
 
 ;; clatex
 (global-set-key (kbd "C-c c")
                 (lambda ()
                   (interactive)
                   (shell-command (concat "clatex -f " buffer-file-name))))
+
+
 
 (provide 'keys)

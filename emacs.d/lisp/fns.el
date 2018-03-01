@@ -269,8 +269,8 @@ Don't mess with special buffers."
   "Center the text in the middle of the buffer. Works best in full screen"
   (interactive)
   (set-window-margins (car (get-buffer-window-list (current-buffer) nil t))
-                      (/ (window-width) 4)
-                      (/ (window-width) 4))
+                      (/ (window-width) 5)
+                      (/ (window-width) 5))
   )
 
 (defun center-text-clear ()
@@ -288,7 +288,6 @@ Don't mess with special buffers."
              (setq centered nil))
       (progn (center-text)
              (setq centered t))))
-
 
 (defun execute-shell-command-on-buffer ()
   (interactive "MRunning clatex -f")
@@ -312,5 +311,53 @@ Don't mess with special buffers."
                        mult
                        (get-number-at-point)))
                      mult)))))
+
+(defun highlight-line-dups-region (&optional start end face msgp)
+  (interactive `(,@(hlt-region-or-buffer-limits) nil t))
+  (let ((count  0)
+        line-re)
+    (save-excursion
+      (goto-char start)
+      (while (< (point) end)
+        (setq count    0
+              line-re  (concat "^" (regexp-quote (buffer-substring-no-properties
+                                                  (line-beginning-position)
+                                                  (line-end-position)))
+                               "$"))
+        (save-excursion
+          (goto-char start)
+          (while (< (point) end)
+            (if (not (re-search-forward line-re nil t))
+                (goto-char end)
+              (setq count  (1+ count))
+              (unless (< count 2)
+                (hlt-highlight-region
+                 (line-beginning-position) (line-end-position)
+                 face)
+                (forward-line 1)))))
+        (forward-line 1)))))
+
+(defun move-line (n)
+  "Move the current line up or down by N lines."
+  (interactive "p")
+  (setq col (current-column))
+  (beginning-of-line) (setq start (point))
+  (end-of-line) (forward-char) (setq end (point))
+  (let ((line-text (delete-and-extract-region start end)))
+    (forward-line n)
+    (insert line-text)
+    ;; restore point to original column in moved line
+    (forward-line -1)
+    (forward-char col)))
+
+(defun move-line-up (n)
+  "Move the current line up by N lines."
+  (interactive "p")
+  (move-line (if (null n) -1 (- n))))
+
+(defun move-line-down (n)
+  "Move the current line down by N lines."
+  (interactive "p")
+  (move-line (if (null n) 1 n)))
 
 (provide 'fns)

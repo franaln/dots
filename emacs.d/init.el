@@ -80,6 +80,8 @@
 ;; sane defaults
 (require 'sane-defaults)
 
+(require 'highlight)
+
 ;; custom config
 (require 'modeline)
 (require 'fns)
@@ -146,6 +148,9 @@
          (string= (buffer-name buf) "*Shell Command Output*")
          (with-current-buffer buf
            (ansi-color-apply-on-region (point-min) (point-max))))))
+
+(require 'yaml-mode)
+
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
