@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <!-- OpenBox config ($HOME/.config/openbox/rc.xml) Frani 2013 -->
 <openbox_config xmlns="http://openbox.org/3.4/rc" xmlns:xi="http://www.w3.org/2001/XInclude">
-
   <resistance>
     <strength>10</strength>
     <screen_edge_strength>20</screen_edge_strength>
   </resistance>
-
   <focus>
     <focusNew>yes</focusNew>
     <followMouse>no</followMouse>
@@ -16,14 +13,12 @@
     <focusDelay>200</focusDelay>
     <raiseOnFocus>no</raiseOnFocus>
   </focus>
-
   <placement>
     <policy>Smart</policy>
     <center>yes</center>
     <monitor>Primary</monitor>
     <primaryMonitor>1</primaryMonitor>
   </placement>
-
   <theme>
     <name>emmental</name>
     <!--
@@ -76,7 +71,6 @@
       <slant>Normal</slant>
     </font>
   </theme>
-
   <desktops>
     <number>9</number>
     <firstdesk>1</firstdesk>
@@ -84,7 +78,6 @@
     </names>
     <popupTime>875</popupTime>
   </desktops>
-
   <resize>
     <drawContents>yes</drawContents>
     <popupShow>Nonpixel</popupShow>
@@ -94,14 +87,12 @@
       <y>0</y>
     </popupFixedPosition>
   </resize>
-
   <margins>
     <top>42</top>
     <bottom>0</bottom>
     <left>0</left>
     <right>0</right>
   </margins>
-
   <dock>
     <position>Top</position>
     <floatingX>0</floatingX>
@@ -114,22 +105,37 @@
     <showDelay>300</showDelay>
     <moveButton>Middle</moveButton>
   </dock>
-
   <!--          -->
   <!-- Keyboard -->
   <!--          -->
   <keyboard>
     <chainQuitKey>C-g</chainQuitKey>
-
     <!-- desktop switching -->
     <keybind key="C-A-d" chroot="true">
-      <keybind key="Up"><action name="DesktopUp"><dialog>no</dialog></action></keybind>
-      <keybind key="Down"><action name="DesktopDown"><dialog>no</dialog></action></keybind>
-      <keybind key="Left"><action name="DesktopLeft"><dialog>no</dialog></action></keybind>
-      <keybind key="Right"><action name="DesktopRight"><dialog>no</dialog></action></keybind>
-      <keybind key="Escape"><action name="BreakChroot"/></keybind>
+      <keybind key="Up">
+        <action name="DesktopUp">
+          <dialog>no</dialog>
+        </action>
+      </keybind>
+      <keybind key="Down">
+        <action name="DesktopDown">
+          <dialog>no</dialog>
+        </action>
+      </keybind>
+      <keybind key="Left">
+        <action name="DesktopLeft">
+          <dialog>no</dialog>
+        </action>
+      </keybind>
+      <keybind key="Right">
+        <action name="DesktopRight">
+          <dialog>no</dialog>
+        </action>
+      </keybind>
+      <keybind key="Escape">
+        <action name="BreakChroot"/>
+      </keybind>
     </keybind>
-
     <keybind key="C-A-Left">
       <action name="GoToDesktop">
         <to>left</to>
@@ -226,7 +232,6 @@
     <keybind key="W-d">
       <action name="ToggleShowDesktop"/>
     </keybind>
-
     <!-- windows -->
     <keybind key="A-F4">
       <action name="Close"/>
@@ -247,7 +252,6 @@
     <keybind key="W-l">
       <action name="ToggleAlwaysOnBottom"/>
     </keybind>
-
     <!-- window switching -->
     <keybind key="A-Tab">
       <action name="NextWindow">
@@ -279,7 +283,6 @@
         <dialog>list</dialog>
       </action>
     </keybind>
-
     <!-- window switching with the arrow keys -->
     <keybind key="W-A-Right">
       <action name="DirectionalCycleWindows">
@@ -301,7 +304,6 @@
         <direction>down</direction>
       </action>
     </keybind>
-
     <!-- tile windows -->
     <keybind key="W-Left">
       <action name="UnmaximizeFull"/>
@@ -329,34 +331,30 @@
     <keybind key="W-Up">
       <action name="Maximize"/>
     </keybind>
-
-   <!-- resize and move windows with the arrow keys -->
-   <keybind key="W-R">
-     <action name="Resize">
+    <!-- resize and move windows with the arrow keys -->
+    <keybind key="W-R">
+      <action name="Resize">
      </action>
-   </keybind>
-   <keybind key="W-M">
-     <action name="Move">
+    </keybind>
+    <keybind key="W-M">
+      <action name="Move">
      </action>
-   </keybind>
-
-   <!-- running applications -->
-   <keybind key="C-A-t">
-     <action name="Execute">
-       <startupnotify>
-         <enabled>true</enabled>
-         <name>terminal</name>
-       </startupnotify>
-       <command>urxvtdc</command>
-     </action>
-   </keybind>
-
+    </keybind>
+    <!-- running applications -->
+    <keybind key="C-A-t">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>terminal</name>
+        </startupnotify>
+        <command>urxvtdc</command>
+      </action>
+    </keybind>
     <keybind key="Print">
       <action name="Execute">
         <command>shutter -f -e -o '~/Pictures/%y-%m-%d_$w_$h.png'</command>
       </action>
     </keybind>
-
     <keybind key="A-F1">
       <action name="Execute">
         <startupnotify>
@@ -365,7 +363,14 @@
         <command>sherlock.py</command>
       </action>
     </keybind>
-
+    <keybind key="A-F2">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+        </startupnotify>
+        <command>sherlock</command>
+      </action>
+    </keybind>
     <keybind key="C-S-Escape">
       <action name="Execute">
         <startupnotify>
@@ -374,14 +379,11 @@
         <command>gnome-system-monitor</command>
       </action>
     </keybind>
-
-   <keybind key="C-A-l">
-     <action name="Execute">
-       <command>slimlock</command>
-     </action>
-   </keybind>
-
-
+    <keybind key="C-A-l">
+      <action name="Execute">
+        <command>slimlock</command>
+      </action>
+    </keybind>
     <keybind key="XF86KbdBrightnessDown">
       <action name="Execute">
         <command>kbdbacklight down</command>
@@ -417,10 +419,7 @@
         <command>monitortray.py --vol +5</command>
       </action>
     </keybind>
-
   </keyboard>
-
-
   <!--       -->
   <!-- Mouse -->
   <!--       -->
@@ -436,7 +435,6 @@
     <!-- Set this to TRUE to move the mouse pointer across the desktop when
        switching due to hitting the edge of the screen -->
     <screenEdgeWarpMouse>false</screenEdgeWarpMouse>
-
     <context name="Frame">
       <mousebind button="A-Left" action="Press">
         <action name="Focus"/>
@@ -461,7 +459,6 @@
         <action name="FocusToBottom"/>
         <action name="Unfocus"/>
       </mousebind>
-
       <mousebind button="Button10" action="Click">
         <action name="GoToDesktop">
           <to>up</to>
@@ -502,9 +499,7 @@
       <!--     <to>right</to> -->
       <!--   </action> -->
       <!-- </mousebind> -->
-
     </context>
-
     <context name="Titlebar">
       <mousebind button="Left" action="Drag">
         <action name="Move"/>
@@ -697,13 +692,11 @@
       </mousebind>
     </context>
     <context name="Desktop">
-
       <mousebind button="Middle" action="Click">
         <action name="Execute">
           <command>sherlock.py</command>
         </action>
       </mousebind>
-
       <mousebind button="A-Up" action="Click">
         <action name="GoToDesktop">
           <to>previous</to>
@@ -734,24 +727,18 @@
       </mousebind>
     </context>
   </mouse>
-
-
   <!--              -->
   <!-- Applications -->
   <!--              -->
   <applications>
-
     <!-- Undecorate all windows -->
     <application class="urxvt*">
       <decor>no</decor>
     </application>
-
     <!-- Chromium in the first worksapce -->
     <application name="chromium">
       <maximized>true</maximized>
       <desktop>1</desktop>
     </application>
-
   </applications>
-
 </openbox_config>
