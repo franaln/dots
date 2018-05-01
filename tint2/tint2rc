@@ -6,9 +6,9 @@
 #-----------------------
 # ID 1 - panel
 rounded = 0
-border_width = 0
-background_color = #000000 10
-border_color = #000000 10
+border_width = 1
+background_color = #000000 40
+border_color = #000000 40
 
 # ID 2 - active task
 rounded = 3
@@ -47,7 +47,7 @@ panel_monitor = 1
 panel_position = top center horizontal
 panel_items = TSC
 panel_size = 100% 42
-panel_margin = 10 0
+panel_margin = 0 0
 panel_padding = 0 4 -2
 panel_dock = 0
 wm_menu = 0
