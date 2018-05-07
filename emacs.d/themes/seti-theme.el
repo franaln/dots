@@ -52,7 +52,8 @@
       (input-text "#CCCCCC")
       (light-blue "#75E5F4")
       (dark-blue "#4F99D3")
-      (intense-green "#8BE03C"))
+      (intense-green "#8BE03C")
+      (text-hl "#1e2122"))
 
   (custom-theme-set-faces
    'seti
@@ -63,7 +64,7 @@
    `(highlight ((t (:background ,text-highlight))))
    `(minibuffer-prompt ((t (:foreground ,dark-blue :weight bold))))
    `(region ((t (:background ,text-region))))
-   `(error ((t (:foreground ,red :weight bold :underline (:color ,red :style line)))))
+   `(error ((t (:foreground ,red :weight bold))))
 
    `(isearch ((t (:background ,background :foreground ,text :box (:line-width 1 :color ,dark-blue) :weight bold))))
    `(lazy-highlight ((t (:background ,background :foreground ,text-2 :box (:line-width 1 :color ,dark-blue)))))
@@ -168,7 +169,7 @@
    `(linum ((t (:foreground ,text-region  :weight light :height 0.9))))
    `(fringe ((t (:background ,background-3 :foreground ,text-4))))
    `(left-margin ((t (nil))))
-   `(hl-line ((t (:background ,text-region)))))
+   `(hl-line ((t (:background ,text-hl)))))
 
   (custom-theme-set-variables
    'seti

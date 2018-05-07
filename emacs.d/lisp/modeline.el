@@ -87,9 +87,9 @@
 
 (set-face-attribute 'mode-line-modified-face nil
     :inherit 'mode-line-face
-    :foreground "red"
+    :foreground "#F95B5B"
     :background "gray5"
-    :box '(:line-width 2 :color "#c82829"))
+    :box '(:line-width 2 :color "#F95B5B"))
 
 (set-face-attribute 'mode-line-folder-face nil
     :inherit 'mode-line-face)
@@ -119,5 +119,6 @@
 (set-face-attribute 'mode-line-hostname-face nil
     :foreground "#4271ae"
     :background "gray5")
+
 
 (provide 'modeline)
