@@ -1,6 +1,17 @@
 ;; -- emacs init --
 ;; -- frani
 
+(require 'package)
+(add-to-list 'package-archives
+             '("melpa-stable" . "https://stable.melpa.org/packages/"))
+(package-initialize)
+
+(if (not (package-installed-p 'use-package))
+    (progn
+      (package-refresh-contents)
+      (package-install 'use-package)))
+
+
 ;; turn off mouse interface early in startup to avoid momentary display
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
@@ -32,6 +43,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(package-selected-packages (quote (deft use-package)))
  '(tab-width 4))
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
@@ -80,10 +92,6 @@
 ;; sane defaults
 (require 'sane-defaults)
 
-;; custom config
-(require 'modeline)
-(require 'fns)
-(require 'keys)
 
 ;; run at full power please
 (put 'downcase-region 'disabled nil)
@@ -113,14 +121,8 @@
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.tex\\'" . latex-mode))
 
-;; custom faces
-(set-face-background 'hl-line "#292c2e") ;; current line
-(set-face-foreground 'hl-line "#ffffff")
-(set-face-background 'region  "green")   ;; selected region
-(set-face-foreground 'region  "black")
 
-;; Close the compilation window if
-;; there was no error at all.
+;; Close the compilation window if there was no error at all.
 (defun compilation-exit-autoclose (status code msg)
   ;; If M-x compile exists with a 0
   (when (and (eq status 'exit) (zerop code))
@@ -146,9 +148,21 @@
          (with-current-buffer buf
            (ansi-color-apply-on-region (point-min) (point-max))))))
 
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(font-lock-keyword-face ((t (:foreground "darkslategray2" :underline nil :weight normal)))))
+;;
+;; Theme and customization
+;;
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
+(load-theme 'seti t)
+
+;; custom config
+(require 'modeline)
+(require 'fns)
+(require 'keys)
+
+;; deft
+(use-package deft
+  :ensure deft
+  :bind ("<f8>" . deft)
+  :commands (deft)
+  :config (setq deft-directory "~/Dropbox/notes"
+                deft-extensions '("txt" "md" "org")))

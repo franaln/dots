@@ -96,7 +96,7 @@
 
 (set-face-attribute 'mode-line-filename-face nil
     :inherit 'mode-line-face
-    :foreground "#eab700"
+    :foreground "#F95B5B"
     :weight 'bold)
 
 (set-face-attribute 'mode-line-position-face nil
@@ -105,7 +105,7 @@
 
 (set-face-attribute 'mode-line-mode-face nil
     :inherit 'mode-line-face
-    :foreground "green")
+    :foreground "#5e70c9")
 
 (set-face-attribute 'mode-line-minor-mode-face nil
     :inherit 'mode-line-mode-face
