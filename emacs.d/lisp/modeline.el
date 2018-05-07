@@ -87,25 +87,25 @@
 
 (set-face-attribute 'mode-line-modified-face nil
     :inherit 'mode-line-face
-    :foreground "#F95B5B"
+    :foreground "#CE4045"
     :background "gray5"
-    :box '(:line-width 2 :color "#F95B5B"))
+    :box '(:line-width 2 :color "#CE4045"))
 
 (set-face-attribute 'mode-line-folder-face nil
     :inherit 'mode-line-face)
 
 (set-face-attribute 'mode-line-filename-face nil
     :inherit 'mode-line-face
-    :foreground "#F95B5B"
+    :foreground "#CE4045"
     :weight 'bold)
 
 (set-face-attribute 'mode-line-position-face nil
     :inherit 'mode-line-face
-    :family "Menlo" :height 100)
+    :height 100)
 
 (set-face-attribute 'mode-line-mode-face nil
     :inherit 'mode-line-face
-    :foreground "#5e70c9")
+    :foreground "#63B2FA")
 
 (set-face-attribute 'mode-line-minor-mode-face nil
     :inherit 'mode-line-mode-face
