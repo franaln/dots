@@ -68,7 +68,7 @@
 
    ;; Dired
    `(dired-directory ((t (:foreground ,text :weight extrabold))))
-   `(dired-header ((t (:foreground "white"  :background ,blue :weight bold))))
+   `(dired-header ((t (:foreground ,blue  :weight bold))))
    `(dired-ignored ((t (:foreground ,text))))
    `(dired-flagged ((t (:foreground ,red :weight bold))))
    `(dired-marked ((t (:background ,blue :foreground "white" :weight normal))))
