@@ -10,7 +10,7 @@
       (purple "#BA85CC")
       (background "#111213")
       (background-2 "#434552")
-      (text "#D4D7D6")
+      (text "#cacecd")
       (text-highlight "#D7DCF0")
       (text-region "#434546")
       (text-dired "#A0A0A0")
