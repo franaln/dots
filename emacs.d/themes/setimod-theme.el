@@ -8,7 +8,7 @@
       (yellow "#EDDB96")
       (red "#CE4045")
       (purple "#BA85CC")
-      (background "#151718")
+      (background "#111213")
       (background-2 "#434552")
       (text "#D4D7D6")
       (text-highlight "#D7DCF0")

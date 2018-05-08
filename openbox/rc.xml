@@ -396,12 +396,12 @@
     </keybind>
     <keybind key="XF86MonBrightnessDown">
       <action name="Execute">
-        <command>monitorytray.py -b -1</command>
+        <command>monitortray.py -b -1</command>
       </action>
     </keybind>
     <keybind key="XF86MonBrightnessUp">
       <action name="Execute">
-        <command>monitorytray.py -b +1</command>
+        <command>monitortray.py -b +1</command>
       </action>
     </keybind>
     <keybind key="XF86AudioMute">
