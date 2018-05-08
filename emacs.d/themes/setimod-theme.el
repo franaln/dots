@@ -63,8 +63,8 @@
    `(font-lock-warning-face ((t (:weight bold :inherit (error)))))
 
    ;; Parens
-   `(show-paren-match ((t (:foreground ,text :underline (:color ,dark-blue :style line)))))
-   `(show-paren-mismatch ((t (:foreground ,text :underline (:color ,red :style line)))))
+   `(show-paren-match ((t (:foreground ,yellow :weight bold))))
+   `(show-paren-mismatch ((t (:foreground ,red :underline (:color ,red :style line)))))
 
    ;; Dired
    `(dired-directory ((t (:foreground ,text :weight extrabold))))

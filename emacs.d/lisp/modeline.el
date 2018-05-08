@@ -76,7 +76,7 @@
 
 (set-face-attribute 'mode-line-80col-face nil
     :inherit 'mode-line-face
-    :foreground "red"
+    :foreground "#CE4045"
     :box '(:line-width 2 :color "blue"))
 
 (set-face-attribute 'mode-line-read-only-face nil
