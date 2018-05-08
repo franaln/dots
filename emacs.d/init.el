@@ -11,6 +11,9 @@
       (package-refresh-contents)
       (package-install 'use-package)))
 
+;; custom file
+(setq custom-file "~/.emacs-custom.el")
+(load custom-file)
 
 ;; turn off mouse interface early in startup to avoid momentary display
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
@@ -158,4 +161,22 @@
   :bind ("<f8>" . deft)
   :commands (deft)
   :config (setq deft-directory "~/Dropbox/notes"
-                deft-extensions '("txt" "md" "org")))
+                deft-extensions '("txt" "md" "org")
+                deft-use-filename-as-title t
+                deft-file-naming-rules '((noslash . "-") (nospace . "-") (case-fn . downcase))
+                ))
+
+;; shell-pop
+(use-package shell-pop
+  :ensure shell-pop
+  :bind (("C-c t" . shell-pop))
+  :config
+  (setq shell-pop-shell-type (quote ("ansi-term" "*ansi-term*" (lambda nil (ansi-term shell-pop-term-shell)))))
+  (setq shell-pop-term-shell "/bin/bash")
+  ;; need to do this manually or not picked up by `shell-pop'
+  (shell-pop--set-shell-type 'shell-pop-shell-type shell-pop-shell-type))
+
+
+;; make cursor the width of the character it is under
+;; i.e. full width of a TAB
+(setq x-stretch-cursor t)

@@ -49,7 +49,11 @@ if [ -f ~/.bash_fns ] ; then
 fi
 
 ## autojump
-. /etc/profile.d/autojump.bash
+if [ -f /etc/profile.d/autojump.bash ] ; then
+    . /etc/profile.d/autojump.bash
+elif [ -f /usr/share/autojump/autojump.sh ] ; then
+    . /usr/share/autojump/autojump.sh
+fi
 
 export CUPS_SERVER=localhost
 export THEME="dark"

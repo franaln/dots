@@ -339,4 +339,12 @@ Don't mess with special buffers."
   (interactive "p")
   (move-line (if (null n) 1 n)))
 
+
+;; Align by &
+(defun align-latex-table (start end)
+  "Align columns by ampersand"
+  (interactive "r")
+  (align-regexp start end
+                "\\(\\s-*\\)&" 1 1 t))
+
 (provide 'fns)
