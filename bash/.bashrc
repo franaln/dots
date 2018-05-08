@@ -57,6 +57,7 @@ fi
 
 export CUPS_SERVER=localhost
 export THEME="dark"
+export TERM=xterm-256color # fix colors in emacs for urxvt
 
 export PATH=~/.local/bin:$PATH
 alias load_root='source ~/root/root/build/bin/thisroot.sh'
