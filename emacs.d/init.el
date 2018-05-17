@@ -15,6 +15,9 @@
 (setq custom-file "~/.emacs-custom.el")
 (load custom-file)
 
+;; setup load path
+(add-to-list 'load-path "~/.emacs.d/lisp")
+
 ;; turn off mouse interface early in startup to avoid momentary display
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
@@ -22,9 +25,6 @@
 
 ;; no splash screen please
 (setq inhibit-startup-message t)
-
-;; setup load path
-(add-to-list 'load-path "~/.emacs.d/lisp")
 
 ;; enter syntaxis color mode
 (global-font-lock-mode t)
@@ -131,8 +131,6 @@
     ;; Specify my function (maybe I should have done a lambda function)
     (setq compilation-exit-message-function 'compilation-exit-autoclose)
 
-(set-face-attribute 'fringe nil :background "#3f4f5b" :foreground "#2E2920")
-
 (require 'ansi-color)
 (require 'yaml-mode)
 
@@ -144,9 +142,9 @@
          (with-current-buffer buf
            (ansi-color-apply-on-region (point-min) (point-max))))))
 
-;;
+;; -----------------------
 ;; Theme and customization
-;;
+;; -----------------------
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 (load-theme 'setimod t)
 
@@ -155,6 +153,10 @@
 (require 'fns)
 (require 'keys)
 
+
+;; ---------------
+;; Packages config
+;; ---------------
 ;; deft
 (use-package deft
   :ensure deft
@@ -164,6 +166,7 @@
                 deft-extensions '("txt" "md" "org")
                 deft-use-filename-as-title t
                 deft-file-naming-rules '((noslash . "-") (nospace . "-") (case-fn . downcase))
+                deft-auto-save-interval 0
                 ))
 
 ;; shell-pop
@@ -175,8 +178,3 @@
   (setq shell-pop-term-shell "/bin/bash")
   ;; need to do this manually or not picked up by `shell-pop'
   (shell-pop--set-shell-type 'shell-pop-shell-type shell-pop-shell-type))
-
-
-;; make cursor the width of the character it is under
-;; i.e. full width of a TAB
-(setq x-stretch-cursor t)

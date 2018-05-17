@@ -119,4 +119,8 @@
 ;; ispell default language
 (setq ispell-dictionary "castellano")
 
+;; Cursor
+(setq x-stretch-cursor t) ;; make cursor the width of the character it is under
+(blink-cursor-mode -1)    ;; Don't blink the cursor, it's distracting!
+
 (provide 'sane-defaults)
