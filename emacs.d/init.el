@@ -142,6 +142,7 @@
          (with-current-buffer buf
            (ansi-color-apply-on-region (point-min) (point-max))))))
 
+
 ;; -----------------------
 ;; Theme and customization
 ;; -----------------------
@@ -157,6 +158,9 @@
 ;; ---------------
 ;; Packages config
 ;; ---------------
+
+(setq tramp-default-method "ssh")
+
 ;; deft
 (use-package deft
   :ensure deft
