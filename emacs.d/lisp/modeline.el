@@ -30,10 +30,9 @@
    ; mode indicators: vc, recursive edit, major mode, minor modes, process, global
    (vc-mode vc-mode)
    "  %["
-   (:propertize "(" face mode-line-mode-face)
-   (:propertize mode-name
-                face mode-line-mode-face)
-   (:propertize ")" face mode-line-mode-face)
+   (:propertize "("       face mode-line-mode-face)
+   (:propertize mode-name face mode-line-mode-face)
+   (:propertize ")"       face mode-line-mode-face)
    "%] "
 
    ))
@@ -65,9 +64,9 @@
 (make-face 'mode-line-hostname-face)
 
 (set-face-attribute 'mode-line nil
-    :foreground "#aaaaaa" :background "gray5"
+    :foreground "#aaaaaa" :background "#080809"
     :inverse-video nil
-    :box '(:line-width 6 :color "gray5" :style nil))
+    :box '(:line-width 6 :color "#080809" :style nil))
 
 (set-face-attribute 'mode-line-inactive nil
     :foreground "#aaaaaa" :background "gray5"
@@ -119,6 +118,5 @@
 (set-face-attribute 'mode-line-hostname-face nil
     :foreground "#4271ae"
     :background "gray5")
-
 
 (provide 'modeline)

@@ -17,7 +17,7 @@
       (text-comment "#99a1a6")
       (input-text "#CCCCCC")
       (light-blue "#75E5F4")
-      (dark-blue "#4F99D3")
+      (dark-blue "#4f57d3")
       (intense-green "#8BE03C")
       (intense-yellow "#e3bf21")
       (text-hl "#1e2122"))
@@ -33,7 +33,7 @@
    `(region ((t (:background ,text-region))))
    `(error ((t (:foreground ,red :weight bold))))
 
-   `(isearch ((t (:background ,background :foreground ,text :box (:line-width 1 :color ,dark-blue) :weight bold))))
+   `(isearch ((t (:background ,dark-blue :foreground ,text :box (:line-width 1 :color ,dark-blue) :weight bold))))
    `(lazy-highlight ((t (:background ,background :foreground ,text :box (:line-width 1 :color ,dark-blue)))))
    `(mode-line ((t (:foreground ,text :background ,background ))))
    `(mode-line-buffer-id ((t (:weight bold :foreground ,yellow))))
