@@ -1,6 +1,6 @@
 [global]
     font = Source Sans Pro 12
-    allow_markup = yes
+    markup = yes
     format = "%s \n %b"
     sort = yes
     indicate_hidden = yes
@@ -24,8 +24,6 @@
     startup_notification = false
     dmenu = /usr/bin/dmenu -p dunst
     browser = /usr/bin/chromium
-
-[frame]
     width = 0
     color = "#030303"
 
@@ -41,7 +39,7 @@
     timeout = 10
 
 [urgency_normal]
-    background = "#f2f2f2"
+    background = "#ffffff"
     foreground = "#030303"
     timeout = 10
 

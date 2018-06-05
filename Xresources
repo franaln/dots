@@ -17,10 +17,10 @@ URxvt.scrollBar: false
 URxvt.saveLines: 5000
 URxvt.termName: rxvt
 URxvt*font: xft:Inconsolata:size=13
-URxvt*boldFont: xft:Inconsolata:size=13
+URxvt*boldFont: xft:Inconsolata-Bold:size=13
 URxvt.letterSpace: -1
 
-URxvt.perl-ext-common: default
+URxvt.perl-ext-common: default,fullscreen,resize-font
 URxvt.url-launcher: chromium
 URxvt.matcher.button:   1
 URxvt.colorUL: #4667b4
@@ -37,6 +37,7 @@ URxvt.keysym.Meta-Up:    \033[1;3A
 URxvt.keysym.Meta-Down:  \033[1;3B
 URxvt.keysym.Meta-Right: \033[1;3C
 URxvt.keysym.Meta-Left:  \033[1;3D
+urxvt*keysym.F11: perl:fullscreen:switch
 
 URxvt.iso14755: false
 URxvt.iso14755_52: false
@@ -45,75 +46,39 @@ URxvt.iso14755_52: false
 *pointerColorBackground: #EEEEEE
 *pointerColorForeground: #121212
 
-! *.foreground:   #c5c8c6
-! *.background:   #131312
-! *.cursorColor:  #a6a28c
-
-! ! black
-! *.color0:       #20201d
-! *.color8:       #7d7a68
-
-! ! red
-! *.color1:       #fb3d22
-! *.color9:       #fb3d22
-
-! ! green
-! *.color2:       #6df67e
-! *.color10:      #6df67e
-
-! ! yellow
-! *.color3:       #fba922
-! *.color11:      #fba922
-
-! ! blue
-! *.color4:       #2274fb
-! *.color12:      #2274fb
-
-! ! magenta
-! *.color5:       #b854d4
-! *.color13:      #b854d4
-
-! ! cyan
-! *.color6:       #9fc2fd
-! *.color14:      #9fc2fd
-
-! ! white
-! *.color7:       #a6a28c
-! *.color15:      #fefbec
-
-
 *.foreground:  #cacecd
 *.background:  #111213
 *.cursorColor: #e3bf21
 !
 ! Black
-*.color0:      #323232
-*.color8:      #323232
+*.color0:      #263238
+*.color8:      #2E3C43
+!! #323232
 !
-! Red
-*.color1:      #c22832
-*.color9:      #c22832
+! Red !! #CE4045
+*.color1:      #F07178
+*.color9:      #F07178
 !
 ! Green
-*.color2:      #8ec43d
-*.color10:     #8ec43d
+*.color2:      #C3E88D
+*.color10:     #C3E88D
 !
 ! Yellow
-*.color3:      #e0c64f
-*.color11:     #e0c64f
+*.color3:      #FFCB6B
+*.color11:     #FFCB6B
 !
 ! Blue
-*.color4:      #43a5d5
-*.color12:     #43a5d5
+*.color4:      #63B2FA
+*.color12:     #63B2FA
 !
 ! Magenta
-*.color5:      #8b57b5
-*.color13:     #8b57b5
+*.color5:      #C792EA
+*.color13:     #C792EA
 !
 ! Cyan
-*.color6:      #8ec43d
-*.color14:     #8ec43d
+*.color6:      #89DDFF
+*.color14:     #89DDFF
 !
 ! White
-*.color7:      #eeeeee
+*.color7:      #ffffff
 *.color15:     #ffffff

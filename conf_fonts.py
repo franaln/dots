@@ -31,9 +31,9 @@ config = """
 
 def main():
 
-    with open('~/.config/fontconfig/fonts.conf', 'w') as f:
+    with open('/home/fran/.config/fontconfig/fonts.conf', 'w') as f:
 
-        text = f.read()
+        # text = f.read()
 
         text = text.replace('</fontconfig>', config+'\n</fontconfig>')
 

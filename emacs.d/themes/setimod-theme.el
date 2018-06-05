@@ -6,19 +6,20 @@
 (let ((blue "#63B2FA")
       (green "#95DA96")
       (yellow "#EDDB96")
-      (red "#CE4045")
+      (red "#c33932")
       (purple "#BA85CC")
       (background "#111213")
       (background-2 "#434552")
       (text "#cacecd")
       (text-highlight "#D7DCF0")
-      (text-region "#434546")
+      (text-region "#56595a")
       (text-dired "#A0A0A0")
       (text-comment "#99a1a6")
       (input-text "#CCCCCC")
       (light-blue "#75E5F4")
       (dark-blue "#4F99D3")
       (intense-green "#8BE03C")
+      (intense-yellow "#e3bf21")
       (text-hl "#1e2122"))
 
   (custom-theme-set-faces
@@ -63,7 +64,7 @@
    `(font-lock-warning-face ((t (:weight bold :inherit (error)))))
 
    ;; Parens
-   `(show-paren-match ((t (:foreground ,yellow :weight bold))))
+   `(show-paren-match ((t (:foreground ,intense-yellow :background ,text-hl :weight extrabold))))
    `(show-paren-mismatch ((t (:foreground ,red :underline (:color ,red :style line)))))
 
    ;; Dired

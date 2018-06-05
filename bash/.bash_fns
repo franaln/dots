@@ -3,7 +3,7 @@
 # frani
 
 # Handy Extract Program
-extract () {
+function extract () {
     if [ -f "$1" ] ; then
         case "$1" in
             *.tar)       tar xf "$1"    ;;
@@ -26,7 +26,7 @@ extract () {
 }
 
 # cd and ls in one
-cl() {
+function cl() {
     if [ -d "$1" ]; then
         cd "$1"
         ls
@@ -35,21 +35,20 @@ cl() {
     fi
 }
 
-count() {
+function count () {
     ll $@ | wc -l
 }
 
-search_tar() {
+function search_tar() {
     for i in `ls $1` ; do echo $i && tar -tvf $i | grep $2 ; done
 }
 
-load_root() {
+function load_root () {
     cd ~/root/bin
     . thisroot.sh
     cd - > /dev/null
     alias python='python2.7'
 }
-
 
 usm () {
     DRIVE="/dev/sdb1";
