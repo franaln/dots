@@ -1,18 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openbox_menu>
 	<menu id="root-menu" label="OpenBox 3">
-		<menu id="2" label="Editors">
-			<item label="Emacs">
-				<action name="Execute">
-					<execute>urxvt -e emacs</execute>
-				</action>
-			</item>
-			<item label="Kate">
-				<action name="Execute">
-					<execute>kate</execute>
-				</action>
-			</item>
-		</menu>
+		<item label="Terminal">
+			<action name="Execute">
+				<execute>urxvtdc</execute>
+			</action>
+		</item>
+		<item label="File Manager">
+			<action name="Execute">
+				<execute>nautilus</execute>
+			</action>
+		</item>
+		<item label="Chromium">
+			<action name="Execute">
+				<execute>chromium</execute>
+			</action>
+		</item>
+		<item label="Emacs">
+			<action name="Execute">
+				<execute>urxvtdc -e emacs</execute>
+			</action>
+		</item>
+		<separator/>
 		<menu id="6" label="Graphics">
 			<item label="GIMP">
 				<action name="Execute">
@@ -27,11 +36,6 @@
 			<item label="Inkscape">
 				<action name="Execute">
 					<execute>inkscape</execute>
-				</action>
-			</item>
-			<item label="KSnapshot">
-				<action name="Execute">
-					<execute>ksnapshot</execute>
 				</action>
 			</item>
 		</menu>
@@ -151,77 +155,6 @@
 			<item label="VidyoDesktop">
 				<action name="Execute">
 					<execute>VidyoDesktop</execute>
-				</action>
-			</item>
-		</menu>
-		<menu id="3" label="Office">
-			<item label="KMail">
-				<action name="Execute">
-					<execute>kmail</execute>
-				</action>
-			</item>
-			<item label="Kontact">
-				<action name="Execute">
-					<execute>kontact</execute>
-				</action>
-			</item>
-			<item label="KOrganizer">
-				<action name="Execute">
-					<execute>korganizer</execute>
-				</action>
-			</item>
-			<item label="KTimeTracker">
-				<action name="Execute">
-					<execute>ktimetracker</execute>
-				</action>
-			</item>
-			<item label="LibreOffice Impress">
-				<action name="Execute">
-					<execute>libreoffice</execute>
-				</action>
-			</item>
-			<item label="Okular">
-				<action name="Execute">
-					<execute>okular</execute>
-				</action>
-			</item>
-		</menu>
-		<menu id="4" label="Science">
-			<item label="bc">
-				<action name="Execute">
-					<execute>urxvt -e bc</execute>
-				</action>
-			</item>
-			<item label="Calc">
-				<action name="Execute">
-					<execute>urxvt -e calc</execute>
-				</action>
-			</item>
-			<item label="dc">
-				<action name="Execute">
-					<execute>xterm -e dc</execute>
-				</action>
-			</item>
-			<item label="ROOT">
-				<action name="Execute">
-					<execute>urxvt-e root</execute>
-				</action>
-			</item>
-		</menu>
-		<menu id="19" label="Shells">
-			<item label="Dolphin">
-				<action name="Execute">
-					<execute>dolphin</execute>
-				</action>
-			</item>
-			<item label="Konsole">
-				<action name="Execute">
-					<execute>konsole</execute>
-				</action>
-			</item>
-			<item label="Oracle VM VirtualBox">
-				<action name="Execute">
-					<execute>VirtualBox</execute>
 				</action>
 			</item>
 		</menu>
@@ -346,22 +279,14 @@
 			</item>
 		</menu>
 		<menu id="38" label="Utilities">
-			<item label="Ark">
-				<action name="Execute">
-					<execute>ark</execute>
-				</action>
-			</item>
-			<item label="Filelight">
-				<action name="Execute">
-					<execute>filelight</execute>
-				</action>
-			</item>
-		</menu>
+        </menu>
 		<separator/>
-		<menu id="39" label="Shutdown">
+		<menu execute="~/bin/ob-pipemenu-recent-files" id="recent" label="Recent files"/>
+		<separator/>
+		<menu id="39" label="Exit">
 			<item label="Lock">
 				<action name="Execute">
-					<execute>xscreensaver-command -lock</execute>
+					<execute>light-locker-command -l</execute>
 				</action>
 			</item>
 			<item label="Logout">
@@ -369,33 +294,23 @@
 			</item>
 			<item label="Reboot">
 				<action name="Execute">
-					<execute>sudo shutdown -r now</execute>
+					<execute>systemctl reboot</execute>
 				</action>
 			</item>
 			<item label="Suspend">
 				<action name="Execute">
-					<execute>sudo pm-suspend</execute>
+					<execute>systemctl suspend</execute>
 				</action>
 			</item>
 			<item label="Hibernate">
 				<action name="Execute">
-					<execute>sudo pm-hibernate</execute>
+					<execute>systemctl hibernate</execute>
 				</action>
 			</item>
 			<item label="Poweroff">
 				<action name="Execute">
-					<execute>sudo shutdown -h now</execute>
+					<execute>systemctl poweroff</execute>
 				</action>
-			</item>
-		</menu>
-		<menu id="40" label="OpenBox">
-			<menu id="client-list-menu"/>
-			<item label="Reconfigure">
-				<action name="Reconfigure"/>
-			</item>
-			<separator/>
-			<item label="Exit">
-				<action name="Exit"/>
 			</item>
 		</menu>
 	</menu>

@@ -35,37 +35,37 @@
     <keepBorder>no</keepBorder>
     <animateIconify>no</animateIconify>
     <font place="ActiveWindow">
-      <name>Source Sans Pro</name>
+      <name>Roboto</name>
       <size>12</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="InactiveWindow">
-      <name>Fira Sans</name>
+      <name>Roboto</name>
       <size>12</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="MenuHeader">
-      <name>Source Sans Pro</name>
-      <size>10</size>
+      <name>Roboto</name>
+      <size>12</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="MenuItem">
-      <name>Source Sans Pro</name>
-      <size>10</size>
+      <name>Roboto</name>
+      <size>12</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="ActiveOnScreenDisplay">
-      <name>Source Sans Pro</name>
+      <name>Roboto</name>
       <size>12</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="InactiveOnScreenDisplay">
-      <name>Source Sans Pro</name>
+      <name>Roboto</name>
       <size>12</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
@@ -114,6 +114,7 @@
     <showDelay>300</showDelay>
     <moveButton>Middle</moveButton>
   </dock>
+
   <!--          -->
   <!-- Keyboard -->
   <!--          -->
@@ -373,11 +374,8 @@
       </action>
     </keybind>
     <keybind key="A-F2">
-      <action name="Execute">
-        <startupnotify>
-          <enabled>true</enabled>
-        </startupnotify>
-        <command>sherlock</command>
+      <action name="ShowMenu">
+        <menu>root-menu</menu>
       </action>
     </keybind>
     <keybind key="C-S-Escape">
@@ -390,7 +388,7 @@
     </keybind>
     <keybind key="C-A-l">
       <action name="Execute">
-        <command>slimlock</command>
+        <command>light-locker-command -l</command>
       </action>
     </keybind>
     <keybind key="XF86KbdBrightnessDown">
@@ -429,6 +427,7 @@
       </action>
     </keybind>
   </keyboard>
+
   <!--       -->
   <!-- Mouse -->
   <!--       -->
@@ -444,6 +443,14 @@
     <!-- Set this to TRUE to move the mouse pointer across the desktop when
        switching due to hitting the edge of the screen -->
     <screenEdgeWarpMouse>false</screenEdgeWarpMouse>
+
+    <context name="Root">
+      <!-- Menus -->
+      <mousebind button="Right" action="Press">
+        <action name="ShowMenu"><menu>root-menu</menu></action>
+      </mousebind>
+    </context>
+
     <context name="Frame">
       <mousebind button="A-Left" action="Press">
         <action name="Focus"/>
@@ -736,14 +743,37 @@
       </mousebind>
     </context>
   </mouse>
+
+  <!--      -->
+  <!-- Menu -->
+  <!--      -->
+  <menu>
+    <!-- default menu file (or custom one in $HOME/.config/openbox/) -->
+    <file>menu.xml</file>
+    <!-- if a press-release lasts longer than this (in milliseconds), the menu is hidden again -->
+    <hideDelay>200</hideDelay>
+    <!-- center submenus vertically about the parent entry -->
+    <middle>no</middle>
+    <!-- time to delay before showing a submenu after hovering over the parent entry.
+       if this is a negative value, then the delay is infinite and the submenu will not be shown until it is clicked on -->
+    <submenuShowDelay>100</submenuShowDelay>
+    <!-- time to delay before hiding a submenu when selecting another entry in parent menu -->
+    <!-- if this is a negative value, then the delay is infinite and the submenu will not be hidden until a different submenu is opened -->
+    <submenuHideDelay>400</submenuHideDelay>
+    <!-- controls if icons appear in the client-list-(combined-)menu -->
+    <applicationIcons>yes</applicationIcons>
+    <!-- show the manage desktops section in the client-list-(combined-)menu -->
+    <manageDesktops>yes</manageDesktops>
+  </menu>
+
   <!--              -->
   <!-- Applications -->
   <!--              -->
   <applications>
-    <!-- Undecorate all windows -->
-    <application class="urxvt*">
-      <decor>no</decor>
-    </application>
+    <!-- <!-\- Undecorate all windows -\-> -->
+    <!-- <application class="urxvt*"> -->
+    <!--   <decor>no</decor> -->
+    <!-- </application> -->
     <!-- Chromium in the first worksapce -->
     <application name="chromium">
       <maximized>true</maximized>
