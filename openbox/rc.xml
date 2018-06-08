@@ -20,7 +20,8 @@
     <primaryMonitor>1</primaryMonitor>
   </placement>
   <theme>
-    <name>emmental</name>
+    <!-- <name>emmental</name> -->
+    <name>emmental-light</name>
     <!--
       available characters are NDSLIMC, each can occur at most once.
       N: window icon
