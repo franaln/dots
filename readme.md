@@ -13,3 +13,7 @@ Include configuration files for:
  * gtk theme
  * moc/mpd
  * xinitrc and Xresources
+
+To apply the configuration for a specific app (e.g. emacs):
+
+    stow emacs
