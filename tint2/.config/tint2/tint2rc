@@ -9,8 +9,10 @@ rounded = 0
 border_width = 0
 border_sides = TBLR
 border_content_tint_weight = 0
-background_color = #2A2C2D 100
-border_color     = #2A2C2D 100
+# background_color = #2A2C2D 100
+# border_color     = #2A2C2D 100
+background_color = #2f343f 100
+border_color     = #2f343f 100
 
 # ID 2 - active task
 rounded = 0
@@ -36,18 +38,18 @@ border_width = 0
 background_color = #000000 100
 border_color = #000000 0
 
-# ID 6 - orange
+# ID 6 - colour
 rounded = 0
 border_width = 2
 border_sides = TBLR
 border_content_tint_weight = 0
 background_content_tint_weight = 0
-background_color         = #1a6785 100
-border_color             = #1a6785 100
-background_color_hover   = #1a6785 100
-border_color_hover       = #1a6785 100
-background_color_pressed = #1a6785 100
-border_color_pressed     = #1a6785 100
+background_color         = #40e0d0 100
+border_color             = #40e0d0 100
+background_color_hover   = #40e0d0 100
+border_color_hover       = #40e0d0 100
+background_color_pressed = #40e0d0 100
+border_color_pressed     = #40e0d0 100
 
 #----------
 # Panel
@@ -111,8 +113,8 @@ task_iconified_background_id = 0
 task_font = Roboto Light 12
 task_font_color           = #DBD2CD 100
 task_iconified_font_color = #DBD2CD 100
-task_active_font_color    = #F4F1EF 100
-task_urgent_font_color    = #F4F1EF 100
+task_active_font_color    = #2f343f 100
+task_urgent_font_color    = #2f343f 100
 font_shadow = 0
 
 task_icon_asb = 100 0 0
