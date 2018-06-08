@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openbox_menu>
+  <menu id="root-menu" label="OpenBox 3">
+    <item label="Terminal">
+      <action name="Execute">
+        <execute>urxvtdc</execute>
+      </action>
+    </item>
+    <item label="File Manager">
+      <action name="Execute">
+        <execute>nautilus</execute>
+      </action>
+    </item>
+    <item label="Chromium">
+      <action name="Execute">
+        <execute>chromium</execute>
+      </action>
+    </item>
+    <item label="Emacs">
+      <action name="Execute">
+        <execute>urxvtdc -e emacs</execute>
+      </action>
+    </item>
+    <separator/>
+    <menu id="5" label="Network">
+      <item label="Chromium">
+        <action name="Execute">
+          <execute>chromium</execute>
+        </action>
+      </item>
+      <item label="Skype">
+        <action name="Execute">
+          <execute>skypeforlinux</execute>
+        </action>
+      </item>
+      <item label="VidyoDesktop">
+        <action name="Execute">
+          <execute>VidyoDesktop</execute>
+        </action>
+      </item>
+      <item label="Dropbox">
+        <action name="Execute">
+          <command>dropbox</command>
+        </action>
+      </item>
+      <item label="CERNBox">
+        <action name="Execute">
+          <command>cernbox</command>
+        </action>
+      </item>
+    </menu>
+    <menu id="7" label="Multimedia">
+      <item label="Pavucontrol">
+        <action name="Execute">
+          <execute>pavucontrol</execute>
+        </action>
+      </item>
+    </menu>
+    <menu id="6" label="Graphics">
+      <item label="GIMP">
+        <action name="Execute">
+          <execute>gimp-2.8</execute>
+        </action>
+      </item>
+      <item label="Gwenview">
+        <action name="Execute">
+          <execute>gwenview</execute>
+        </action>
+      </item>
+    </menu>
+    <menu id="37" label="System">
+      <menu id="36" label="Settings">
+        <menu id="21" label="GNOME">
+          <item label="Privilege granting">
+            <action name="Execute">
+              <execute>gksu-properties</execute>
+            </action>
+          </item>
+        </menu>
+      </menu>
+    </menu>
+    <separator/>
+    <menu execute="~/bin/ob-pipemenu-recent-files" id="recent" label="Recent files"/>
+    <separator/>
+    <menu id="39" label="Exit">
+      <item label="Lock">
+        <action name="Execute">
+          <execute>light-locker-command -l</execute>
+        </action>
+      </item>
+      <item label="Logout">
+        <action name="Exit"/>
+      </item>
+      <item label="Reboot">
+        <action name="Execute">
+          <execute>systemctl reboot</execute>
+        </action>
+      </item>
+      <item label="Suspend">
+        <action name="Execute">
+          <execute>systemctl suspend</execute>
+        </action>
+      </item>
+      <item label="Hibernate">
+        <action name="Execute">
+          <execute>systemctl hibernate</execute>
+        </action>
+      </item>
+      <item label="Poweroff">
+        <action name="Execute">
+          <execute>systemctl poweroff</execute>
+        </action>
+      </item>
+    </menu>
+  </menu>
+</openbox_menu>

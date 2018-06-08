@@ -61,7 +61,7 @@ usm () {
 
 function sc () {
     if [ -d .git ] ; then
-        git st -uno
+        git status -uno
     elif [ -d .svn ] ; then
         svn status | grep -v ?
     fi
