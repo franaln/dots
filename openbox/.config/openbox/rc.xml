@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- OpenBox config ($HOME/.config/openbox/rc.xml) Frani 2013 -->
 <openbox_config xmlns="http://openbox.org/3.4/rc" xmlns:xi="http://www.w3.org/2001/XInclude">
+
   <resistance>
     <strength>10</strength>
     <screen_edge_strength>20</screen_edge_strength>
   </resistance>
+
   <focus>
     <focusNew>yes</focusNew>
     <followMouse>no</followMouse>
@@ -13,14 +15,15 @@
     <focusDelay>200</focusDelay>
     <raiseOnFocus>no</raiseOnFocus>
   </focus>
+
   <placement>
     <policy>Smart</policy>
     <center>yes</center>
     <monitor>Primary</monitor>
     <primaryMonitor>1</primaryMonitor>
   </placement>
+
   <theme>
-    <!-- <name>emmental</name> -->
     <name>emmental-light</name>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -72,6 +75,7 @@
       <slant>Normal</slant>
     </font>
   </theme>
+
   <desktops>
     <number>9</number>
     <firstdesk>1</firstdesk>
@@ -88,6 +92,7 @@
     </names>
     <popupTime>875</popupTime>
   </desktops>
+
   <resize>
     <drawContents>yes</drawContents>
     <popupShow>Nonpixel</popupShow>
@@ -97,12 +102,14 @@
       <y>0</y>
     </popupFixedPosition>
   </resize>
+
   <margins>
     <top>42</top>
     <bottom>0</bottom>
     <left>0</left>
     <right>0</right>
   </margins>
+
   <dock>
     <position>Top</position>
     <floatingX>0</floatingX>
@@ -121,6 +128,7 @@
   <!--          -->
   <keyboard>
     <chainQuitKey>C-g</chainQuitKey>
+
     <!-- desktop switching -->
     <keybind key="C-A-d" chroot="true">
       <keybind key="Up">
@@ -263,9 +271,11 @@
     <keybind key="W-l">
       <action name="ToggleAlwaysOnBottom"/>
     </keybind>
+
     <!-- window switching -->
     <keybind key="A-Tab">
       <action name="NextWindow">
+        <bar>no</bar>
         <finalactions>
           <action name="Focus"/>
           <action name="Raise"/>
@@ -275,6 +285,7 @@
     </keybind>
     <keybind key="A-S-Tab">
       <action name="PreviousWindow">
+        <bar>no</bar>
         <finalactions>
           <action name="Focus"/>
           <action name="Raise"/>
@@ -286,14 +297,17 @@
       <action name="NextWindow">
         <allDesktops>yes</allDesktops>
         <dialog>list</dialog>
+        <bar>no</bar>
       </action>
     </keybind>
     <keybind key="W-S-Tab">
       <action name="PreviousWindow">
         <allDesktops>yes</allDesktops>
         <dialog>list</dialog>
+        <bar>no</bar>
       </action>
     </keybind>
+
     <!-- window switching with the arrow keys -->
     <keybind key="W-A-Right">
       <action name="DirectionalCycleWindows">
