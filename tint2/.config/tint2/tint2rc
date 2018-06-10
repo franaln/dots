@@ -35,8 +35,8 @@ border_color     = #FFFFFF 5
 # ID 5 - tooltip
 rounded = 3
 border_width = 0
-background_color = #000000 100
-border_color = #000000 0
+background_color = #2f343f 100
+border_color     = #2f343f 100
 
 # ID 6 - colour
 rounded = 0
@@ -56,7 +56,7 @@ border_color_pressed     = #40e0d0 100
 #----------
 panel_monitor = 1
 panel_position = top center horizontal
-panel_items = TSC
+panel_items = TESC
 panel_size = 100% 42
 panel_margin = 0 0
 panel_padding = 0 0 0
@@ -84,11 +84,11 @@ taskbar_hide_different_monitor = 0
 taskbar_hide_different_desktop = 0
 taskbar_always_show_all_desktop_tasks = 1
 taskbar_name_padding = 4 2
-taskbar_name_background_id = 1
-taskbar_name_active_background_id = 1
+taskbar_name_background_id = 0
+taskbar_name_active_background_id = 0
 taskbar_name_font = Roboto 12
 taskbar_name_font_color        = #DBD2CD 100
-taskbar_name_active_font_color = #F4F1EF 100
+taskbar_name_active_font_color = #DBD2CD 100
 taskbar_distribute_size = 1
 taskbar_sort_order = none
 task_align = left
@@ -140,7 +140,7 @@ time1_format = %A %d %b, %H:%M
 time1_timezone = America/Argentina/Buenos_Aires
 # time1_timezone = Europe/Zurich
 time1_font = Roboto 12
-clock_font_color = #ffffff 100
+clock_font_color = #DBD2CD 100
 clock_padding = 8 0 8
 clock_background_id = 0
 clock_tooltip = %A %d %b, %H:%M
@@ -153,7 +153,7 @@ tooltip_padding = 2 2
 tooltip_show_timeout = 1.0
 tooltip_hide_timeout = 0.0
 tooltip_background_id = 5
-tooltip_font_color = #ffffff 100
+tooltip_font_color = #DBD2CD 100
 tooltip_font = Roboto 12
 
 #----------
@@ -163,3 +163,27 @@ mouse_middle = close
 mouse_right = none
 mouse_scroll_up = none
 mouse_scroll_down = none
+
+#---------
+# Spotify
+#---------
+execp = new
+execp_command = /home/fran/bin/music-status.sh
+execp_interval = 4
+execp_has_icon = 0
+execp_cache_icon = 1
+execp_continuous = 0
+execp_markup = 1
+execp_lclick_command = playerctl play-pause
+execp_rclick_command = playerctl next
+execp_mclick_command = playerctl previous
+#execp_uwheel_command =
+#execp_dwheel_command =
+execp_font = Roboto 12
+execp_font_color = #DBD2CD 100
+execp_padding = 8 0
+execp_background_id = 0
+execp_centered = 0
+execp_icon_w = 0
+execp_icon_h = 0
+execp_tooltip = "Left click: Play/Pause, Middle click: Previous, Right click: Next"

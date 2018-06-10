@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- OpenBox config ($HOME/.config/openbox/rc.xml) Frani 2013 -->
+
+<!-- OpenBox config ($HOME/.config/openbox/rc.xml) -->
 <openbox_config xmlns="http://openbox.org/3.4/rc" xmlns:xi="http://www.w3.org/2001/XInclude">
 
   <resistance>
@@ -251,6 +252,7 @@
     <keybind key="W-d">
       <action name="ToggleShowDesktop"/>
     </keybind>
+
     <!-- windows -->
     <keybind key="A-F4">
       <action name="Close"/>
@@ -267,9 +269,6 @@
     </keybind>
     <keybind key="W-t">
       <action name="ToggleAlwaysOnTop"/>
-    </keybind>
-    <keybind key="W-l">
-      <action name="ToggleAlwaysOnBottom"/>
     </keybind>
 
     <!-- window switching -->
@@ -310,25 +309,30 @@
 
     <!-- window switching with the arrow keys -->
     <keybind key="W-A-Right">
-      <action name="DirectionalCycleWindows">
+      <action name="DirectionalTargetWindow">
         <direction>right</direction>
+        <dialog>no</dialog>
       </action>
     </keybind>
     <keybind key="W-A-Left">
-      <action name="DirectionalCycleWindows">
+      <action name="DirectionalTargetWindow">
         <direction>left</direction>
+        <dialog>no</dialog>
       </action>
     </keybind>
     <keybind key="W-A-Up">
-      <action name="DirectionalCycleWindows">
+      <action name="DirectionalTargetWindow">
         <direction>up</direction>
+        <dialog>no</dialog>
       </action>
     </keybind>
     <keybind key="W-A-Down">
-      <action name="DirectionalCycleWindows">
+      <action name="DirectionalTargetWindow">
         <direction>down</direction>
+        <dialog>no</dialog>
       </action>
     </keybind>
+
     <!-- tile windows -->
     <keybind key="W-Left">
       <action name="UnmaximizeFull"/>
@@ -356,6 +360,75 @@
     <keybind key="W-Up">
       <action name="Maximize"/>
     </keybind>
+
+    <!-- Vertical tiling -->
+    <keybind key="C-W-v">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <width>50%</width>
+      </action>
+      <action name="MaximizeVert"/>
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>0</y>
+      </action>
+      <action name="NextWindow">
+        <interactive>no</interactive>
+        <dialog>none</dialog>
+        <finalactions>
+          <action name="UnmaximizeFull"/>
+          <action name="MoveResizeTo">
+            <width>50%</width>
+          </action>
+          <action name="MaximizeVert"/>
+          <action name="MoveResizeTo">
+            <x>-0</x>
+            <y>0</y>
+          </action>
+        </finalactions>
+      </action>
+    </keybind>
+
+    <!-- Horizontal tiling -->
+    <keybind key="C-W-h">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <height>50%</height>
+      </action>
+      <action name="MaximizeHorz"/>
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>0</y>
+      </action>
+      <action name="NextWindow">
+        <interactive>no</interactive>
+        <dialog>none</dialog>
+        <finalactions>
+          <action name="UnmaximizeFull"/>
+          <action name="MoveResizeTo">
+            <height>50%</height>
+          </action>
+          <action name="MaximizeHorz"/>
+          <action name="MoveResizeTo">
+            <x>0</x>
+            <y>-0</y>
+          </action>
+        </finalactions>
+      </action>
+    </keybind>
+
+    <!-- Restore window dimensions -->
+    <keybind key="C-W-r">
+      <action name="UnmaximizeFull"/>
+      <action name="NextWindow">
+        <interactive>no</interactive>
+        <dialog>none</dialog>
+        <finalactions>
+          <action name="UnmaximizeFull"/>
+        </finalactions>
+      </action>
+    </keybind>
+
     <!-- resize and move windows with the arrow keys -->
     <keybind key="W-R">
       <action name="Resize">
@@ -365,6 +438,7 @@
       <action name="Move">
      </action>
     </keybind>
+
     <!-- running applications -->
     <keybind key="C-A-t">
       <action name="Execute">
@@ -375,11 +449,11 @@
         <command>urxvtdc</command>
       </action>
     </keybind>
-    <keybind key="Print">
-      <action name="Execute">
-        <command>shutter -f -e -o '~/Pictures/%y-%m-%d_$w_$h.png'</command>
-      </action>
-    </keybind>
+    <!-- <keybind key="Print"> -->
+    <!--   <action name="Execute"> -->
+    <!--     <command>shutter -f -e -o '~/Pictures/%y-%m-%d_$w_$h.png'</command> -->
+    <!--   </action> -->
+    <!-- </keybind> -->
     <keybind key="A-F1">
       <action name="Execute">
         <startupnotify>
@@ -442,6 +516,7 @@
       </action>
     </keybind>
   </keyboard>
+
 
   <!--       -->
   <!-- Mouse -->
@@ -759,11 +834,12 @@
     </context>
   </mouse>
 
+
   <!--      -->
   <!-- Menu -->
   <!--      -->
   <menu>
-    <!-- default menu file (or custom one in $HOME/.config/openbox/) -->
+    <!-- menu file (in $HOME/.config/openbox/) -->
     <file>menu.xml</file>
     <!-- if a press-release lasts longer than this (in milliseconds), the menu is hidden again -->
     <hideDelay>200</hideDelay>
@@ -781,6 +857,7 @@
     <manageDesktops>yes</manageDesktops>
   </menu>
 
+
   <!--              -->
   <!-- Applications -->
   <!--              -->
@@ -795,4 +872,5 @@
       <desktop>1</desktop>
     </application>
   </applications>
+
 </openbox_config>
