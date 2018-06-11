@@ -133,22 +133,30 @@
     <!-- desktop switching -->
     <keybind key="C-A-d" chroot="true">
       <keybind key="Up">
-        <action name="DesktopUp">
+        <action name="GoToDesktop">
+          <to>up</to>
+          <wrap>no</wrap>
           <dialog>no</dialog>
         </action>
       </keybind>
       <keybind key="Down">
-        <action name="DesktopDown">
+        <action name="GoToDesktop">
+          <to>down</to>
+          <wrap>no</wrap>
           <dialog>no</dialog>
         </action>
       </keybind>
       <keybind key="Left">
-        <action name="DesktopLeft">
+        <action name="GoToDesktop">
+          <to>left</to>
+          <wrap>no</wrap>
           <dialog>no</dialog>
         </action>
       </keybind>
       <keybind key="Right">
-        <action name="DesktopRight">
+        <action name="GoToDesktop">
+          <to>right</to>
+          <wrap>no</wrap>
           <dialog>no</dialog>
         </action>
       </keybind>

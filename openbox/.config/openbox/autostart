@@ -11,5 +11,6 @@ nm-applet --sm-disable &
 dunst -conf $HOME/.config/dunst/dunstrc &
 light-locker &
 (sleep 3 && dropbox) &
+(sleep 3 && cernbox) &
 (sleep 3 && monitortray.py) &
 (sleep 3 && chromium) &
