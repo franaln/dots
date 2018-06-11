@@ -75,7 +75,7 @@ strut_policy = follow_size
 #----------
 taskbar_mode = single_desktop
 taskbar_hide_if_empty = 0
-taskbar_padding = 3 3 5
+taskbar_padding = 3 4 5
 taskbar_background_id = 1
 taskbar_active_background_id = 1
 taskbar_name = 1
@@ -104,7 +104,7 @@ task_tooltip = 1
 task_thumbnail = 0
 task_thumbnail_size = 400.0
 task_maximum_size = 250 5
-task_padding = 5 10
+task_padding = 10 10
 task_background_id = 0
 task_active_background_id = 6
 task_urgent_background_id = 6
@@ -117,10 +117,10 @@ task_active_font_color    = #2f343f 100
 task_urgent_font_color    = #2f343f 100
 font_shadow = 0
 
-task_icon_asb = 100 0 0
-task_active_icon_asb = 100 0 0
-task_urgent_icon_asb = 100 0 0
-task_iconified_icon_asb = 100 0 0
+# task_icon_asb = 100 0 0
+# task_active_icon_asb = 100 0 0
+# task_urgent_icon_asb = 100 0 0
+# task_iconified_icon_asb = 100 0 0
 
 
 #-------------
@@ -168,7 +168,7 @@ mouse_scroll_down = none
 # Spotify
 #---------
 execp = new
-execp_command = /home/fran/bin/music-status.sh
+execp_command = $HOME/.config/tint2/music-status.sh
 execp_interval = 4
 execp_has_icon = 0
 execp_cache_icon = 1
