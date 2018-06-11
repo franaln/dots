@@ -1,120 +1,191 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openbox_menu>
-    <menu id="5" label="Network">
-        <item label="Chromium">
-            <action name="Execute">
-                <command>chromium</command>
-            </action>
-        </item>
-        <item label="Spotify">
-            <action name="Execute">
-                <execute>spotify</execute>
-            </action>
-        </item>
-        <item label="Skype">
-            <action name="Execute">
-                <command>skypeforlinux</command>
-            </action>
-        </item>
-        <item label="VidyoDesktop">
-            <action name="Execute">
-                <command>VidyoDesktop</command>
-            </action>
-        </item>
-        <item label="Dropbox">
-            <action name="Execute">
-                <command>dropbox</command>
-            </action>
-        </item>
-        <item label="CERNBox">
-            <action name="Execute">
-                <command>cernbox</command>
-            </action>
-        </item>
-        <item label="Stremio">
-            <action name="Execute">
-                <command>stremio</command>
-            </action>
-        </item>
-    </menu>
-    <menu id="7" label="Multimedia">
-        <item label="Pavucontrol">
-            <action name="Execute">
-                <command>pavucontrol</command>
-            </action>
-        </item>
-    </menu>
-    <menu id="6" label="Graphics">
-        <item label="Image Viewer">
-            <action name="Execute">
-                <command>gwenview</command>
-            </action>
-        </item>
-        <item label="GIMP">
-            <action name="Execute">
-                <command>gimp-2.8</command>
-            </action>
-        </item>
-    </menu>
-    <menu id="37" label="System">
-        <item label="System Monitor">
-            <action name="Execute">
-                <command>gnome-system-monitor</command>
-            </action>
-        </item>
-    </menu>
-    <menu id="39" label="Exit">
-        <item label="Lock">
-            <action name="Execute">
-                <command>light-locker-command -l</command>
-            </action>
-        </item>
-        <item label="Logout">
-            <action name="Exit"/>
-        </item>
-        <item label="Reboot">
-            <action name="Execute">
-                <command>systemctl reboot</command>
-            </action>
-        </item>
-        <item label="Suspend">
-            <action name="Execute">
-                <command>systemctl suspend</command>
-            </action>
-        </item>
-        <item label="Hibernate">
-            <action name="Execute">
-                <command>systemctl hibernate</command>
-            </action>
-        </item>
-        <item label="Poweroff">
-            <action name="Execute">
-                <command>systemctl poweroff</command>
-            </action>
-        </item>
-    </menu>
-    <menu id="root-menu" label="Openbox 3">
-        <item label="Terminal">
-            <action name="Execute">
-                <command>urxvtdc</command>
-            </action>
-        </item>
-        <item label="File Manager">
-            <action name="Execute">
-                <command>nautilus</command>
-            </action>
-        </item>
-        <item label="Chromium">
-            <action name="Execute">
-                <command>chromium</command>
-            </action>
-        </item>
-        <separator/>
-        <menu id="5"/>
-        <menu id="7"/>
-        <menu id="6"/>
-        <menu id="37"/>
-        <separator/>
-        <menu id="39"/>
-    </menu>
+
+  <menu id="applications-submenu" label="Applications">
+    <item label="Chromium">
+      <action name="Execute">
+        <command>chromium</command>
+      </action>
+    </item>
+    <item label="Spotify">
+      <action name="Execute">
+        <execute>spotify</execute>
+      </action>
+    </item>
+    <item label="Skype">
+      <action name="Execute">
+        <command>skypeforlinux</command>
+      </action>
+    </item>
+    <item label="VidyoDesktop">
+      <action name="Execute">
+        <command>VidyoDesktop</command>
+      </action>
+    </item>
+    <item label="Dropbox">
+      <action name="Execute">
+        <command>dropbox</command>
+      </action>
+    </item>
+    <item label="CERNBox">
+      <action name="Execute">
+        <command>cernbox</command>
+      </action>
+    </item>
+    <item label="Stremio">
+      <action name="Execute">
+        <command>stremio</command>
+      </action>
+    </item>
+    <item label="Pavucontrol">
+      <action name="Execute">
+        <command>pavucontrol</command>
+      </action>
+    </item>
+    <item label="Image Viewer">
+      <action name="Execute">
+        <command>gwenview</command>
+      </action>
+    </item>
+    <item label="GIMP">
+      <action name="Execute">
+        <command>gimp</command>
+      </action>
+    </item>
+  </menu>
+
+  <menu id="system-submenu" label="System">
+    <item label="System Monitor">
+      <action name="Execute">
+        <command>gnome-system-monitor</command>
+      </action>
+    </item>
+  </menu>
+
+  <menu id="exit-submenu" label="Exit">
+    <item label="Lock">
+      <action name="Execute">
+        <command>light-locker-command -l</command>
+      </action>
+    </item>
+    <item label="Logout">
+      <action name="Exit"/>
+    </item>
+    <item label="Reboot">
+      <action name="Execute">
+        <command>systemctl reboot</command>
+      </action>
+    </item>
+    <item label="Suspend">
+      <action name="Execute">
+        <command>systemctl suspend</command>
+      </action>
+    </item>
+    <item label="Hibernate">
+      <action name="Execute">
+        <command>systemctl hibernate</command>
+      </action>
+    </item>
+    <item label="Poweroff">
+      <action name="Execute">
+        <command>systemctl poweroff</command>
+      </action>
+    </item>
+  </menu>
+
+  <!-- Screens -->
+  <menu id="screen-submenu" label="Screens">
+    <item label="-> HDMI">
+      <action name="Execute">
+        <command></command>
+      </action>
+    </item>
+    <item label="<- HDMI">
+      <action name="Execute">
+        <command></command>
+      </action>
+    </item>
+  </menu>
+
+  <menu id="root-menu" label="Openbox 3">
+    <item label="Terminal">
+      <action name="Execute">
+        <command>urxvtdc</command>
+      </action>
+    </item>
+    <item label="File Manager">
+      <action name="Execute">
+        <command>nautilus</command>
+      </action>
+    </item>
+    <item label="Chromium">
+      <action name="Execute">
+        <command>chromium</command>
+      </action>
+    </item>
+    <separator/>
+    <menu id="applications-submenu"/>
+    <menu id="system-submenu"/>
+    <menu id="screen-submenu"/>
+    <separator/>
+    <menu id="exit-submenu"/>
+  </menu>
+
+  <!-- Switch desktops -->
+  <menu id="desktops-menu" label="Desktops">
+    <item label="Desktop 1">
+      <action name="GoToDesktop">
+        <to>1</to>
+        <dialog>no</dialog>
+      </action>
+    </item>
+    <item label="Desktop 2">
+      <action name="GoToDesktop">
+        <to>2</to>
+        <dialog>no</dialog>
+      </action>
+    </item>
+    <item label="Desktop 3">
+      <action name="GoToDesktop">
+        <to>3</to>
+        <dialog>no</dialog>
+      </action>
+    </item>
+    <item label="Desktop 4">
+      <action name="GoToDesktop">
+        <to>4</to>
+        <dialog>no</dialog>
+      </action>
+    </item>
+    <item label="Desktop 5">
+      <action name="GoToDesktop">
+        <to>5</to>
+        <dialog>no</dialog>
+      </action>
+    </item>
+    <item label="Desktop 6">
+      <action name="GoToDesktop">
+        <to>6</to>
+        <dialog>no</dialog>
+      </action>
+    </item>
+    <item label="Desktop 7">
+      <action name="GoToDesktop">
+        <to>7</to>
+        <dialog>no</dialog>
+      </action>
+    </item>
+    <item label="Desktop 8">
+      <action name="GoToDesktop">
+        <to>8</to>
+        <dialog>no</dialog>
+      </action>
+    </item>
+    <item label="Desktop 9">
+      <action name="GoToDesktop">
+        <to>9</to>
+        <dialog>no</dialog>
+      </action>
+    </item>
+
 </openbox_menu>
