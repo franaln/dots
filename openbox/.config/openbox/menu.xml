@@ -44,7 +44,7 @@
     </item>
     <item label="Image Viewer">
       <action name="Execute">
-        <command>gwenview</command>
+        <command>eog</command>
       </action>
     </item>
     <item label="GIMP">
@@ -94,20 +94,9 @@
   </menu>
 
   <!-- Screens -->
-  <menu id="screen-submenu" label="Screens">
-    <item label="-> HDMI">
-      <action name="Execute">
-        <command>pactl set-card-profile 0 output:hdmi-stereo-extra1 ; xrandr --output HDMI1 --auto ; xrandr --output eDP1 --off</command>
-      </action>
-    </item>
-    <item label="<- HDMI">
-      <action name="Execute">
-        <command>pactl set-card-profile 0 output:analog-stereo+input:analog-stereo; xrandr --output eDP1 --auto; xrandr --output HDMI1 --off</command>
-      </action>
-    </item>
-  </menu>
+  <menu id="screen-submenu" label="Displays" execute="~/.config/openbox/hdmi-pipemenu.sh" />
 
-  <menu id="root-menu" label="Openbox 3">
+  <menu id="root-menu" label="Openbox">
     <item label="Terminal">
       <action name="Execute">
         <command>urxvtdc</command>
