@@ -28,9 +28,9 @@ border_color = #4285F4 100
 
 # ID 4 - iconified task
 rounded = 0
-border_width = 0
-background_color = #FFFFFF 5
-border_color     = #FFFFFF 5
+border_width = 2
+background_color = #404755 100
+border_color     = #404755 100
 
 # ID 5 - tooltip
 rounded = 3
@@ -105,10 +105,10 @@ task_thumbnail = 0
 task_thumbnail_size = 400.0
 task_maximum_size = 250 5
 task_padding = 10 10
-task_background_id = 0
+task_background_id = 4
 task_active_background_id = 6
 task_urgent_background_id = 6
-task_iconified_background_id = 0
+task_iconified_background_id = 4
 
 task_font = Roboto 12
 task_font_color           = #DBD2CD 100

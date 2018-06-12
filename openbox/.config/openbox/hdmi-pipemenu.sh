@@ -20,7 +20,7 @@ if [[ $devices == *"HDMI1 connected"* ]] ; then
 
 elif [[ $devices == *"VGA1 connected"* ]] ; then
 
-    echo -e '<item label="--&gt; VGA">'
+    echo -e '<item label=" VGA">'
     echo '  <action name="Execute">'
     echo '    <command>xrandr --output VGA1 --auto ; xrandr --output eDP1 --off</command>'
     echo '  </action>'
@@ -33,7 +33,7 @@ elif [[ $devices == *"VGA1 connected"* ]] ; then
     echo '</item>'
 
 else
-    echo '<item label="No displays connected"></item>'
+    echo '<item label="No external displays connected"></item>'
 fi
 
 echo '</openbox_pipe_menu>'

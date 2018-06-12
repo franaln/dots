@@ -94,7 +94,10 @@
   </menu>
 
   <!-- Screens -->
-  <menu id="screen-submenu" label="Displays" execute="~/.config/openbox/hdmi-pipemenu.sh" />
+  <menu id="displays-submenu" label="Displays" execute="~/.config/openbox/hdmi-pipemenu.sh" />
+
+  <!-- Places -->
+  <menu id="places-submenu" label="Displays" execute="~/.config/openbox/gtk-bookmarks-menu.py" />
 
   <menu id="root-menu" label="Openbox">
     <item label="Terminal">
@@ -115,7 +118,8 @@
     <separator/>
     <menu id="applications-submenu"/>
     <menu id="system-submenu"/>
-    <menu id="screen-submenu"/>
+    <menu id="displays-submenu"/>
+    <menu id="places-submenu"/>
     <separator/>
     <menu id="exit-submenu"/>
   </menu>
