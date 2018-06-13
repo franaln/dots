@@ -376,9 +376,8 @@
         <width>50%</width>
       </action>
       <action name="MaximizeVert"/>
-      <action name="MoveResizeTo">
-        <x>0</x>
-        <y>0</y>
+      <action name="MoveToEdge">
+        <direction>east</direction>
       </action>
       <action name="NextWindow">
         <interactive>no</interactive>
@@ -389,9 +388,8 @@
             <width>50%</width>
           </action>
           <action name="MaximizeVert"/>
-          <action name="MoveResizeTo">
-            <x>-0</x>
-            <y>0</y>
+          <action name="MoveToEdge">
+            <direction>west</direction>
           </action>
         </finalactions>
       </action>
@@ -404,9 +402,8 @@
         <height>50%</height>
       </action>
       <action name="MaximizeHorz"/>
-      <action name="MoveResizeTo">
-        <x>0</x>
-        <y>0</y>
+      <action name="MoveToEdge">
+        <direction>north</direction>
       </action>
       <action name="NextWindow">
         <interactive>no</interactive>
@@ -417,9 +414,8 @@
             <height>50%</height>
           </action>
           <action name="MaximizeHorz"/>
-          <action name="MoveResizeTo">
-            <x>0</x>
-            <y>-0</y>
+          <action name="MoveToEdge">
+            <direction>south</direction>
           </action>
         </finalactions>
       </action>
