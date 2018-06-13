@@ -3,7 +3,7 @@
 status=$(playerctl status 2>/dev/null)
 
 if [[ $? != 0 ]] ; then
-    echo -e "\uF04d"
+    echo ""
 
 else
 
