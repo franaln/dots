@@ -37,11 +37,6 @@
         <command>stremio</command>
       </action>
     </item>
-    <item label="Pavucontrol">
-      <action name="Execute">
-        <command>pavucontrol</command>
-      </action>
-    </item>
     <item label="Image Viewer">
       <action name="Execute">
         <command>eog</command>
@@ -58,6 +53,11 @@
     <item label="System Monitor">
       <action name="Execute">
         <command>gnome-system-monitor</command>
+      </action>
+    </item>
+    <item label="Pavucontrol">
+      <action name="Execute">
+        <command>pavucontrol</command>
       </action>
     </item>
   </menu>
