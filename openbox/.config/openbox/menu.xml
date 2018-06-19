@@ -47,6 +47,11 @@
         <command>gimp</command>
       </action>
     </item>
+    <item label="Flameshot">
+      <action name="Execute">
+        <command>flameshot</command>
+      </action>
+    </item>
   </menu>
 
   <menu id="system-submenu" label="System">

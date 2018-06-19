@@ -168,7 +168,7 @@ mouse_scroll_down = none
 # Spotify
 #---------
 execp = new
-execp_command = $HOME/.config/tint2/music-status.sh
+execp_command = $HOME/.config/tint2/player-status.py
 execp_interval = 4
 execp_has_icon = 0
 execp_cache_icon = 1
@@ -186,4 +186,4 @@ execp_background_id = 0
 execp_centered = 0
 execp_icon_w = 0
 execp_icon_h = 0
-execp_tooltip = "Left click: Play/Pause, Middle click: Previous, Right click: Next"
+execp_tooltip = "Left: Play/Pause; Middle: Previous; Right: Next"
