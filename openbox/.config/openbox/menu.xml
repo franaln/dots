@@ -99,10 +99,10 @@
   </menu>
 
   <!-- Screens -->
-  <menu id="displays-submenu" label="Displays" execute="~/.config/openbox/hdmi-pipemenu.sh" />
+  <menu id="displays-submenu" label="Displays" execute="~/.config/openbox/displays-menu.py" />
 
   <!-- Places -->
-  <menu id="places-submenu" label="Places" execute="~/.config/openbox/gtk-bookmarks-menu.py" />
+  <menu id="places-submenu" label="Places" execute="~/.config/openbox/scripts/places-menu.py" />
 
   <menu id="root-menu" label="Openbox">
     <item label="Terminal">
