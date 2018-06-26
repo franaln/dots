@@ -186,7 +186,7 @@ execp_background_id = 0
 execp_centered = 0
 execp_icon_w = 0
 execp_icon_h = 0
-execp_tooltip = "left: play/pause; middle: previous; right: next"
+execp_tooltip = left:play/pause, middle:previous, right:next
 
 #---------
 # Weather
@@ -222,9 +222,9 @@ execp_has_icon = 0
 execp_cache_icon = 1
 execp_continuous = 0
 execp_markup = 1
-execp_lclick_command =
+execp_lclick_command = $HOME/bin/volume.py mute
 execp_rclick_command = pavucontrol
-execp_mclick_command = $HOME/bin/volume.py mute
+execp_mclick_command =
 execp_uwheel_command = $HOME/bin/volume.py up
 execp_dwheel_command = $HOME/bin/volume.py down
 execp_font = Roboto 12
@@ -235,4 +235,4 @@ execp_background_id = 0
 execp_centered = 0
 execp_icon_w = 0
 execp_icon_h = 0
-execp_tooltip = "middle: mute"
+execp_tooltip = left:mute, right:pavucontrol
