@@ -519,6 +519,11 @@
         <command>volume.py up 5</command>
       </action>
     </keybind>
+    <keybind key="XF86Calculator">
+      <action name="Execute">
+        <command>gnome-calculator</command>
+      </action>
+    </keybind>
   </keyboard>
 
 
