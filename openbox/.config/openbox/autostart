@@ -12,4 +12,4 @@ dunst -conf $HOME/.config/dunst/dunstrc &
 light-locker &
 (sleep 2 && dropbox) &
 (sleep 2 && cernbox) &
-(sleep 2 && monitortray.py) &
+(sleep 2 && battery.py) &
