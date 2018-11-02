@@ -57,6 +57,16 @@
         <command>flameshot</command>
       </action>
     </item>
+    <item label="Transmission">
+      <action name="Execute">
+        <command>transmission-gtk</command>
+      </action>
+    </item>
+    <item label="Google Chrome">
+      <action name="Execute">
+        <command>google-chrome-stable</command>
+      </action>
+    </item>
   </menu>
 
   <menu id="system-submenu" label="System">
@@ -104,7 +114,7 @@
   </menu>
 
   <!-- Screens -->
-  <menu id="displays-submenu" label="Displays" execute="~/.config/openbox/displays-menu.py" />
+  <menu id="displays-submenu" label="Displays" execute="~/.config/openbox/scripts/displays-menu.py" />
 
   <!-- Places -->
   <menu id="places-submenu" label="Places" execute="~/.config/openbox/scripts/places-menu.py" />

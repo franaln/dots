@@ -88,6 +88,8 @@
 ;; sane defaults
 (require 'sane-defaults)
 
+;; remove trailing spaces
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 ;; run at full power please
 (put 'downcase-region 'disabled nil)

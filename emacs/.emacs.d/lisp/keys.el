@@ -4,6 +4,13 @@
 (global-set-key (kbd "\033[1;5D") 'backward-word)
 (global-set-key (kbd "\033[1;5C") 'forward-word)
 
+(add-hook 'term-setup-hook
+  '(lambda ()
+     (define-key function-key-map "\e[1;3A" [M-up])
+     (define-key function-key-map "\e[1;3B" [M-down])
+     (define-key function-key-map "\e[1;3C" [M-right])
+     (define-key function-key-map "\e[1;3D" [M-left])))
+
 ;; Transpose stuff with M-t
 (global-unset-key (kbd "M-t")) ;; which used to be transpose-words
 (global-set-key (kbd "M-t l") 'transpose-lines)
@@ -44,7 +51,6 @@
 (global-set-key (kbd "M-<up>") 'move-line-up)
 (global-set-key (kbd "M-<down>") 'move-line-down)
 
-
 ; Fixing another key binding bug in iedit mode
 (define-key global-map (kbd "C-c o") 'iedit-mode)
 
@@ -55,7 +61,6 @@
                 (lambda ()
                   (interactive)
                   (shell-command (concat "clatex -f " buffer-file-name))))
-
 
 (global-set-key (kbd "<C-S-up>")     'buf-move-up)
 (global-set-key (kbd "<C-S-down>")   'buf-move-down)
