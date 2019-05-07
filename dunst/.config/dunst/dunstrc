@@ -1,31 +1,48 @@
 [global]
-    font = Roboto 12
+    font = Roboto 13
     markup = yes
     format = "<b>%s</b>\n%b"
     sort = yes
     indicate_hidden = yes
-    alignment = center
+    alignment = left
     bounce_freq = 0
     show_age_threshold = 60
     show_indicators = no
     word_wrap = yes
     ignore_newline = no
-    geometry = "300x10-40+50"
-    transparency = 0
+    geometry = "350x50-50+70"
+    transparency = 5
     idle_threshold = 120
     monitor = 0
-    follow = mouse
+    follow = none
     sticky_history = yes
-    line_height = 0
+    line_height = 5
     separator_height = 2
     padding = 8
-    horizontal_padding = 8
+    horizontal_padding = 20
     separator_color = frame
     startup_notification = false
     dmenu = /usr/bin/dmenu -p dunst
     browser = /usr/bin/chromium
     width = 0
-    frame_color = "#383838"
+    corner_radius = 6
+
+    # Stack together notifications with the same content
+    stack_duplicates = false
+
+    # Hide the count of stacked notifications with the same content
+    hide_duplicate_count = true
+
+    ### Icons ###
+    # Align icons left/right/off
+    icon_position = left
+
+    # Scale larger icons down to this size, set to 0 to disable
+    max_icon_size = 56
+
+    # Paths to default icons.
+    icon_path = /usr/share/icons/Paper/32x32/status/:/usr/share/icons/Paper/32x32/devices/:/usr/share/icons/Paper/32x32/apps/
+
 
 [shortcuts]
     close = ctrl+space
@@ -33,14 +50,14 @@
     history = ctrl+grave
     context = ctrl+shift+period
 
-[urgency_low]
-    background = "#2f343f"
-    foreground = "#DBD2CD"
-    timeout = 5
-
 [urgency_normal]
-    background = "#2f343f"
-    foreground = "#DBD2CD"
+    background = "#373D4A"
+    foreground = "#FCFCFC"
+    timeout = 20
+
+[urgency_low]
+    background = "#373D4A"
+    foreground = "#FCFCFC"
     timeout = 20
 
 [urgency_critical]

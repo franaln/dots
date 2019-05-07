@@ -70,11 +70,10 @@ else
     alias pacq='pacman -Q'
 
     # packer
-    alias pacaur='aurman --aur'
-    alias auru='aurman -Syu'
-    alias auri='aurman -S'
-    alias aurr='aurman -R'
-    alias aurs='aurman -Ss'
+    alias auru='yay -a -Syu'
+    alias auri='yay -a -S'
+    alias aurr='yay -a -R'
+    alias aurs='yay -a -Ss'
 fi
 
 # security/safety features

@@ -479,11 +479,11 @@
         <command>gnome-system-monitor</command>
       </action>
     </keybind>
-    <keybind key="C-A-l">
-      <action name="Execute">
-        <command>light-locker-command -l</command>
-      </action>
-    </keybind>
+    <!-- <keybind key="C-A-l"> -->
+    <!--   <action name="Execute"> -->
+    <!--     <command>light-locker-command -l</command> -->
+    <!--   </action> -->
+    <!-- </keybind> -->
     <keybind key="XF86KbdBrightnessDown">
       <action name="Execute">
         <command>kbdbacklight down</command>
@@ -496,12 +496,12 @@
     </keybind>
     <keybind key="XF86MonBrightnessDown">
       <action name="Execute">
-        <command>xbacklight - 10%</command>
+        <command>xbacklight - 20%</command>
       </action>
     </keybind>
     <keybind key="XF86MonBrightnessUp">
       <action name="Execute">
-        <command>xbacklight + 10%</command>
+        <command>xbacklight + 20%</command>
       </action>
     </keybind>
     <keybind key="XF86AudioMute">
