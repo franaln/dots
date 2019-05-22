@@ -53,28 +53,19 @@ alias lg='ll | grep'
 alias o='open'
 
 # packages
-if [[ `uname -v` == *"Ubuntu"* ]] ; then
-    # apt-get and aptitude
-    alias apu='sudo apt-get update'
-    alias apg='sudo apt-get upgrade'
-    alias apdg='sudo apt-get dist-upgrade'
-    alias api='sudo aptitude install'
-    alias aps='aptitude search'
-    alias apr='sudo apt-get remove'
-else
-    # pacman
-    alias pacu='sudo pacman -Syu'
-    alias paci='sudo pacman -S'
-    alias pacr='sudo pacman -Rs'
-    alias pacs='pacsearch'
-    alias pacq='pacman -Q'
+# pacman
+alias pacu='sudo pacman -Syu'
+alias paci='sudo pacman -S'
+alias pacr='sudo pacman -Rs'
+alias pacs='pacsearch'
+alias pacq='pacman -Q'
 
-    # packer
-    alias auru='yay -a -Syu'
-    alias auri='yay -a -S'
-    alias aurr='yay -a -R'
-    alias aurs='yay -a -Ss'
-fi
+# AUR
+alias auru='yay -a -Syu'
+alias auri='yay -a -S'
+alias aurr='yay -a -R'
+alias aurs='yay -a -Ss'
+
 
 # security/safety features
 alias cp='cp -i'
