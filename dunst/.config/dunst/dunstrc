@@ -13,7 +13,7 @@
     geometry = "350x50-50+70"
     transparency = 5
     idle_threshold = 120
-    monitor = 0
+    monitor = 1
     follow = none
     sticky_history = yes
     line_height = 5
