@@ -44,12 +44,12 @@ border_width = 2
 border_sides = TBLR
 border_content_tint_weight = 0
 background_content_tint_weight = 0
-background_color         = #40e0d0 100
-border_color             = #40e0d0 100
-background_color_hover   = #40e0d0 100
-border_color_hover       = #40e0d0 100
-background_color_pressed = #40e0d0 100
-border_color_pressed     = #40e0d0 100
+background_color         = #c7c8ca 100
+border_color             = #c7c8ca 100
+background_color_hover   = #c7c8ca 100
+border_color_hover       = #c7c8ca 100
+background_color_pressed = #c7c8ca 100
+border_color_pressed     = #c7c8ca 100
 
 #----------
 # Panel
