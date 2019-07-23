@@ -125,7 +125,7 @@
         <command>urxvtdc</command>
       </action>
     </item>
-    <item label="File Manager">
+    <item label="Files">
       <action name="Execute">
         <command>nautilus</command>
       </action>
