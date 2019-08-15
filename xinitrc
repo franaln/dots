@@ -1,6 +1,6 @@
 # screen powersave
 xset +dpms
-xset dpms 0 0 300
+xset dpms 0 0 900
 
 # read .Xresource
 xrdb ~/.Xresources

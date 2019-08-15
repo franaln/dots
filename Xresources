@@ -11,7 +11,7 @@ Xft.rgba: rgb
 URxvt.depth: 0
 URxvt.transparent: false
 URxvt.tint: #000000
-URxvt.geometry: 120x30
+URxvt.geometry: 235x50
 URxvt.cursorBlink: false
 URxvt.scrollBar: false
 URxvt.saveLines: 5000
