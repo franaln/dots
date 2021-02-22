@@ -9,7 +9,11 @@ for line in open('/home/fran/.config/gtk-3.0/bookmarks').read().split('\n'):
     if not line:
         continue
 
-    path, name = line.split()
+    try:
+        path, name = line.split()
+    except:
+        path = line
+        name = line.split('/')[-1]
 
     print("""<item label=\"%s\">
     <action name=\"Execute\">

@@ -54,15 +54,14 @@ alias o='open'
 alias mpvs='mpv --shuffle'
 alias hs='history | grep'
 
-# packages
-## pacman
+# pacman
 alias pacu='sudo pacman -Syu'
 alias paci='sudo pacman -S'
 alias pacr='sudo pacman -Rs'
 alias pacs='pacsearch'
 alias pacq='pacman -Q'
 
-## packer
+# AUR
 alias auru='yay -a -Syu'
 alias auri='yay -a -S'
 alias aurr='yay -a -R'
