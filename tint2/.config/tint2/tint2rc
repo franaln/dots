@@ -96,14 +96,14 @@ task_align = left
 # Tasks
 #----------
 urgent_nb_of_blink = 3
-task_icon = 0
+task_icon = 1
 task_text = 1
 task_centered = 1
 task_tooltip = 1
 task_thumbnail = 0
 task_thumbnail_size = 400.0
-task_maximum_size = 250 5
-task_padding = 10 10
+task_maximum_size = 300 5
+task_padding = 5 5
 
 task_background_id = 0
 task_iconified_background_id = 0
@@ -117,10 +117,10 @@ task_active_font_color    = #2f343f 100
 task_urgent_font_color    = #2f343f 100
 font_shadow = 0
 
-# task_icon_asb = 100 0 0
-# task_active_icon_asb = 100 0 0
-# task_urgent_icon_asb = 100 0 0
-# task_iconified_icon_asb = 100 0 0
+task_icon_asb = 100 0 0
+task_active_icon_asb = 100 0 0
+task_urgent_icon_asb = 100 0 0
+task_iconified_icon_asb = 100 0 0
 
 #-------------
 # System Tray
@@ -184,29 +184,29 @@ execp_icon_w = 0
 execp_icon_h = 0
 execp_tooltip = Left: Play/Pause, Middle: Previous, Right: Next
 
-#---------
-# Weather
-#---------
-execp = new
-execp_command = $HOME/bin/weather.sh
-execp_interval = 900
-execp_has_icon = 0
-execp_cache_icon = 1
-execp_continuous = 0
-execp_markup = 1
-execp_lclick_command =
-execp_rclick_command =
-execp_mclick_command =
-execp_uwheel_command =
-execp_dwheel_command =
-execp_font = Roboto 13
-execp_font_color = #DBD2CD 100
-execp_padding = 8 0
-execp_background_id = 0
-execp_centered = 0
-execp_icon_w = 0
-execp_icon_h = 0
-execp_tooltip = Weather in Geneva
+# #---------
+# # Weather
+# #---------
+# execp = new
+# execp_command = $HOME/bin/weather.sh
+# execp_interval = 900
+# execp_has_icon = 0
+# execp_cache_icon = 1
+# execp_continuous = 0
+# execp_markup = 1
+# execp_lclick_command =
+# execp_rclick_command =
+# execp_mclick_command =
+# execp_uwheel_command =
+# execp_dwheel_command =
+# execp_font = Roboto 13
+# execp_font_color = #DBD2CD 100
+# execp_padding = 8 0
+# execp_background_id = 0
+# execp_centered = 0
+# execp_icon_w = 0
+# execp_icon_h = 0
+# execp_tooltip = Weather in Geneva
 
 #---------
 # Volume
