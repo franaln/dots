@@ -1,10 +1,20 @@
 ;; -- emacs init --
 ;; -- frani
 
+
 (require 'package)
 (add-to-list 'package-archives
-             '("melpa-stable" . "https://stable.melpa.org/packages/"))
+             '("melpa" . "https://melpa.org/packages/") t)
+(add-to-list 'package-archives
+             '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 (package-initialize)
+
+
+;; ;; packages
+;; (when (>= emacs-major-version 24)
+;;   (require 'package)
+;;   (package-initialize)
+;;   )
 
 (if (not (package-installed-p 'use-package))
     (progn
@@ -113,11 +123,6 @@
 (autoload 'insert-elisp-big-header "e-seperators" nil t)
 (autoload 'insert-script-big-header "e-seperators" nil t)
 (autoload 'insert-text-seperator-line "e-seperators" nil t)
-(autoload 'markdown-mode "markdown-mode" "Major mode for editing Markdown files" t)
-(add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
-(add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
-(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
-(add-to-list 'auto-mode-alist '("\\.tex\\'" . latex-mode))
 
 
 ;; Close the compilation window if there was no error at all.
@@ -163,17 +168,13 @@
 
 (setq tramp-default-method "ssh")
 
-;; deft
-(use-package deft
-  :ensure deft
-  :bind ("<f8>" . deft)
-  :commands (deft)
-  :config (setq deft-directory "~/Dropbox/notes"
-                deft-extensions '("txt" "md" "org")
-                deft-use-filename-as-title t
-                deft-file-naming-rules '((noslash . "-") (nospace . "-") (case-fn . downcase))
-                deft-auto-save-interval 0
-                ))
+(use-package markdown-mode
+  :ensure t
+  :commands (markdown-mode gfm-mode)
+  :mode (("README\\.md\\'" . gfm-mode)
+         ("\\.md\\'" . markdown-mode)
+         ("\\.markdown\\'" . markdown-mode))
+  )
 
 ;; shell-pop
 (use-package shell-pop
@@ -184,3 +185,19 @@
   (setq shell-pop-term-shell "/bin/bash")
   ;; need to do this manually or not picked up by `shell-pop'
   (shell-pop--set-shell-type 'shell-pop-shell-type shell-pop-shell-type))
+
+
+(add-hook 'org-shiftup-final-hook 'windmove-up)
+(add-hook 'org-shiftleft-final-hook 'windmove-left)
+(add-hook 'org-shiftdown-final-hook 'windmove-down)
+(add-hook 'org-shiftright-final-hook 'windmove-right)
+
+
+
+;; Install additinal themes from melpa
+;; make sure to use :defer keyword
+(use-package hemera-theme :ensure :defer)
+(use-package nyx-theme :ensure :defer)
+;; (use-package cyberpunk-theme :ensure :defer)
+
+(add-to-list 'custom-theme-load-path "~/Downloads/cyberpunk-theme.el")

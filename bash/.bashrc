@@ -5,7 +5,7 @@
 [ -z "$PS1" ] && return
 PS1='\[\e[1;34m\][\u@\h]\[\e[m\] \w $ '
 
-export HISTIGNORE="&:ls:ll:[bf]g:exit:mpv:[cxh]:a\ :[ \t]*"
+export HISTIGNORE="ls:ll:[bf]g:xdotool:exit:mpv:[ \t]*"
 
 HISTCONTROL=$HISTCONTROL${HISTCONTROL+:}ignoredups
 HISTCONTROL=ignoreboth
@@ -48,18 +48,18 @@ if [ -f ~/.bash_fns ] ; then
     . ~/.bash_fns
 fi
 
+export CUPS_SERVER=localhost
+export THEME="dark"
+export TERM=xterm-256color # fix colors in emacs for urxvt
+
+export PATH=~/.local/bin:$MYBIN:$PATH
+
+# urxvt window title
+#export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND ;} echo -ne '\033]0;Terminal - ${PWD}\007"
+
 ## autojump
 if [ -f /etc/profile.d/autojump.bash ] ; then
     . /etc/profile.d/autojump.bash
 elif [ -f /usr/share/autojump/autojump.sh ] ; then
     . /usr/share/autojump/autojump.sh
 fi
-
-export CUPS_SERVER=localhost
-export THEME="dark"
-export TERM=xterm-256color # fix colors in emacs for urxvt
-
-export PATH=~/.local/bin:$PATH
-
-# urxvt window title
-PROMPT_COMMAND='echo -ne "\033]0;Terminal - ${PWD}\007"'

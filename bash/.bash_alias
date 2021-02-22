@@ -51,30 +51,22 @@ alias dmesgt='dmesg | tail'
 alias setup='test -f setup.sh && source ./setup.sh || echo setup: no setup.sh in the current directory.'
 alias lg='ll | grep'
 alias o='open'
+alias mpvs='mpv --shuffle'
+alias hs='history | grep'
 
 # packages
-if [[ `uname -v` == *"Ubuntu"* ]] ; then
-    # apt-get and aptitude
-    alias apu='sudo apt-get update'
-    alias apg='sudo apt-get upgrade'
-    alias apdg='sudo apt-get dist-upgrade'
-    alias api='sudo aptitude install'
-    alias aps='aptitude search'
-    alias apr='sudo apt-get remove'
-else
-    # pacman
-    alias pacu='sudo pacman -Syu'
-    alias paci='sudo pacman -S'
-    alias pacr='sudo pacman -Rs'
-    alias pacs='pacsearch'
-    alias pacq='pacman -Q'
+## pacman
+alias pacu='sudo pacman -Syu'
+alias paci='sudo pacman -S'
+alias pacr='sudo pacman -Rs'
+alias pacs='pacsearch'
+alias pacq='pacman -Q'
 
-    # packer
-    alias auru='yay -a -Syu'
-    alias auri='yay -a -S'
-    alias aurr='yay -a -R'
-    alias aurs='yay -a -Ss'
-fi
+## packer
+alias auru='yay -a -Syu'
+alias auri='yay -a -S'
+alias aurr='yay -a -R'
+alias aurs='yay -a -Ss'
 
 # security/safety features
 alias cp='cp -i'
@@ -86,9 +78,11 @@ alias ln='ln -i'
 ##alias del_older='find * -mtime +30 -exec sudo rm {} \;'
 
 # lxplus
+alias kinit='kinit falonso@CERN.CH'
 alias sx='ssh -Y falonso@lxplus.cern.ch'
 alias s1='ssh -Y falonso@pcunlp001.cern.ch'
 alias s2='ssh -Y falonso@pcunlp002.cern.ch'
+alias siflp='ssh -Y falonso@163.10.100.39'
 
 # fisica.unlp.edu.ar
 alias smetis='ssh -Y falonso@metis.fisica.unlp.edu.ar'
@@ -99,3 +93,6 @@ alias hon='set -o history'
 
 # Others
 alias reload_tint2='killall -SIGUSR1 tint2'
+
+alias subes='subliminal download -l es -s -f'
+alias suben='subliminal download -l en -s -f'

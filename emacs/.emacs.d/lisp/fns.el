@@ -347,4 +347,10 @@ Don't mess with special buffers."
   (align-regexp start end
                 "\\(\\s-*\\)&" 1 1 t))
 
+(defun align-twiki-table (start end)
+  "Align columns by ampersand"
+  (interactive "r")
+  (align-regexp start end
+                "\\(\\s-*\\)|" 1 1 t))
+
 (provide 'fns)

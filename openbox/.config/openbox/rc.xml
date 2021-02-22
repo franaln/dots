@@ -25,7 +25,7 @@
   </placement>
 
   <theme>
-    <name>emmental-light</name>
+    <name>emmental-dark</name>
     <!--
       available characters are NDSLIMC, each can occur at most once.
       N: window icon
@@ -492,12 +492,12 @@
     </keybind>
     <keybind key="XF86MonBrightnessDown">
       <action name="Execute">
-        <command>xbacklight - 20%</command>
+        <command>backlight.py down</command>
       </action>
     </keybind>
     <keybind key="XF86MonBrightnessUp">
       <action name="Execute">
-        <command>xbacklight + 20%</command>
+        <command>backlight.py up</command>
       </action>
     </keybind>
     <keybind key="XF86AudioMute">

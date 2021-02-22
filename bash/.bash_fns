@@ -82,3 +82,12 @@ function stopwatch(){
         sleep 0.1
     done
 }
+
+function mkcd(){
+    mkdir -p $1; cd $1
+}
+
+function cast(){
+    filename="${1%.*}"
+    castnow $1 --subtitle $filename.srt --subtitle-color "#FFFFFFFF" --subtitle-scale 1.2
+}
