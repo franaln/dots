@@ -76,17 +76,6 @@ alias ln='ln -i'
 # delete files older than 30 days
 ##alias del_older='find * -mtime +30 -exec sudo rm {} \;'
 
-# lxplus
-alias kinit='kinit falonso@CERN.CH'
-alias sx='ssh -Y falonso@lxplus.cern.ch'
-alias s1='ssh -Y falonso@pcunlp001.cern.ch'
-alias s2='ssh -Y falonso@pcunlp002.cern.ch'
-alias siflp='ssh -Y falonso@163.10.100.39'
-
-# fisica.unlp.edu.ar
-alias smetis='ssh -Y falonso@metis.fisica.unlp.edu.ar'
-alias sleda='ssh -Y fran@leda.fisica.unlp.edu.ar'
-
 alias hoff='set +o history'
 alias hon='set -o history'
 

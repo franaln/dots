@@ -48,6 +48,11 @@ if [ -f ~/.bash_fns ] ; then
     . ~/.bash_fns
 fi
 
+# private
+if [ -f ~/.bash_priv ]; then
+    . ~/.bash_priv
+fi
+
 export CUPS_SERVER=localhost
 export THEME="dark"
 export TERM=xterm-256color # fix colors in emacs for urxvt
@@ -63,3 +68,4 @@ if [ -f /etc/profile.d/autojump.bash ] ; then
 elif [ -f /usr/share/autojump/autojump.sh ] ; then
     . /usr/share/autojump/autojump.sh
 fi
+
