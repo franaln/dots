@@ -2,22 +2,23 @@
 # bash aliases
 
 # ls
-alias ls='ls -N --color=auto'
+alias ls='ls --color=auto'
 alias sl='ls'
 alias ll='ls -lh'
 alias la='ls -A'
-alias lt='ls -N --color=auto | sort -k 2 -k 1M -k2'
+alias lt='ls --color=auto | sort -k 2 -k 1M -k2'
 
 # emacs
-alias emacs='emacs -nw'
+alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs -nw'
 alias emw='emacs'
 alias ewm='emacs'
 alias em='emacs'
 alias e='emacs'
 alias semw='sudo emacs -nw'
+alias emwx="emw --eval '(find-file \"/ssh:falonso@lxplus9.cern.ch:~/work\")'"
 
 # python
-#alias python='python2.7'
+alias python='python3'
 
 # root
 alias root='root -l'
@@ -32,10 +33,6 @@ alias untargz='tar -xvzf'
 alias cd..='cd ..'
 alias ..='cd ..'
 alias ...='cd ../..'
-
-# music player
-alias mocp='mocp -m ~/Music -T dante'
-alias ncmpcpp='ncmpcpp -c ~/.config/ncmpcpp/config'
 
 # demas
 alias reload='source ~/.bashrc'
@@ -80,7 +77,5 @@ alias hoff='set +o history'
 alias hon='set -o history'
 
 # Others
-alias reload_tint2='killall -SIGUSR1 tint2'
-
 alias subes='subliminal download -l es -s -f'
 alias suben='subliminal download -l en -s -f'
