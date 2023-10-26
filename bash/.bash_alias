@@ -79,3 +79,6 @@ alias hon='set -o history'
 # Others
 alias subes='subliminal download -l es -s -f'
 alias suben='subliminal download -l en -s -f'
+
+#
+alias start_docker_iflp='docker run -it --rm --cap-add NET_ADMIN iflp-vpn:latest'
